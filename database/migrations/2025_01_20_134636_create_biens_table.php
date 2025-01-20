@@ -15,11 +15,11 @@ return new class extends Migration
             $table->id();
             $table->integer('surface');
             $table->integer('image');
-            $table->integer('price');
+            $table->integer('prix');
             $table->foreignId('city_id')->constrained('cities');
             $table->foreignId('type_bien_id')->constrained('type_biens');
             $table->foreignId('status_id')->constrained('statuses');
-            $table->foreignId('clients_id')->constrained('clients');
+            $table->foreignId('user_id')->constrained('users');
             $table->foreignId('etat_id')->constrained('etats');
             $table->timestamps();
         });
