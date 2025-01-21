@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class TypeBien extends Model
 {
+    protected $fillable = [
+        'name'
+    ];
     use HasFactory;
 }
