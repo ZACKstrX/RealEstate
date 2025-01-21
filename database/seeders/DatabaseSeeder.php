@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
         $this->call(StatueSeeder::class);
         $this->call(EtatSeeder::class);
         $this->call(BienSeeder::class);
+        $this->call(BienDetailSeeder::class);
  
     }
 }

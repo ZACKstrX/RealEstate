@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Bien;
+use App\Models\BienDetails;
 use App\Models\User;
 
 use Illuminate\Http\Request;
@@ -25,7 +26,9 @@ Route::get('test',function(){
 // $data = Bien::with('user','city','typeBien','etat')
 // ->get();
 
-    $data = User::with('biens')->get();
+    // $data = User::with('biens')->get();
+    $data = Bien::with('bienDetail')->get();
+        // $data = BienDetails::with('bien')->get();
 
     return response()->json($data);
 });

@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class BienDetails extends Model
 {
@@ -12,10 +14,10 @@ class BienDetails extends Model
         'baths',
         'parages',
         'balconies',
-        'description',
-        'phone_number',
-        'email',
-        'bien_id'
+         'bien_id'
     ];
+    public function bien() :BelongsTo{
+        return $this->belongsTo(Bien::class,'bien_id');
+    }
     use HasFactory;
 }

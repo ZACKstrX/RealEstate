@@ -20,12 +20,12 @@ return new class extends Migration
             $table->integer('surface')->nullable();
             $table->string('image')->nullable();
             $table->integer('prix');
-            $table->foreignId('city_id')->constrained('cities');
-            $table->foreignId('type_bien_id')->constrained('type_biens');
-            $table->foreignId('status_id')->constrained('statuses');
-            $table->foreignId('user_id')->constrained('users');
-            $table->foreignId('etat_id')->constrained('etats');
-            $table->timestamps();
+            $table->foreignId('city_id')->nullable()->constrained('cities');
+            $table->foreignId('type_bien_id')->nullable()->constrained('type_biens');
+            $table->foreignId('status_id')->nullable()->constrained('statuses');
+            $table->foreignId('user_id')->nullable()->constrained('users');
+            $table->foreignId('etat_id')->nullable()->constrained('etats');
+             $table->timestamps();
         });
     }
 
