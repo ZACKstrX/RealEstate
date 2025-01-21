@@ -13,8 +13,12 @@ return new class extends Migration
     {
         Schema::create('biens', function (Blueprint $table) {
             $table->id();
-            $table->integer('surface');
-            $table->integer('image');
+            $table->string('title');
+            $table->text("description")->nullable();
+            $table->string('phone_number');
+            $table->string('email');
+            $table->integer('surface')->nullable();
+            $table->string('image')->nullable();
             $table->integer('prix');
             $table->foreignId('city_id')->constrained('cities');
             $table->foreignId('type_bien_id')->constrained('type_biens');
