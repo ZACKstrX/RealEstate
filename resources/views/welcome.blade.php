@@ -46,12 +46,29 @@
         </nav>
 
         <div class="header-image">
-           <h1>Yafin</h1>
-           <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+            <div class="hero-content">
+
+                <div class="container" style="height: 100%">
+                        <div class="hero-slide"> 
+                            <div class="hero-title">
+                                <h1 class="title">Find Your Home Here </h1>
+                                <p class="sous-title"><i>Discover the perfect</br>
+                                                         property for your needs.</br>
+                                                          Browse homes, lands, and more</br>
+                                                          in just a few clicks!</i></p>
+                            </div>
+                            <form class="search" role="search">
+                                <input class="form-control form-control-sm me-2" type="search" placeholder="Search" aria-label="Search"
+                                  >
+                                <button class="btn btn-success"  type="submit">Search</button>   
+                             </form>
+                        </div>
+                   
+                </div>
+             </div>
         </div>
+        
     </div>
+<h1>ouuf</h1>
 </body>
 </html>
