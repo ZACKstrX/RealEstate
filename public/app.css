@@ -120,3 +120,41 @@
     opacity: 0.5;
 
 }
+.invitation{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    width: auto;
+    height: 60vh;  
+}
+.title2{
+ 
+    color: #BC4749;
+    font-size: 30px;
+    font-weight: 900;
+    
+}
+.sous-title2{
+    font-family: 'Poppins';
+    color: #BC4749;
+    font-size: 20px;
+    font-weight: 400;
+}
+.buisnessMen{
+ width: 300px;
+ height: auto;
+ /* border-width: ;
+ border-color: ;
+ border-style: ; */
+border: 15px #BC4749 solid; 
+border-radius:  5%;
+transition: 1s;
+
+}
+.buisnessMen:hover{
+   
+    transform: rotate(-10deg);
+   }

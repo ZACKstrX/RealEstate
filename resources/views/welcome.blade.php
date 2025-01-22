@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Dear Client</title>
+    <title>GreenLeaf Estates</title>
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
@@ -32,7 +32,7 @@
                     <ul class="navbar-nav ms-auto">
                         
                         <li class="nav-item">
-                            <a class="nav-link " href="#"><button type="button " class="buttonhover buttonfocus btn dark-green " ><strong class="wordhover">Log in</strong></button></a>
+                            <a class="nav-link " href="#"><button type="button " class="buttonhover buttonfocus btn dark-green " ><strong class="wordhover">Sign in</strong></button></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#"><button type="button" class="buttonhover buttonfocus btn dark-green " ><strong class="wordhover">Sign Up</strong></button></a>
@@ -41,7 +41,7 @@
                 </div>
             </div>
         </nav>
-
+                                            <!--navbar end-->
         <div class="header-image">
             <div class="hero-content">
 
@@ -68,6 +68,22 @@
     </div>
 
                                                 <!-- the header of the page ending -->
-<h1></h1>
+<div class="invitation">
+    <div>
+        <img class="buisnessMen" src="./images/buisnessMen.jpeg" >
+    </div>
+
+    <div class="invit">
+        <h1 class="title2" >Sign in for a better experience </h1>
+        <p class="sous-title2"><strong><i>Be able to easily post and manage your real estate and land listings.</br>
+                                                        Reach more potential buyers,</br> track your listings, and enjoy a seamless experience tailored to your needs.</br>
+                                                        Start selling your properties today with ease!</p></i></strong>
+    </div>
+
+
+
+</div>
+
+
 </body>
 </html>
