@@ -9,7 +9,10 @@
     height: 80px;
     z-index: 2;
 }
-
+.logo-nav{
+    height: 50px;
+    width: auto;
+}
  
 
 
@@ -33,7 +36,7 @@
     width: 100%;
     height: 100%;
     background-color: rgb(9, 26, 9);
-    opacity: 0.4;
+    opacity: 0.5;
     z-index: 1;
 
 }
@@ -85,8 +88,35 @@
 
 @media only screen and (max-width:770px) {
     .hero-slide{
-        
+    
         flex-direction: column-reverse; 
        
     }
+}
+
+.bg-parchment{
+    background-color: #F2E8CF;
+}
+.dark-green{
+    background-color: #6a994e;
+}
+.inputhover:hover{      /* to make the elements coler in the coller bellow while puting the mouse on it */
+    background-color:#F2E8CF;
+}
+.inputfocus:focus{      /* to make the elements coler in the coller bellow while clicking on it */
+    background-color:#F2E8CF;   
+}
+.buttonhover:hover{
+    background-color: #6a994e;
+    opacity: 0.9;
+    
+}
+.buttonfocus:focus{
+    background-color: #6a994e;
+}
+
+.wordhover:hover{
+    color: black;
+    opacity: 0.5;
+
 }

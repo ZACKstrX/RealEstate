@@ -11,34 +11,31 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker.min.css" rel="stylesheet">
     <link href="./app.css" rel="stylesheet"> 
 </head>
-<body>
+<body class="bg-parchment">
     <div class="header-container">
        
-        <nav class="nav navbar navbar-expand-lg bg-success" data-bs-theme="dark">
+        <nav class="nav navbar navbar-expand-lg bg-parchment" data-bs-theme="dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Logements</a>
+                <div><img class="logo-nav" src="./images/logo.png" alt=""><a class="navbar-brand" href="#"></a></div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Homes</a>
+                            <a class="nav-link" href="#" style="color:#6a994e" ><strong class="wordhover">Homes</strong></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Lands</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                            <a class="nav-link" href="#"style="color:#6a994e"><strong class="wordhover">Lands</strong></a>
                         </li>
                     </ul>
                     <ul class="navbar-nav ms-auto">
                         
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link " href="#"><button type="button " class="buttonhover buttonfocus btn dark-green " ><strong class="wordhover">Log in</strong></button></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Sign Up</a>
+                            <a class="nav-link" href="#"><button type="button" class="buttonhover buttonfocus btn dark-green " ><strong class="wordhover">Sign Up</strong></button></a>
                         </li>
                     </ul>
                 </div>
@@ -51,16 +48,16 @@
                 <div class="container" style="height: 100%">
                         <div class="hero-slide"> 
                             <div class="hero-title">
-                                <h1 class="title">Find Your Home Here </h1>
-                                <p class="sous-title"><i>Discover the perfect</br>
+                                <h1 class="title" style="color: #F2E8CF">Find Your Home Here </h1>
+                                <p class="sous-title" style="color: #F2E8CF"><i>Discover the perfect</br>
                                                          property for your needs.</br>
                                                           Browse homes, lands, and more</br>
                                                           in just a few clicks!</i></p>
                             </div>
                             <form class="search" role="search">
-                                <input class="form-control form-control-sm me-2" type="search" placeholder="Search" aria-label="Search"
+                                <input class="form-control form-control-sm me-2 bg-parchment inputfocus inputhover" type="search" placeholder="Search" aria-label="Search"
                                   >
-                                <button class="btn btn-success"  type="submit">Search</button>   
+                                <button class="btn dark-green buttonhover buttonfocus "  type="submit" style="color: white"><strong class="wordhover">Search</strong></button>   
                              </form>
                         </div>
                    
@@ -69,6 +66,8 @@
         </div>
         
     </div>
-<h1>ouuf</h1>
+
+                                                <!-- the header of the page ending -->
+<h1></h1>
 </body>
 </html>
