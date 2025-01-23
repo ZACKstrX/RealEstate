@@ -100,15 +100,16 @@
 .dark-green{
     background-color: #6a994e;
 }
-.inputhover:hover{      /* to make the elements coler in the coller bellow while puting the mouse on it */
+.mybtn2:hover{      /* to make the elements coler in the coller bellow while puting the mouse on it */
     background-color:#F2E8CF;
+    opacity: 0.9;
 }
-.inputfocus:focus{      /* to make the elements coler in the coller bellow while clicking on it */
+.mybtn2:focus{      /* to make the elements coler in the coller bellow while clicking on it */
     background-color:#F2E8CF;   
+    opacity: 0.9;
 }
 .mybtn:hover{
     background-color: #6a994e;
-    opacity: 0.9;
     
 }
 .mybtn:focus{
@@ -178,9 +179,17 @@ justify-content: space-around;
 background-color: #6a994e;
 border: 15px  #6a994e solid; 
 border-radius:  5%;
-height: 420px;
-width: 200px;
+height: 450px;
+width: 350px;
 }
 .card-content{
     align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.card-text{
+    color: #F2E8CF;
+}
+.green-text{
+    color: #6a994e;
 }
