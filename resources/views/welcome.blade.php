@@ -68,18 +68,20 @@
     </div>
 
                                                 <!-- the header of the page ending -->
-<div class="invitation">
+<div class="invitation" >
     <div>
         <img class="buisnessMen" src="./images/buisnessMen.jpeg" >
     </div>
 
     <div class="invit">
         <h1 class="title2" >Sign in for a better experience </h1>
-        <p class="sous-title2"><strong><i>Be able to easily post and manage your real estate and land listings.</br>
-                                                        Reach more potential buyers,</br> track your listings, and enjoy a seamless experience tailored to your needs.</br>
-                                                        Start selling your properties today with ease!</p></i></strong>
+        <p class="sous-title2" ><strong><i>Be able to easily post and manage your real estate and land listings.</br>
+                                          Reach more potential buyers,</br> 
+                                          track your listings, and enjoy a seamless experience tailored to your needs.</br>
+                                          Start selling your properties today with ease!</p></i></strong>
+             <a class="nav-link" href="#"><button type="button" class=" btn bg-parchment inputhover inputfocus" ><strong class="wordhover" style="color: #6a994e">Sign Up</strong></button></a>
     </div>
-
+                                        <!--end of invitation-->
 
 
 </div>

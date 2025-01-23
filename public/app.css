@@ -121,6 +121,7 @@
 
 }
 .invitation{
+    background-color: #6a994e;
     display: flex;
     justify-content: center;
     justify-content: space-around;
@@ -132,14 +133,14 @@
 }
 .title2{
  
-    color: #BC4749;
     font-size: 30px;
     font-weight: 900;
+    color: #F2E8CF;
     
 }
 .sous-title2{
     font-family: 'Poppins';
-    color: #BC4749;
+    color: #F2E8CF;
     font-size: 20px;
     font-weight: 400;
 }
@@ -149,12 +150,12 @@
  /* border-width: ;
  border-color: ;
  border-style: ; */
-border: 15px #BC4749 solid; 
+border: 15px #F2E8CF solid; 
 border-radius:  5%;
 transition: 1s;
-
+transform: rotate(-7deg);
 }
-.buisnessMen:hover{
+/* .buisnessMen:hover{    Rotation while touching with mouse 
    
     transform: rotate(-10deg);
-   }
+   } */
