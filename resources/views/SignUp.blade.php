@@ -16,10 +16,11 @@
         rel="stylesheet">
     <link rel="icon" href="./images/logo.png" type="image/png">
     <link href="./app.css" rel="stylesheet">
+    <link href="./SignUp.css" rel="stylesheet">
 </head>
 
 <body class="bg-parchment">
-    
+
     <nav class="nav navbar navbar-expand-lg red" data-bs-theme="dark">
         <div class="container-fluid">
             <div><img class="logo-nav" src="./images/logo.png" alt=""><a class="navbar-brand"
@@ -32,23 +33,31 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
 
-                        <a class="nav-link green-text" href="#"><strong class="wordhover card-text">Homes</strong></a>
+                        <a class="nav-link green-text" href="#"><strong
+                                class="wordhover card-text">Homes</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link green-text " href="#"><strong class="wordhover card-text">Lands</strong></a>
+                        <a class="nav-link green-text " href="#"><strong
+                                class="wordhover card-text">Lands</strong></a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ms-auto">
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"><button type="button"
-                                class="mybtn btn bg-parchment "><strong class="wordhover red-text">Sign
+                                class="mybtn2 btn bg-parchment "><strong class="wordhover red-text">Sign
                                     In</strong></button></a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    {{-- navbar end --}}
+
+
+    <div class="house">
+        <img src="./images/GreenGuy.jpg" class="img">
+    </div>
 
 </body>
 

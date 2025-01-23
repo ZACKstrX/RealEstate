@@ -1,0 +1,12 @@
+.contain{
+    height: 70vh;
+    width: auto;
+    
+}
+.img{
+    width: 200vh;
+    height: auto;
+    object-fit: cover; 
+    display: block; 
+    position: relative;
+}
