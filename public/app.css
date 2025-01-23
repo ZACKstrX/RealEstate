@@ -100,6 +100,9 @@
 .dark-green{
     background-color: #6a994e;
 }
+.red{
+    background-color: #bc4749;
+}
 .mybtn2:hover{      /* to make the elements coler in the coller bellow while puting the mouse on it */
     background-color:#F2E8CF;
     opacity: 0.9;
@@ -192,6 +195,9 @@ width: 350px;
 }
 .green-text{
     color: #6a994e;
+}
+.red-text{
+    color: #bc4749;
 }
 
 
