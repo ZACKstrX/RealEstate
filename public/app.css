@@ -106,12 +106,12 @@
 .inputfocus:focus{      /* to make the elements coler in the coller bellow while clicking on it */
     background-color:#F2E8CF;   
 }
-.buttonhover:hover{
+.mybtn:hover{
     background-color: #6a994e;
     opacity: 0.9;
     
 }
-.buttonfocus:focus{
+.mybtn:focus{
     background-color: #6a994e;
 }
 
@@ -152,10 +152,35 @@
  border-style: ; */
 border: 15px #F2E8CF solid; 
 border-radius:  5%;
-transition: 1s;
+/* transition: 1s; */
 transform: rotate(-7deg);
 }
 /* .buisnessMen:hover{    Rotation while touching with mouse 
    
     transform: rotate(-10deg);
    } */
+
+.cards{
+display: flex;
+justify-content: center;
+align-items: center;
+justify-content: space-around;
+background-color: #F2E8CF;
+width: auto;
+height: 70vh;
+}
+
+.card{ 
+display:flex;
+align-items: center;
+flex-direction: column;
+justify-content: space-around;
+background-color: #6a994e;
+border: 15px  #6a994e solid; 
+border-radius:  5%;
+height: 420px;
+width: 200px;
+}
+.card-content{
+    align-items: center;
+}

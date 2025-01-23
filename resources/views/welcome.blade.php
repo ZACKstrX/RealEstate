@@ -9,6 +9,7 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <link rel="icon" href="./images/logo.png" type="image/png">
     <link href="./app.css" rel="stylesheet"> 
 </head>
 <body class="bg-parchment">
@@ -32,10 +33,10 @@
                     <ul class="navbar-nav ms-auto">
                         
                         <li class="nav-item">
-                            <a class="nav-link " href="#"><button type="button " class="buttonhover buttonfocus btn dark-green " ><strong class="wordhover">Sign in</strong></button></a>
+                            <a class="nav-link " href="#"><button type="button " class="mybtn btn dark-green " ><strong class="wordhover">Sign in</strong></button></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><button type="button" class="buttonhover buttonfocus btn dark-green " ><strong class="wordhover">Sign Up</strong></button></a>
+                            <a class="nav-link" href="#"><button type="button" class="mybtn btn dark-green " ><strong class="wordhover">Sign Up</strong></button></a>
                         </li>
                     </ul>
                 </div>
@@ -81,10 +82,32 @@
                                           Start selling your properties today with ease!</p></i></strong>
              <a class="nav-link" href="#"><button type="button" class=" btn bg-parchment inputhover inputfocus" ><strong class="wordhover" style="color: #6a994e">Sign Up</strong></button></a>
     </div>
-                                        <!--end of invitation-->
+</div>                                   <!--end of invitation-->
 
+<div class="cards">
+    <div class="card" style="width: 18rem;">
+        <img src="./images/buy.png " style="width: 150px; height:150px;">
+        <div class="card-content">
+          <h3 class="card-title" style="color: #F2E8CF"> Buy a home</h3>
+          <p class="card-text" style="color: #F2E8CF"><strong><i>Find your place with an immersive photo experience and the most listings, including things you won’t find anywhere else.</i> </strong></p>
+        </div>
+        <div> <a href="#" class="mybtn btn dark-green" style="background-color: #F2E8CF"><strong style="color:  #6a994e">Browse homes</strong></a></div>
+      </div>
+
+      <div class="cards">
+        <div class="card" style="width: 18rem;">
+            <img src="./images/sell.png " style="width: 150px; height:150px;">
+            <div class="card-content">
+              <h3 class="card-title" style="color: #F2E8CF">Sell a home</h3>
+              <p class="card-text" style="color: #F2E8CF"><strong><i> No matter what path you take to sell your home, we can help you navigate a successful sale.</i> </strong></p>
+            </div>
+            <div> <a href="#" class="mybtn btn dark-green" style="background-color: #F2E8CF"><strong style="color:  #6a994e">Post it Now !</strong></a></div>
+          </div>
+
+      
 
 </div>
+
 
 
 </body>
