@@ -8,6 +8,9 @@
     <title>GreenLeaf Estates</title>
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker.min.css"
         rel="stylesheet">
@@ -29,12 +32,10 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link green-text" href="#"><strong
-                                    class="wordhover">Homes</strong></a>
+                            <a class="nav-link green-text" href="#"><strong class="wordhover">Homes</strong></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link green-text " href="#"><strong
-                                    class="wordhover">Lands</strong></a>
+                            <a class="nav-link green-text " href="#"><strong class="wordhover">Lands</strong></a>
                         </li>
                     </ul>
                     <ul class="navbar-nav ms-auto">
@@ -60,8 +61,8 @@
                 <div class="container" style="height: 100%">
                     <div class="hero-slide">
                         <div class="hero-title">
-                            <h1 class="title" class="card-text">Find Your Home Here </h1>
-                            <p class="sous-title" class="card-text"><i>Discover the perfect</br>
+                            <h1 class="title">Find Your Home Here </h1>
+                            <p class="sous-title"><i>Discover the perfect</br>
                                     property for your needs.</br>
                                     Browse homes, lands, and more</br>
                                     in just a few clicks!</i></p>
@@ -70,7 +71,7 @@
                             <input class="form-control form-control-sm me-2 bg-parchment inputfocus inputhover"
                                 type="search" placeholder="Search" aria-label="Search">
                             <button class="btn dark-green mybtn " type="submit"><strong
-                                    class="wordhover">Search</strong></button>
+                                    class="wordhover card-text">Search</strong></button>
                         </form>
                     </div>
 
@@ -88,13 +89,13 @@
 
         <div class="invit">
             <h1 class="title2">Sign in for a better experience </h1>
-            <p class="sous-title2"><strong><i>Be able to easily post and manage your real estate and land listings.</br>
+            <p class="sous-title2"><b><i>Be able to easily post and manage your real estate and land listings.</br>
                         Reach more potential buyers,</br>
                         track your listings, and enjoy a seamless experience tailored to your needs.</br>
-                        Start selling your properties today with ease!</p></i></strong>
-            <a class="nav-link" href="#"><button type="button"
-                    class=" btn bg-parchment mybtn2"><strong class="wordhover green-text">Sign
-                        Up</strong></button></a>
+                        Start selling your properties today with ease!</p></i></b>
+            <a class="nav-link" href="#"><button type="button" class=" btn bg-parchment mybtn2"><b
+                        class="wordhover green-text">Sign
+                        Up</b></button></a>
         </div>
     </div> <!--end of invitation-->
 
@@ -105,24 +106,25 @@
             <img src="./images/sell.png " style="width: 150px; height:150px;">
             <div class="card-content">
                 <h3 class="card-text">Sell a home</h3>
-                <p class="card-text"><strong><i> No matter what path you take to sell your
-                            home, we can help you navigate a successful sale.</i> </strong></p>
+                <p class="card-text"><b><i> No matter what path you take to sell your
+                            home, we can help you navigate a successful sale.</i> </b></p>
             </div>
-            <div> <a href="#" class="mybtn2 btn bg-parchment"><strong class="green-text">Post it Now
-                        !</strong></a></div>
+            <div> <a href="#" class="mybtn2 btn bg-parchment"><b class="green-text">Post it Now
+                        !</b></a></div>
         </div>
         <div class="card">
             <img src="./images/buy.png " style="width: 150px; height:150px;">
             <div class="card-content">
                 <h3 class="card-text">Join the community</h3>
-                <p class="card-text"><strong><i> Join a network of homeowners, buyers, and sellers in our vibrant
+                <p class="card-text"><b><i> Join a network of homeowners, buyers, and sellers in our vibrant
                             community.
                             We’re here to support you with resources, insights, and local connections to help you every
-                            step of the way.</i> </strong></p>
+                            step of the way.</i> </b></p>
             </div>
-            <div> <button class="mybtn btn dark-green"></button></div>
+            <div> <a href="#" class="mybtn2 btn bg-parchment"><strong class="green-text">Sign up
+                    </strong></a></div>
         </div>
-        
+
         <div class="card">
             <img src="./images/home.png " style="width: 150px; height:150px;">
             <div class="card-content">
@@ -134,11 +136,22 @@
             <div> <a href="#" class="mybtn2 btn bg-parchment"><strong class="green-text">Browse
                         homes</strong></a></div>
         </div>
-
-
     </div> <!--End of cards-->
 
-
+    {{-- <i class="fa-brands fa-facebook" style="color: red"></i> --}}
+    <footer class="foot py-3 foot">
+        <div></div>
+        <div>
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"><b class="card-text">Home</b></a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"> <b class="card-text">Features</b></a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"><b class="card-text">Pricing</b></a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"><b class="card-text">FAQs</b></a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"><b class="card-text">About</b></a></li>
+            </ul>
+            <p class=" text-center text-body-secondary "><b class="card-text">&copy; 2024 Company, Inc</b> </p>
+        </div>
+    </footer>
 
 </body>
 

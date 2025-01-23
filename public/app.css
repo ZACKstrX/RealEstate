@@ -54,14 +54,14 @@
 }
 .title{
  
-    color: aliceblue;
+    color: #F2E8CF;
     font-size: 1000;
     font-weight: 900;
     
 }
 .sous-title{
  
-    color: aliceblue;
+    color: #F2E8CF;
     font-size: 30px;
     font-weight: 300px;
 }
@@ -192,4 +192,11 @@ width: 350px;
 }
 .green-text{
     color: #6a994e;
+}
+
+
+.foot{
+    width: auto;
+    height: 60vh;
+    background-color: #6a994e;
 }
