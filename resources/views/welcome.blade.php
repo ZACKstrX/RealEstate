@@ -29,11 +29,11 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#" style="color:#6a994e"><strong
+                            <a class="nav-link green-text" href="#"><strong
                                     class="wordhover">Homes</strong></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"style="color:#6a994e"><strong
+                            <a class="nav-link green-text " href="#"><strong
                                     class="wordhover">Lands</strong></a>
                         </li>
                     </ul>
@@ -111,7 +111,18 @@
             <div> <a href="#" class="mybtn2 btn bg-parchment"><strong class="green-text">Post it Now
                         !</strong></a></div>
         </div>
-
+        <div class="card">
+            <img src="./images/buy.png " style="width: 150px; height:150px;">
+            <div class="card-content">
+                <h3 class="card-text">Join the community</h3>
+                <p class="card-text"><strong><i> Join a network of homeowners, buyers, and sellers in our vibrant
+                            community.
+                            We’re here to support you with resources, insights, and local connections to help you every
+                            step of the way.</i> </strong></p>
+            </div>
+            <div> <button class="mybtn btn dark-green"></button></div>
+        </div>
+        
         <div class="card">
             <img src="./images/home.png " style="width: 150px; height:150px;">
             <div class="card-content">
@@ -125,17 +136,6 @@
         </div>
 
 
-        <div class="card">
-            <img src="./images/buy.png " style="width: 150px; height:150px;">
-            <div class="card-content">
-                <h3 class="card-text">Join the community</h3>
-                <p class="card-text"><strong><i> Join a network of homeowners, buyers, and sellers in our vibrant
-                            community.
-                            We’re here to support you with resources, insights, and local connections to help you every
-                            step of the way.</i> </strong></p>
-            </div>
-            <div> <button class="mybtn btn dark-green"></button></div>
-        </div>
     </div> <!--End of cards-->
 
 
