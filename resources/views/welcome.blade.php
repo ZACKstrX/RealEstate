@@ -138,18 +138,30 @@
         </div>
     </div> <!--End of cards-->
 
-    {{-- <i class="fa-brands fa-facebook" style="color: red"></i> --}}
     <footer class="foot py-3 foot">
-        <div></div>
+        <div>
+
+        </div>
         <div>
             <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"><b class="card-text">Home</b></a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"> <b class="card-text">Features</b></a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"><b class="card-text">Pricing</b></a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"><b class="card-text">FAQs</b></a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"><b class="card-text">About</b></a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"><b
+                            class="card-text">Terms of Use</b></a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"> <b
+                            class="card-text">Features</b></a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"><b
+                            class="card-text">Who are We ?</b></a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"><b
+                            class="card-text">FAQs</b></a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"><b
+                            class="card-text">About</b></a></li>
             </ul>
-            <p class=" text-center text-body-secondary "><b class="card-text">&copy; 2024 Company, Inc</b> </p>
+            <p class=" text-center text-body-secondary "><b class="card-text">&copy; 2024 GreenLeaf Estates, Inc</b> </p>
+            <div class="icons">
+                <i class="icon fa-brands fa-facebook" style="color: #F2E8CF"></i>
+                <i class="icon fa-brands fa-instagram" style="color: #F2E8CF"></i>
+                <i class="icon fa-brands fa-x-twitter" style="color: #F2E8CF"></i>
+            </div>
+
         </div>
     </footer>
 

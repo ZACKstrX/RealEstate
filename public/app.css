@@ -196,7 +196,19 @@ width: 350px;
 
 
 .foot{
+    display: flex;
+    flex-direction: column;
+    
     width: auto;
-    height: 60vh;
+    height: 30vh;
     background-color: #6a994e;
+}
+.icon{
+font-size: 28px;
+}
+.icons{
+    justify-content: center;
+display: flex;
+flex-direction: row;
+gap: 20px;
 }
