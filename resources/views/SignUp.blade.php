@@ -72,7 +72,8 @@
             <div class="row  mb-4">
                 <div class="form-group col-md-6">
                     <label for="inputEmail4"><b class="green-text">Email</b></label>
-                    <input type="email" class="form-control searchopacity" id="inputEmail4" name="email" placeholder="Email">
+                    <input type="email" class="form-control searchopacity" id="inputEmail4" name="email"
+                        placeholder="Email">
                 </div>
 
                 <div class="form-group col-md-6">
@@ -84,17 +85,23 @@
             </div>
             <div class="form-group  mb-4">
                 <label for="inputAddress "><b class="green-text">Address</b></label>
-                <input type="text" class="form-control searchopacity" id="inputAddress" name="adresse" placeholder="1234 Main St">
+                <input type="text" class="form-control searchopacity" id="inputAddress" name="adresse"
+                    placeholder="1234 Main St">
             </div>
 
 
-            <div>
-                <div class="form-group  mb-4 ">
+            <div class="row mb-4">
+                <div class="form-group  col-md-6 ">
                     <label for="inputPassword4"><b class="green-text">Password</b></label>
                     <input type="password" class="form-control searchopacity" id="inputPassword4" name="password"
                         placeholder="Password...">
                 </div>
 
+                <div class="form-group col-md-6">
+                    <label for="birthday"  ><b class="green-text">Birthday</b></label>
+                    <input name="birthday" id="birthday"     class="form-control    searchopacity" placeholder="Pick a Date"  >
+                  
+                </div>
 
             </div>
 
@@ -106,7 +113,8 @@
                     </label>
                 </div>
             </div>
-            <button type="button"   class="mybtn btn dark-green "><strong class="wordhover card-text">SignUp</strong></button>
+            <button type="button" class="mybtn btn dark-green "><strong
+                    class="wordhover card-text">SignUp</strong></button>
 
 
     </div>
@@ -115,9 +123,27 @@
 
     </form>
     </div>
-    </div>
+    </div>  
 
 
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous">
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#birthday').datepicker({
+                format: 'yyyy/mm/dd', 
+                endDate: '0d', 
+                autoclose: true, 
+                startView: 2,
+                todayHighlight: true 
+            });
+        });
+    </script>
+
 </html>
