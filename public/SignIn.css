@@ -1,0 +1,56 @@
+.bgimg{
+    z-index: 2;
+    background-image: url('./images/SignIn.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;  
+    height: 90vh; 
+    display: flex;
+    position: relative;
+    align-items: center;
+    
+}
+
+.bgimg::after{
+    z-index: 2;
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(9, 26, 9);
+    opacity: 0.4;
+    z-index: 1;
+}
+
+.SignInform{
+    align-items: center;
+    background-color:#F2E8CF;
+    border-radius: 10%;
+    height:550px;
+    width: 600px;
+    position: relative;
+    padding: 4rem;
+    z-index: 5;
+    left: 50px;
+
+}
+.CentredItems{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo-nav-bigger{
+    height: 90px;
+    width: auto;
+}
+.bgcText{
+    color: #006351;
+  }
+  .bgc{
+    background: #006351;
+  }
+.green-input{
+    color: #006351;
+}
