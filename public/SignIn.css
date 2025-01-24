@@ -64,3 +64,7 @@
 .green-input{
     color: #006351;
 }
+
+input::placeholder{
+    color: #044536 !important;
+}

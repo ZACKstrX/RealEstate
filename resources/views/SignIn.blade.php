@@ -45,7 +45,7 @@
                             </div>
                             <div class="form-group">
                             <label for="exampleInputPassword1"><b class="green-input"><i>Password</i> </b></label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            <input type="password" class="form-control tt" id="exampleInputPassword1" placeholder="Password">
                             </div>
                          </div>
                          
