@@ -86,9 +86,7 @@
 
 .search >div> input {
     
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 0px;
-    border-top-right-radius: 0px;
+    border-radius: 20px 0 0;
     border-left: #000000 solid 1px;
     border-bottom: #000000 solid 1px;
     border-top: #000000 solid 1px;
@@ -106,15 +104,39 @@
     border-top: #000000 solid 1px;
     border-left: 0;
 }
+
 .select{
     
     border: #000000 solid 1px;
-    border-bottom-right-radius: 20px;
-    border-top-left-radius: 20px;
+    border-radius: 20px 0 20px 0; /* good practice*/
     width: 90px;
     height: 50px;
-}
+    padding: 12px 24px 12px 12px;
+    appearance: none;
+    background-image: url(./images/caret-down.svg);
+    background-repeat:no-repeat ;
+    background-position: calc(100% - 12px) center ;
+    scrollbar-width: thin;
+    scrollbar-color: black transparent;
+    
 
+}
+.select::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  /* Track */
+  .select::-webkit-scrollbar-track {
+    border-radius: 3px;
+    background-color: transparent;
+  }
+   
+  /* Handle */
+  .select::-webkit-scrollbar-thumb {
+    background: #F2E8CF; 
+    border-radius: 10px;
+  }
+  
 @media only screen and (max-width:770px) {
     .hero-slide{
     

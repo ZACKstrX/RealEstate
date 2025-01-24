@@ -80,7 +80,13 @@
                                 <option value="">Rabat</option>
                                 <option value="">Tanger</option>
                                 <option value="">Marakech</option>
-                                <option value=""><Obj></Obj>Oujda</option>
+                                <option value="">Oujda</option>
+                                <option value="">Fes</option>
+                                <option value="">Rabat</option>
+                                <option value="">Tanger</option>
+                                <option value="">Marakech</option>
+                                <option value="">Oujda</option>
+                                
                               </select>
                             <div class="searshdiv">
                             <input class=" form-control-sm  bg-parchment noborder  fw-bold nooutlin"

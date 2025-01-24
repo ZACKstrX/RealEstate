@@ -22,3 +22,6 @@ Route::get('SignUp',function(){
 Route::get('SignIn',function(){
     return view('SignIn');
 });
+route::get('Dash', function(){
+    return view('DashBoard');
+});

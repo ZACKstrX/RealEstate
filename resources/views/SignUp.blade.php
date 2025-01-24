@@ -102,8 +102,8 @@
                 </div>
 
                 <div class="form-group col-md-6">
-                    <label for="birthday"  ><b class="green-text">Birthday</b></label>
-                    <input name="birthday" id="birthday"     class="form-control    searchopacity" placeholder="Pick a Date"  >
+                    <label for="birthday"  ><b class="green-text ">Birthday</b></label>
+                    <input name="birthday" id="birthday"     class="form-control searchopacity" placeholder="Pick a Date"  >
                   
                 </div>
 
