@@ -40,7 +40,7 @@
                         <div>
                             <div class="form-group">
                             <label for="exampleInputEmail1"><b class="green-input"> <i>Email address</i> </b> </label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            <input type="email" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                             </div>
                             <div class="form-group">
@@ -49,7 +49,7 @@
                             </div>
                          </div>
                          
-                        <button type="submit" class="mt-4 btn bgc"><b class="card-text"><i>Sign In</i> </b></button>
+                        <button type="submit" class="mt-4 btn bgc "><b class="card-text"><i>Sign In</i> </b></button>
                       </form>
                 </div>
 

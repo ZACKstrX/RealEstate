@@ -113,6 +113,7 @@
 }
 .mybtn:hover{
     background-color: #6a994e;
+    box-shadow: rgb(20, 30, 40) -30px 20px 40px -15px, rgb(20, 30, 40) -40px 20px 40px -15px;
     
 }
 .mybtn:focus{
@@ -175,6 +176,7 @@ height: 70vh;
 }
 
 .card{ 
+
 display:flex;
 align-items: center;
 flex-direction: column;
@@ -184,6 +186,13 @@ border: 15px  #6a994e solid;
 border-radius:  5%;
 height: 450px;
 width: 350px;
+box-shadow: rgba(106, 153, 78, 0.4) -5px 5px, 
+            rgba(106, 153, 78, 0.3) -10px 10px, 
+            rgba(106, 153, 78, 0.2) -15px 15px, 
+            rgba(106, 153, 78, 0.1) -20px 20px, 
+            rgba(106, 153, 78, 0.05) -25px 25px;
+
+
 }
 .card-content{
     align-items: center;

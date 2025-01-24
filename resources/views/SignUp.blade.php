@@ -56,6 +56,10 @@
     <div class="img">
 
         <form class="form">
+            <div class="d-flex flex-column align-items-center ">
+                <img class="w-25" src="./images/logo.png" alt="">
+                    <h2 class="bgcText"><b><i><u>Sign Up</u></i> </b></h2>
+            </div>
             <div class="row mb-4">
                 <div class="col">
                     <label for="inputFirstName"><b class="green-text">First Name</b> </label>
