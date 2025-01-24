@@ -21,7 +21,7 @@
 
 <body class="bg-parchment">
 
-    <nav class="nav navbar navbar-expand-lg red" data-bs-theme="dark">
+    <nav class="nav navbar navbar-expand-lg bg-parchment" data-bs-theme="dark">
         <div class="container-fluid">
             <div><img class="logo-nav" src="./images/logo.png" alt=""><a class="navbar-brand"
                     href="#"></a></div>
@@ -32,22 +32,20 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-
-                        <a class="nav-link green-text" href="#"><strong
-                                class="wordhover card-text">Homes</strong></a>
+                        <a class="nav-link green-text" href="#"><strong class="wordhover">Homes</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link green-text " href="#"><strong
-                                class="wordhover card-text">Lands</strong></a>
+                        <a class="nav-link green-text " href="#"><strong class="wordhover">Lands</strong></a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ms-auto">
-                    </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><button type="button"
-                                class="mybtn2 btn bg-parchment "><strong class="wordhover red-text">Sign
-                                    In</strong></button></a>
+                        <a class="nav-link " href="#"><button type="button " class="mybtn btn dark-green "><strong
+                                    class="wordhover card-text">Sign
+                                    in</strong></button></a>
                     </li>
+
                 </ul>
             </div>
         </div>
@@ -55,10 +53,71 @@
     {{-- navbar end --}}
 
 
-    <div class="house">
-        <img src="./images/GreenGuy.jpg" class="img">
+    <div class="img">
+
+        <form class="form">
+            <div class="row mb-4">
+                <div class="col">
+                    <label for="inputFirstName"><b class="green-text">First Name</b> </label>
+                    <input type="text" class="form-control searchopacity"id="inputFirstName" name="first_name"
+                        placeholder="First name">
+                </div>
+                <div class="col">
+                    <label for="inputLastName"><b class="green-text">Last Name</b></label>
+                    <input type="text" class="form-control searchopacity"id="inputLastName" name="last_name"
+                        placeholder="Last name">
+                </div>
+
+            </div>
+            <div class="row  mb-4">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4"><b class="green-text">Email</b></label>
+                    <input type="email" class="form-control searchopacity" id="inputEmail4" name="email" placeholder="Email">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="inputPhoneNumber"><b class="green-text">Phone Number</b></label>
+                    <input type="password" class="form-control searchopacity" id="inputPhoneNumber" name="phone_number"
+                        placeholder="Password">
+                </div>
+
+            </div>
+            <div class="form-group  mb-4">
+                <label for="inputAddress "><b class="green-text">Address</b></label>
+                <input type="text" class="form-control searchopacity" id="inputAddress" name="adresse" placeholder="1234 Main St">
+            </div>
+
+
+            <div>
+                <div class="form-group  mb-4 ">
+                    <label for="inputPassword4"><b class="green-text">Password</b></label>
+                    <input type="password" class="form-control searchopacity" id="inputPassword4" name="password"
+                        placeholder="Password...">
+                </div>
+
+
+            </div>
+
+            <div class="form-group ">
+                <div class="form-check">
+                    <input class="form-check-input " type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                        <b class="green-text">Check me out</b>
+                    </label>
+                </div>
+            </div>
+            <button type="button"   class="mybtn btn dark-green "><strong class="wordhover card-text">SignUp</strong></button>
+
+
     </div>
 
-</body>
 
+
+    </form>
+    </div>
+    </div>
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </html>

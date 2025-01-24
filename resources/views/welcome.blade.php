@@ -68,10 +68,10 @@
                                     in just a few clicks!</i></p>
                         </div>
                         <form class="search" role="search">
-                            <input class="form-control form-control-sm me-2 bg-parchment inputfocus inputhover"
+                            <input class="form-control form-control-sm me-2 bg-parchment mybtn2"
                                 type="search" placeholder="Search" aria-label="Search">
                             <button class="btn dark-green mybtn " type="submit"><strong
-                                    class="wordhover card-text">Search</strong></button>
+                                    class="wordhover card-text ">Search</strong></button>
                         </form>
                     </div>
 
@@ -139,7 +139,7 @@
     </div> <!--End of cards-->
 
     <footer class="foot py-3 foot">
-        <div>
+        <div class="prefooter">
 
         </div>
         <div>
@@ -155,7 +155,8 @@
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"><b
                             class="card-text">About</b></a></li>
             </ul>
-            <p class=" text-center text-body-secondary "><b class="card-text">&copy; 2024 GreenLeaf Estates, Inc</b> </p>
+            <p class=" text-center text-body-secondary "><b class="card-text">&copy; 2024 GreenLeaf Estates, Inc</b>
+            </p>
             <div class="icons">
                 <i class="icon fa-brands fa-facebook" style="color: #F2E8CF"></i>
                 <i class="icon fa-brands fa-instagram" style="color: #F2E8CF"></i>

@@ -200,13 +200,15 @@ width: 350px;
     color: #bc4749;
 }
 
-
+.prefooter{
+    height: 40px;
+}
 .foot{
     display: flex;
     flex-direction: column;
     
     width: auto;
-    height: 30vh;
+    height:50vh;
     background-color: #6a994e;
 }
 .icon{

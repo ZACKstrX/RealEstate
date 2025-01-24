@@ -4,9 +4,59 @@
     
 }
 .img{
-    width: 200vh;
-    height: auto;
-    object-fit: cover; 
-    display: block; 
+    z-index: 2;
+    background-image: url('./images/GreenGuy.jpg');
+    background-size: cover; /* Or 'contain' if you want the full image visible */
+    background-position: center; /* Centers the image in the div */
+    width: 100%;  /* Use viewport width to cover the entire screen */
+    height: 90vh; /* Use viewport height to cover the entire screen */
+    display: flex;
     position: relative;
+    justify-content: flex-end;
+    align-items: center;
+    
 }
+
+
+.img::after{
+    z-index: 2;
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(9, 26, 9);
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.form{
+    align-items: center;
+    background-color:#F2E8CF;
+    border-radius: 10%;
+    height:600px;
+    width: 600px;
+    position: relative;
+    padding: 4rem;
+     z-index: 5;
+    right: 20px;
+}
+.sides{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.searchopacity{
+    border: black solid 2px ;
+    background-color: #A7C957;
+    opacity: 0.8;
+}
+
+input:focus::placeholder {
+    color: #6a994e;
+  }
+input:focus {
+    border-color: #6a994e !important;  
+    box-shadow: 0 0 0 0.2rem rgba(39, 242, 117, 0.25) !important;
+  }
