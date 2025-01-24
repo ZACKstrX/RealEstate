@@ -69,16 +69,25 @@
                         </div>
                         <form class="search" role="search">
 
-                            <select class="form-control form-control-lg" style="">
+                            <select class="select dark-green card-text fw-bold nooutlin">
                                 <option value="buy" selected>Buy</option>
                                 <option value="rent">Rent</option>
-                                <option value="lease">Lease</option>
                               </select>
-                              
-                            <input class="form-control form-control-sm me-2 bg-parchment mybtn2"
+                            
+                              <select class="select dark-green card-text fw-bold nooutlin">
+                                <option value="" selected>City</option>
+                                <option value="">Fes</option>
+                                <option value="">Rabat</option>
+                                <option value="">Tanger</option>
+                                <option value="">Marakech</option>
+                                <option value=""><Obj></Obj>Oujda</option>
+                              </select>
+                            <div class="searshdiv">
+                            <input class=" form-control-sm  bg-parchment noborder  fw-bold nooutlin"
                                 type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn dark-green mybtn " type="submit"><strong
+                            <button class=" " type="submit"><strong
                                     class="wordhover card-text ">Search</strong></button>
+                                </div>
                         </form>
                     </div>
 

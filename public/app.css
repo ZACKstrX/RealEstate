@@ -74,17 +74,46 @@
 }
 .search{
     display: flex;
+    gap: 10px;
     padding-top: 52px;    
   
 }
-.search > input {
+.searshdiv{
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+}
+
+.search >div> input {
+    
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    border-left: #000000 solid 1px;
+    border-bottom: #000000 solid 1px;
+    border-top: #000000 solid 1px;
+    border-right: 0;
     height: 50px;
     width: 300px;
 }
-.search > button {
+.search >div> button {
+    background-color: #6a994e;
+    border-bottom-right-radius: 20px;
+    
+    height: 50px;
+    border-right: #000000 solid 1px;
+    border-bottom: #000000 solid 1px;
+    border-top: #000000 solid 1px;
+    border-left: 0;
+}
+.select{
+    
+    border: #000000 solid 1px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    width: 90px;
     height: 50px;
 }
-searsh
 
 @media only screen and (max-width:770px) {
     .hero-slide{
@@ -124,6 +153,9 @@ searsh
     color: black;
     opacity: 0.5;
 
+}
+.noborder:focus{
+    border:0;
 }
 .invitation{
     background-color: #6a994e;
@@ -229,4 +261,9 @@ display: flex;
 flex-direction: row;
 gap: 20px;
 }
- /* ------------------------------------------------ */
+.nooutlin:focus-visible{
+    outline: none;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+} /* ------------------------------------------------ */
