@@ -51,19 +51,21 @@
 }
 .searchopacity{
     border: black solid 2px ;
-    background-color: #A7C957;
+    background-color: #5a9151;
     opacity: 0.8;
     
 }
 .searchopacity:hover{
     box-shadow: rgb(20, 30, 40) -30px 20px 40px -15px, rgb(20, 30, 40) -40px 20px 40px -15px;
+}
 
+input::placeholder{
+    color: #F2E8CF !important;
 }
 
 
-
 input:focus::placeholder {
-    color: #6a994e;
+    color: #6a994e !important;
     
   }
 input:focus {
@@ -71,4 +73,7 @@ input:focus {
     box-shadow: 0 0 0 0.2rem rgba(39, 242, 117, 0.25) !important;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; 
   }
+  .SignINc{
+    color: #5a9151;
+}   
   

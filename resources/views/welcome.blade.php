@@ -68,6 +68,13 @@
                                     in just a few clicks!</i></p>
                         </div>
                         <form class="search" role="search">
+
+                            <select class="form-control form-control-lg" style="">
+                                <option value="buy" selected>Buy</option>
+                                <option value="rent">Rent</option>
+                                <option value="lease">Lease</option>
+                              </select>
+                              
                             <input class="form-control form-control-sm me-2 bg-parchment mybtn2"
                                 type="search" placeholder="Search" aria-label="Search">
                             <button class="btn dark-green mybtn " type="submit"><strong
