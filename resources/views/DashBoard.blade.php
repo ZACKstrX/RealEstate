@@ -16,13 +16,19 @@
     <link href="./app.css" rel="stylesheet">
     <link href="./SignUp.css" rel="stylesheet">
     <link href="./SignIn.css" rel="stylesheet">
-    <link href="./dash.css" rel="stylesheet">
+    <link href="./sidebar.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
 
 <body class="bg-parchment">
-
+    <nav class="nav  navbar-expand-lg bg-parchment center" data-bs-theme="dark">
+        <div class="container-fluid signav d-flex justify-content-center">
+            <a class="navbar-brand" href="#">
+                <img class="logo-nav" src="./images/logo.png" alt="Logo">
+            </a>
+        </div>
+    </nav>
     
     <div class="sidebar">
 
@@ -75,11 +81,11 @@
         </ul>
     </div>
 
-    <div class="main-content">
+    {{-- <div class="main-content">
         <div class="container">
-            <h1>Code Commerce </h1>
+            <h1>GreenLeaf Estates </h1>
         </div>
-    </div>  
+    </div>   --}}
 
 </body>
 <script>
