@@ -41,7 +41,7 @@
         </div>
 
         <div class="user">
-            <img src="./images/SignUp.jpg" alt="me" class="user-img">
+            <img src="./images/profile.svg" alt="me" class="user-img">
             <div><p class="bold">Client B.</p>
             <p>Admin</p>
         </div>

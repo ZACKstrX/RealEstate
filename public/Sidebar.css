@@ -13,10 +13,12 @@ html, body {
 .user-img{
     width: 50px;
     border-radius: 100%;
-    border: 1px solid black;
+    border: 2px solid #000000;
+    background-color: #F2E8CF;
 }
 .sidebar{
     position:absolute;
+    border-right: #F2E8CF solid 2px;
     top: 0;
     left: 0;
     height:100vh;
@@ -156,4 +158,5 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-bottom: #6a994e 2px solid;
 }
