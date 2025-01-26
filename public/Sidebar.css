@@ -6,13 +6,17 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
+html, body {
+    height: 100vh; /* Set the height of the html and body to 100% */
+    margin: 0; 
+  }
 .user-img{
     width: 50px;
     border-radius: 100%;
     border: 1px solid black;
 }
 .sidebar{
-    position:relative;
+    position:absolute;
     top: 0;
     left: 0;
     height:100vh;
@@ -24,7 +28,7 @@
 }
 .sidebar.active ~ .main-content{
     left: 250px;
-    width: calc(100% -250px);
+    width: calc(100% - 250px);
 }
 .sidebar.active{
     width: 250px;
@@ -137,26 +141,14 @@
     display: none;
 }
 .main-content{
+    height: calc(100vh - 80px); 
     position: relative;
-    background-color: aqua;
-    /* min-height: 100vh; */
+    background-color: rgb(255, 255, 255);
     top: 0;
     left: 80px;
     transition: all 0.5s ease;
-    /* width: calc(100% - 80%); */
+    width: calc(100% - 80px);
     padding: 1rem;
-
-
-    
-        width: 100%;          /* Takes up the full width of its container */
-        height: 100vh;        /* Takes up the full height of the viewport */
-        overflow: hidden;     /* Hides any content that overflows */
-        display: flex;        /* Flexbox makes it responsive */
-        flex-direction: column;  /* Optional, based on content arrangement */
-        justify-content: center; /* Centers content vertically */
-        align-items: center;    /* Centers content horizontally */
-        box-sizing: border-box;  /* Includes padding and border in width/height calculation */
-
 }
 
 /* nav bar  */

@@ -81,11 +81,11 @@
         </ul>
     </div>
 
-    {{-- <div class="main-content">
+    <div class="main-content">
         <div class="container">
             <h1>GreenLeaf Estates </h1>
         </div>
-    </div>   --}}
+    </div>  
 
 </body>
 <script>
