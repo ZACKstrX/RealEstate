@@ -34,27 +34,26 @@ route::get('Dash', function(){
 
 
 // dash routes : 
-route::get('Type',function(){
+route::get('TypeList',function(){
     return view('type.list');
 });
 
 
-route::get('Cities',function(){
+route::get('CitiesList',function(){
     return view('cities.list');
 });
 
 
-route::get('Statut',function(){
+route::get('StatutList',function(){
     return view('statut.list');
 });
 
-
-route::get('Products',function(){
+//products routes
+route::get('ProductsList',function(){
     return view('products.list');
+    
+});route::get('ProductsForm',function(){
+    return view('products.form');
 });
 
-
-route::get('example',function(){
-    return view('example.list');
-});
 

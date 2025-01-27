@@ -51,25 +51,25 @@
             </div>
             <ul>
                   <li>
-                    <a href="/Products">
+                    <a href="/ProductsList">
                         <i class="bx bxs-shopping-bag"></i>
                         <span class="nav-item">Products</span>
                     </a>
                     <span class="tooltip">Products</span>
                 </li> <li>
-                    <a href="/Cities">
+                    <a href="/CitiesList">
                         <i class='bx bxs-city'></i>
                         <span class="nav-item">Cities</span>
                     </a>
                     <span class="tooltip">Cities</span>
                 </li> <li>
-                    <a href="Type">
+                    <a href="TypeList">
                         <i class="bx bx-list-check"></i>
                         <span class="nav-item">Type</span>
                     </a>
                     <span class="tooltip">Type</span>
                 </li><li>
-                    <a href="Statut">
+                    <a href="StatutList">
                         <i class='bx bx-cart-add'></i>
                         <span class="nav-item">Statut</span>
                     </a>
