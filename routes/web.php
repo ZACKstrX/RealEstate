@@ -23,5 +23,15 @@ Route::get('SignIn',function(){
     return view('SignIn');
 });
 route::get('Dash', function(){
-    return view('DashBoard');
+    return view('Type');
 });
+// dash routes : 
+route::get('Type',function(){
+    return view('Type');
+});
+route::get('Cities',function(){
+    return view('Cities');
+});route::get('Statut',function(){
+    return view('Statut');
+});
+ 

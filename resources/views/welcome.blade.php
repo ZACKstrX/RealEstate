@@ -15,6 +15,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker.min.css"
         rel="stylesheet">
     <link rel="icon" href="./images/logo.png" type="image/png">
+    
+    <link href="./css/bootstrap.css" rel="stylesheet" />
     <link href="./app.css" rel="stylesheet">
 </head>
 
@@ -81,12 +83,6 @@
                                 <option value="">Tanger</option>
                                 <option value="">Marakech</option>
                                 <option value="">Oujda</option>
-                                <option value="">Fes</option>
-                                <option value="">Rabat</option>
-                                <option value="">Tanger</option>
-                                <option value="">Marakech</option>
-                                <option value="">Oujda</option>
-                                
                               </select>
                             <div class="searshdiv">
                             <input class=" form-control-sm  bg-parchment noborder  fw-bold nooutlin"
@@ -187,7 +183,8 @@
 
         </div>
     </footer>
+    <script src="./js/bootstrap.js">
+    </script> 
 
 </body>
-
 </html>
