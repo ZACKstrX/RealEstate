@@ -11,14 +11,22 @@
         <tbody>
           <tr>
             <td>On loan</td>
+            <td><a class="btn btn-secondary me-3">Update</a>
+              <a  class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this restaurant?')">Delete</a></td>
           </tr>
           <tr>
             <td>for loan</td>
+            <td><a class="btn btn-secondary me-3">Update</a>
+              <a  class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this restaurant?')">Delete</a></td>
           </tr>
           <tr>
             <td>for sell</td>
+            <td><a class="btn btn-secondary me-3">Update</a>
+              <a  class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this restaurant?')">Delete</a></td>
           </tr><tr>
             <td>buyed</td>
+            <td><a class="btn btn-secondary me-3">Update</a>
+              <a  class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this restaurant?')">Delete</a></td>
           </tr>
         </tbody>
       </table>
