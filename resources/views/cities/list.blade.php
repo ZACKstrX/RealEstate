@@ -2,7 +2,7 @@
 
 <div class="container">
     <h1>Type : </h1>
-    <table class="table table-striped ">
+    <table class="table table-striped " style="">
         <thead>
           <tr>
             <th scope="col">Name</th>

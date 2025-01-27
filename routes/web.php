@@ -16,27 +16,45 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
 Route::get('SignUp',function(){
     return view('SignUp');
 });
+
+
 Route::get('SignIn',function(){
     return view('SignIn');
 });
+
+
 route::get('Dash', function(){
-    return view('Type');
+    return view('type.list');
 });
+
+
 // dash routes : 
 route::get('Type',function(){
-    return view('Type');
+    return view('type.list');
 });
+
+
 route::get('Cities',function(){
-    return view('Cities');
+    return view('cities.list');
 });
+
+
 route::get('Statut',function(){
-    return view('Statut');
+    return view('statut.list');
 });
+
+
 route::get('Products',function(){
-    return view('Products');
+    return view('products.list');
 });
- 
- 
+
+
+route::get('example',function(){
+    return view('example.list');
+});
+

@@ -2,7 +2,7 @@
 
 <div class="container">
     <h1>Type : </h1>
-    <table class="table table-striped ">
+    <table class="table table-striped " fit>
         <thead>
           <tr>
             <th scope="col">Name</th>
@@ -16,8 +16,8 @@
               <a  class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this restaurant?')">Delete</a></td>
           </tr>
           <tr>
-            <td>Apartment</td>
-            <td><a class="btn btn-secondary me-3">Update</a>
+            <td >Apartment</td>
+            <td ><a class="btn btn-secondary me-3">Update</a>
               <a  class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this restaurant?')">Delete</a></td>
           </tr>
           <tr>
