@@ -31,7 +31,12 @@ route::get('Type',function(){
 });
 route::get('Cities',function(){
     return view('Cities');
-});route::get('Statut',function(){
+});
+route::get('Statut',function(){
     return view('Statut');
 });
+route::get('Products',function(){
+    return view('Products');
+});
+ 
  

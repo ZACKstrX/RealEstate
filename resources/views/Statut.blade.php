@@ -5,6 +5,7 @@
         <thead>
           <tr>
             <th scope="col">Name :</th>
+            <th scope="col">operations :</th>
           </tr>
         </thead>
         <tbody>

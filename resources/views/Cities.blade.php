@@ -5,21 +5,27 @@
         <thead>
           <tr>
             <th scope="col">Name</th>
+            <th scope="col">Operations</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Fes</td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <td>Rabat</td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <td>Tanger</td>
+            <td></td>
+            <td></td>
           </tr><tr>
-            <td>Marakech</td>
+            <td></td>
+            <td></td>
           </tr><tr>
-            <td>Oujda</td>
+            <td></td>
+            <td></td>
           </tr>
           
         </tbody>

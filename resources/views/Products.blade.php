@@ -4,25 +4,50 @@
     <table class="table table-striped ">
         <thead>
           <tr>
-            <th scope="col">title :</th>
-            <th scope="col">surface :</th>
-            <th scope="col">prix :</th>
-            <th scope="col">city :</th>
-            <th scope="col">Name :</th>
-            <th scope="col">Name :</th>
+            <th scope="col">Title </th>
+            <th scope="col">Surface </th>
+            <th scope="col">Price </th>
+            <th scope="col">City </th>
+            <th scope="col">Product Type </th>
+            <th scope="col">Owner </th>
+            <th scope="col">oaperations </th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>On loan</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <td>for loan</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <td>for sell</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr><tr>
-            <td>buyed</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td> 
+            <td></td>
+            <td></td>
           </tr>
         </tbody>
       </table>
