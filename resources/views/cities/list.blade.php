@@ -1,12 +1,13 @@
 @include('template.header')
 
 <div class="container">
-    <h1>Cities : </h1>
+  <div class="d-flex justify-content-between mb-5"><h1>Cities :</h1> <a class="btn btn-success ">Add City</a> </div>
     <table class="table table-striped " style="">
         <thead>
           <tr>
             <th scope="col">Name</th>
             <th scope="col">operations</th>
+            
           </tr>
         </thead>
         <tbody>

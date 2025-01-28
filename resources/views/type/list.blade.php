@@ -1,7 +1,7 @@
 @include('template.header')
 
 <div class="container">
-    <h1>Type : </h1>
+  <div class="d-flex justify-content-between mb-5"><h1>Types :</h1> <a class="btn btn-success ">Add Type</a> </div>
     <table class="table table-striped " fit>
         <thead>
           <tr>

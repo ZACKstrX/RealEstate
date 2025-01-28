@@ -1,6 +1,6 @@
 @include('template.header')
-<div class="container">
-    <h1>Products :</h1>
+<div class="container">  
+    <div class="d-flex justify-content-between mb-5"><h1>Products :</h1> <a class="btn btn-success ">Add Product</a> </div>
     <table class="table table-striped ">
         <thead>
           <tr>
@@ -11,7 +11,7 @@
             <th scope="col">Product Type </th>
             <th scope="col">Owner </th>
             <th scope="col d-flex row gap">oaperations </th>
-            <th> <a class="btn btn-secondary me-3">Update</a></th>
+            
           </tr>
         </thead>
         <tbody>

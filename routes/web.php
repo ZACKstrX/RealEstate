@@ -47,9 +47,6 @@ route::get('CitiesList',function(){
 route::get('StatutList',function(){
     return view('statut.list');
 });
-route::get('StatutForm',function(){
-    return view('statut.form');
-});
 
 //Products routes
 route::get('ProductsList',function(){

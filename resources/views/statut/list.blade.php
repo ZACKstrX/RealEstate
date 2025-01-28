@@ -1,6 +1,6 @@
 @include('template.header')
 <div class="container">
-    <h1>Statut :</h1>
+  <div class="d-flex justify-content-between mb-5"><h1>Statut :</h1> <a class="btn btn-success ">Add Statut </a> </div> <!--Model to create-->
     <table class="table table-striped ">
         <thead>
           <tr>
