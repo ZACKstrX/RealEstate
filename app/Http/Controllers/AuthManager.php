@@ -27,21 +27,23 @@ class AuthManager extends Controller
 
     public function signup(Request $request){
         $request->validate([
-            'first_name'=>['required',],
+            'first_name'=>['required'],
             'last_name'=>['required'],
             'phone_number'=>'required',
             'email'=>'required',
             'password'=>'required'
         ]);
-        $User = User::create([
-        'first_name' => $request->firstname,
-        'last_name' => $request->lastname,
-        'phone_number' => $request->phone_number,
-        'email' => $request->email,
-        'password' => $request->password,
-        'adresse'=> $request->adresse,
-        'birthday'=>$request->birthday
-        ]);
+        $User = User::create($request->all());
+
+        // [
+        //     'first_name' => $request->first_name,
+        //     'last_name' => $request->last_name,
+        //     'phone_number' => $request->phone_number,
+        //     'email' => $request->email,
+        //     'password' => $request->password,
+        //     'adresse'=> $request->adresse,
+        //     'birthday'=>$request->birthday
+        //     ]
         return redirect('/login');
         
     }

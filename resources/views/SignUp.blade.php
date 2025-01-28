@@ -55,7 +55,8 @@
 
     <div class="img">
 
-        <form class="form">
+        <form class="form" method="POST" action="/signup">
+            @csrf
             <div class="d-flex flex-column align-items-center ">
                 <img class="w-25" src="./images/logo.png" alt="">
                 <h2 class="SignINc"><b><i><u>Sign Up</u></i> </b></h2>
@@ -82,8 +83,8 @@
 
                 <div class="form-group col-md-6">
                     <label for="inputPhoneNumber"><b class="green-text">Phone Number</b></label>
-                    <input type="password" class="form-control searchopacity" id="inputPhoneNumber" name="phone_number"
-                        placeholder="Password">
+                    <input type="text" class="form-control searchopacity" id="inputPhoneNumber" name="phone_number"
+                        placeholder="Phone Number">
                 </div>
 
             </div>
@@ -118,10 +119,7 @@
                     </label>
                 </div>
             </div>
-            <button type="button" class="mybtn btn dark-green "><strong
-                    class="wordhover card-text">SignUp</strong></button>
-
-
+            <button type="submit" class="mybtn btn dark-green "><strong class="wordhover card-text">SignUp</strong></button>
     </div>
 
 

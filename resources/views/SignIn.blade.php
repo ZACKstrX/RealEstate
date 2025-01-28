@@ -36,7 +36,7 @@
                     <img class="logo-nav-bigger" src="./images/logo.png" alt="">
                     <h1 class="bgcText "><b><i><u>Sign In</u></i> </b></h1>
 
-                    <form class="CentredItems" method="POST" action="login">
+                    <form class="CentredItems" method="POST" action="/login">
                         @csrf   
                         <div>
                             <div class="form-group">

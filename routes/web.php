@@ -40,6 +40,10 @@ route::get('Menu',function(){
     return view('Menu');
 });
 
+route::post('signup',[AuthManager::class,'signup']);
+
+
+
 route::post('login',[AuthManager::class,'login']);
 
  Route::middleware('auth')->group(function(){
