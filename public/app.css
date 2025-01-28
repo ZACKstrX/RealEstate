@@ -223,7 +223,7 @@ width: auto;
 height: 70vh;
 }
 
-.card{ 
+.my_card{ 
 
 display:flex;
 align-items: center;
@@ -287,6 +287,9 @@ gap: 20px;
 
 ul{
     padding: 0 !important;
+}
+.GAP{
+   gap: 20px;
 }
 
 @media only screen and (max-width:770px) {

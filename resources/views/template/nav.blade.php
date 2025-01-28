@@ -15,11 +15,11 @@
     <link rel="icon" href="./images/logo.png" type="image/png">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="./css/bootstrap.css" rel="stylesheet" />
-    <link href="./app.css" rel="stylesheet">
     <link href="./SignUp.css" rel="stylesheet">
     <link href="./SignIn.css" rel="stylesheet">
     <link href="./sidebar.css" rel="stylesheet">
     <link href="./form.css" rel="stylesheet">
+    <link href="./app.css" rel="stylesheet">
     
     
 

@@ -52,8 +52,12 @@ route::get('StatutList',function(){
 route::get('ProductsList',function(){
     return view('products.list');
     
-});route::get('ProductsForm',function(){
+});
+
+route::get('ProductsForm',function(){
     return view('products.form');
 });
 
-
+route::get('Menu',function(){
+    return view('Menu');
+});

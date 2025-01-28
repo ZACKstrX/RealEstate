@@ -120,7 +120,7 @@
     <div class="cards">
 
 
-        <div class="card">
+        <div class="my_card">
             <img src="./images/sell.png " style="width: 150px; height:150px;">
             <div class="card-content">
                 <h3 class="card-text">Sell a home</h3>
@@ -130,7 +130,7 @@
             <div> <a href="#" class="mybtn2 btn bg-parchment"><b class="green-text">Post it Now
                         !</b></a></div>
         </div>
-        <div class="card">
+        <div class="my_card">
             <img src="./images/buy.png " style="width: 150px; height:150px;">
             <div class="card-content">
                 <h3 class="card-text">Join the community</h3>
@@ -143,7 +143,7 @@
                     </strong></a></div>
         </div>
 
-        <div class="card">
+        <div class="my_card">
             <img src="./images/home.png " style="width: 150px; height:150px;">
             <div class="card-content">
                 <h3 class="card-text"> Buy a home</h3>
