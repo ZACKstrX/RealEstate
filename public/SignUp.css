@@ -32,7 +32,7 @@
 
 .form{
    box-shadow: rgba(0, 0, 0, 0.4) -80px 0px 60px -10px;
-
+    border: #5a9151 solid 5px;
     align-items: center;
     background-color:#F2E8CF;
     border-radius: 10%;

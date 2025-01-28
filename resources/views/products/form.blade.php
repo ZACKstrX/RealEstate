@@ -1,37 +1,54 @@
 @include('template.nav')
-<form>
+<form class="form form2">
     <div class="form-row">
+        <div class="d-flex flex-column align-items-center ">
+            <img class="w-25" src="./images/logo.png" alt="">
+            <h2 class="SignINc"><b><i>Real Estate Information :</i> </b></h2>
+        </div>
 
         <div class="form-group col-md-6">
             <label for="inputPassword4">Title</label>
             <input type="text" class="form-control" placeholder="title" name="title">
         </div>
+
+
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Descreption</label>
             <textarea class="form-control" id="inputTittle" name="description"></textarea>
         </div>
+
+
         <div class="form-group col-md-6">
             <label for="inputEmail4">Phone Number</label>
             <input type="text" class="form-control" placeholder="Phone Number" name="phone_number">
         </div>
+
+
         <div class="form-group col-md-6">
             <label for="inputEmail4">Email</label>
             <input type="email" class="form-control" placeholder="Email">
         </div>
+
+
     </div>
     <div class="form-group">
         <label for="inputAddress">Surface</label>
         <input type="text" class="form-control" placeholder="Ex: 500 m " name="surface">
     </div>
+
+
     {{-- <div class="form-group">
         <label for="inputAddress2">Address 2</label>
         <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
     </div> --}}
     <div class="form-row">
+
         <div class="form-group col-md-6">
             <label for="inpuPrice">Price</label>
             <input type="text" class="form-control" id="inputPrice" name="prix" placeholder="in MAD">
         </div>
+
+   <div class="d-flex row">        {{--Here --}}
         <div class="form-group col-md-4">
             <label for="inputCity">City</label>
             <select class="form-control" name="city_id">
@@ -43,6 +60,8 @@
                 <option>Oujda</option>
             </select>
         </div>
+
+
         <div class="form-group col-md-4">
             <label for="inputType">Type de bien</label>
             <select  class="form-control" name="type_bien_id">
@@ -53,6 +72,12 @@
                 <option>Studio</option>
             </select>
         </div>
+    </div>
+
+
+
+
+    <div class="d-flex row">
         <div class="form-group col-md-4">
             <label for="inputStatut">Statut</label>
             <select  class="form-control" name="status_id">
@@ -63,6 +88,8 @@
                 <option>buyed</option>
             </select>
         </div>
+
+
         <div class="form-group col-md-4">
             <label for="inputEtat">Etat</label>
             <select  class="form-control" name="etat_id">
@@ -71,6 +98,9 @@
                 <option>Old</option>
             </select>
         </div>
+    </div>
+
+
 
         <div class="form-group col-md-4">
             <label for="inputBaths">Number of rooms</label>
@@ -88,6 +118,8 @@
                 <option>More...</option>
             </select>
         </div>
+
+
         <div class="form-group col-md-4">
             <label for="inputBaths">Number of baths</label>
             <select  class="form-control" name="baths">
@@ -104,6 +136,8 @@
                 <option>More...</option>
             </select>
         </div>
+
+
         <div class="form-group col-md-4">
             <label for="inputGarages">Number of garages</label>
             <select  class="form-control" name="parages">
@@ -120,6 +154,8 @@
                 <option>More...</option>
             </select>
         </div>
+
+
         <div class="form-group col-md-4">
             <label for="inputBalconies">Number of balconies</label>
             <select  class="form-control" name="balconies">
@@ -136,6 +172,8 @@
                 <option>More...</option>
             </select>
         </div>
+
+
     </div>
     <div class="form-group">
         <div class="form-check">

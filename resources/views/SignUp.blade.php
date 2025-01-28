@@ -58,7 +58,7 @@
         <form class="form">
             <div class="d-flex flex-column align-items-center ">
                 <img class="w-25" src="./images/logo.png" alt="">
-                    <h2 class="SignINc"><b><i><u>Sign Up</u></i> </b></h2>
+                <h2 class="SignINc"><b><i><u>Sign Up</u></i> </b></h2>
             </div>
             <div class="row mb-4">
                 <div class="col">
@@ -102,9 +102,10 @@
                 </div>
 
                 <div class="form-group col-md-6">
-                    <label for="birthday"  ><b class="green-text ">Birthday</b></label>
-                    <input name="birthday" id="birthday"     class="form-control searchopacity" placeholder="Pick a Date"  >
-                  
+                    <label for="birthday"><b class="green-text ">Birthday</b></label>
+                    <input name="birthday" id="birthday" class="form-control searchopacity"
+                        placeholder="Pick a Date">
+
                 </div>
 
             </div>
@@ -127,7 +128,7 @@
 
     </form>
     </div>
-    </div>  
+    </div>
 
 
 </body>
@@ -135,19 +136,19 @@
     integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous">
 </script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.min.js"></script>
 
-    <script>
-        $(document).ready(function () {
-            $('#birthday').datepicker({
-                format: 'yyyy/mm/dd', 
-                endDate: '0d', 
-                autoclose: true, 
-                startView: 2,
-                todayHighlight: true 
-            });
+<script>
+    $(document).ready(function() {
+        $('#birthday').datepicker({
+            format: 'yyyy/mm/dd',
+            endDate: '0d',
+            autoclose: true,
+            startView: 2,
+            todayHighlight: true
         });
-    </script>
+    });
+</script>
 
 </html>
