@@ -36,20 +36,22 @@
                     <img class="logo-nav-bigger" src="./images/logo.png" alt="">
                     <h1 class="bgcText "><b><i><u>Sign In</u></i> </b></h1>
 
-                    <form class="CentredItems">
+                    <form class="CentredItems" method="POST" action="login">
+                        @csrf   
                         <div>
                             <div class="form-group">
                             <label for="exampleInputEmail1"><b class="green-input"> <i>Email address</i> </b> </label>
-                            <input type="email" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            <input type="email" class="form-control " name="email" placeholder="Enter email">
                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                             </div>
                             <div class="form-group">
                             <label for="exampleInputPassword1"><b class="green-input"><i>Password</i> </b></label>
-                            <input type="password" class="form-control tt" id="exampleInputPassword1" placeholder="Password">
+                            <input type="password" class="form-control tt" name="password" placeholder="Password">
                             </div>
                          </div>
                          
                         <button type="submit" class="mt-4 btn bgc "><b class="card-text"><i>Sign In</i> </b></button>
+                        <small>You dont' have an account ?<a href="/SignUp">Sign up</a></small>
                       </form>
                 </div>
 

@@ -19,9 +19,6 @@
     <link href="./sidebar.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="./css/bootstrap.css" rel="stylesheet" />
-    
-    
-
 </head>
 
 <body style="background-color:#f0eee9;">
@@ -81,7 +78,7 @@
                     </a>
                     <span class="tooltip">Settings </span>
                 </li><li>
-                    <a href="#">
+                    <a href="/logout">
                         <i class="bx bx-log-out"></i>
                         <span class="nav-item">Logout</span>
                     </a>
