@@ -1,7 +1,7 @@
 @include('template.header')
 
 <div class="container">
-    <h1>Type : </h1>
+    <h1>Cities : </h1>
     <table class="table table-striped " style="">
         <thead>
           <tr>

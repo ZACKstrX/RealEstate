@@ -43,12 +43,15 @@ route::get('CitiesList',function(){
     return view('cities.list');
 });
 
-
+//Statut routes
 route::get('StatutList',function(){
     return view('statut.list');
 });
+route::get('StatutForm',function(){
+    return view('statut.form');
+});
 
-//products routes
+//Products routes
 route::get('ProductsList',function(){
     return view('products.list');
     

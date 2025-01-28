@@ -11,6 +11,7 @@
             <th scope="col">Product Type </th>
             <th scope="col">Owner </th>
             <th scope="col d-flex row gap">oaperations </th>
+            <th> <a class="btn btn-secondary me-3">Update</a></th>
           </tr>
         </thead>
         <tbody>
