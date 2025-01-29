@@ -89,5 +89,7 @@ route::post('login',[AuthManager::class,'login']);
 })->name('product.form');
 
 
-// ----------------------------------------
+// ----------------------------------------------------
 route::post('/addcity',[CityController::class,'add']);
+
+Route::post('/updatecity/{id}', [CityController::class, 'update'])->name('city.update');

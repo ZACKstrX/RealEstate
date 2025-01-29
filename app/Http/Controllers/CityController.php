@@ -20,5 +20,23 @@ class CityController extends Controller
         $cities =City::all();
         return view('cities.list',['cts'=> $cities ]);
      }
+    
+     public function update(Request $request, $id)
+     {
+         $city = City::findOrFail($id);
+     
+         $request->validate([
+             'name' => 'required|string|max:255',
+         ]);
+     
+         $city->update([
+             'name' => $request->name,
+         ]);
+     
+         return redirect()->back()->with('success', 'City updated successfully.');
+     }
+
+
+
 
 }

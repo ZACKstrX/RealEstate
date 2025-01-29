@@ -15,7 +15,7 @@
         @foreach ($cts as $city )
           <tr>
             <td>{{$city->name}}</td>
-            <td><a class="btn btn-secondary me-3" data-bs-toggle="modal" data-bs-target="#updateCityModal" data-city-name="{{$city->name}}">Update</a>
+            <td><a class="btn btn-secondary me-3" data-bs-toggle="modal" data-bs-target="#updateCityModal" data-city-id="{{ $city->id }}" data-city-name="{{ $city->name }}">Update</a>
               <a class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this city?')">Delete</a></td>
           </tr>
         @endforeach
@@ -52,14 +52,17 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="updateCityModalLabel">Update City</h5>
+        <h5 class="modal-title" id="updateCityModalLabel">Edit City</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form >
+        <form id="updateCityForm" method="POST">
+          @csrf
+          @method('POST')
+          <input type="hidden" name="id" id="updateCityId">
           <div class="mb-3">
             <label for="updateCityName" class="form-label">City Name</label>
-            <input type="text" class="form-control" id="updateCityName" placeholder="Enter new city name">
+            <input type="text" class="form-control" name="name" id="updateCityName" placeholder="Enter new city name">
           </div>
           <button type="submit" class="btn btn-primary">Update City</button>
         </form>
@@ -70,12 +73,21 @@
 
 <!-- JavaScript to handle the modal updates -->
 <script>
-  const updateCityModal = document.getElementById('updateCityModal');
-  updateCityModal.addEventListener('show.bs.modal', function (event) {
-    const button = event.relatedTarget;
-    const cityName = button.getAttribute('data-city-name');
-    const modalInput = updateCityModal.querySelector('#updateCityName');
-    modalInput.value = cityName;
+  document.addEventListener('DOMContentLoaded', function () {
+    const updateCityModal = document.getElementById('updateCityModal');
+    updateCityModal.addEventListener('show.bs.modal', function (event) {
+      const button = event.relatedTarget;
+      const cityId = button.getAttribute('data-city-id');
+      const cityName = button.getAttribute('data-city-name');
+      
+      const modalInput = document.getElementById('updateCityName');
+      const modalForm = document.getElementById('updateCityForm');
+      const modalIdInput = document.getElementById('updateCityId');
+
+      modalInput.value = cityName;
+      modalIdInput.value = cityId;
+      modalForm.action = `/updatecity/${cityId}`;
+    });
   });
 </script>
 
