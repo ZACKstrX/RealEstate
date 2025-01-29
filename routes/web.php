@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthManager;
+use App\Http\Controllers\BienController;
 use App\Http\Controllers\CityController;
 use App\Http\Controllers\StatusController;
 use App\Http\Controllers\TypeBienController;
@@ -71,19 +72,17 @@ route::post('login',[AuthManager::class,'login']);
         
     });
     
-    route::get('ProductsForm',function(){
-        return view('products.form');
-    });
+    Route::get('productform', [BienController::class, 'create']);
     
  });
 
- Route::get('/productform', function () {
-    if (auth()->check()) {
-        return view('products.form');
-    } else {
-        return redirect()->route('login');  // Redirect to login if not authenticated
-    }
-})->name('product.form');
+//  Route::get('/productform', function () {
+//     if (auth()->check()) {
+//         return view('products.form');
+//     } else {
+//         return redirect()->route('login');  
+//     }
+// })->name('product.form');
 
 
 // ----------------------------------------------------
