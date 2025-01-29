@@ -61,7 +61,7 @@ route::post('login',[AuthManager::class,'login']);
     });
     
     
-    route::get('CitiesList',[CityController::class, 'showlist']);
+    route::get('CitiesList',[CityController::class, 'showlist'])->name('cities.list');
     
     //Statut routes
     route::get('StatutList',function(){

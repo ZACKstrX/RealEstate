@@ -14,7 +14,7 @@ class CityController extends Controller
         $City = City::create([
             'name' => $request->name
         ]);
-        return $this->showlist();
+        return redirect()->route('cities.list');
      }   
      public function showlist(){
         $cities =City::all();

@@ -15,7 +15,7 @@
         @foreach ($cts as $city )
           <tr>
             <td>{{$city->name}}</td>
-            <td><a class="btn btn-secondary me-3" data-bs-toggle="modal" data-bs-target="#updateCityModal" data-city-name="">Update</a>
+            <td><a class="btn btn-secondary me-3" data-bs-toggle="modal" data-bs-target="#updateCityModal" data-city-name="{{$city->name}}">Update</a>
               <a class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this city?')">Delete</a></td>
           </tr>
         @endforeach
