@@ -79,3 +79,11 @@ route::post('login',[AuthManager::class,'login']);
     });
     
  });
+
+ Route::get('/productform', function () {
+    if (auth()->check()) {
+        return view('products.form');
+    } else {
+        return redirect()->route('login');  // Redirect to login if not authenticated
+    }
+})->name('product.form');

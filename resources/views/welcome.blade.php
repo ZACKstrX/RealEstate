@@ -43,12 +43,12 @@
                     <ul class="navbar-nav ms-auto">
 
                         <li class="nav-item">
-                            <a class="nav-link " href="#"><button type="button "
+                            <a class="nav-link " href="/login"><button type="button "
                                     class="mybtn btn dark-green "><strong class="wordhover card-text">Sign
                                         in</strong></button></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><button type="button"
+                            <a class="nav-link" href="/SignUp"><button type="button"
                                     class="mybtn btn dark-green "><strong class="wordhover card-text">Sign
                                         Up</strong></button></a>
                         </li>
@@ -127,8 +127,13 @@
                 <p class="card-text"><b><i> No matter what path you take to sell your
                             home, we can help you navigate a successful sale.</i> </b></p>
             </div>
-            <div> <a href="#" class="mybtn2 btn bg-parchment"><b class="green-text">Post it Now
-                        !</b></a></div>
+            <div> 
+                @if (Auth::check())
+                <a href='productform' class="mybtn2 btn bg-parchment"><b class="green-text">Post it Now!</b></a>
+            @else
+                <a href='login' class="r is not logged in, link to the login pmybtn2 btn bg-parchment"><b class="green-text">Login to Post it Now!</b></a>
+            @endif
+            </div>
         </div>
         <div class="my_card">
             <img src="./images/buy.png " style="width: 150px; height:150px;">
@@ -139,7 +144,7 @@
                             We’re here to support you with resources, insights, and local connections to help you every
                             step of the way.</i> </b></p>
             </div>
-            <div> <a href="#" class="mybtn2 btn bg-parchment"><strong class="green-text">Sign up
+            <div> <a href="/SignUp" class="mybtn2 btn bg-parchment"><strong class="green-text">Sign up
                     </strong></a></div>
         </div>
 
@@ -151,7 +156,7 @@
                             experience and the most listings, including things you won’t find anywhere else.</i>
                     </strong></p>
             </div>
-            <div> <a href="#" class="mybtn2 btn bg-parchment"><strong class="green-text">Browse
+            <div> <a href="/Menu" class="mybtn2 btn bg-parchment"><strong class="green-text">Browse
                         homes</strong></a></div>
         </div>
     </div> <!--End of cards-->

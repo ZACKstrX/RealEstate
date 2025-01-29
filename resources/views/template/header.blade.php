@@ -47,7 +47,13 @@
             </div>
             </div>
             <ul>
-                  <li>
+                <li>
+                    <a href="/">
+                        <i class='bx bxs-home-alt-2'></i>
+                        <span class="nav-item">Menu</span>
+                    </a>
+                    <span class="tooltip">Menu</span>
+                </li><li>
                     <a href="/ProductsList">
                         <i class="bx bxs-shopping-bag"></i>
                         <span class="nav-item">Products</span>
