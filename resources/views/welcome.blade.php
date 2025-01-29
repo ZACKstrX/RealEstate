@@ -41,7 +41,7 @@
                         </li>
                     </ul>
                     <ul class="navbar-nav ms-auto">
-
+                        @if (!Auth::check())
                         <li class="nav-item">
                             <a class="nav-link " href="/login"><button type="button "
                                     class="mybtn btn dark-green "><strong class="wordhover card-text">Sign
@@ -52,6 +52,16 @@
                                     class="mybtn btn dark-green "><strong class="wordhover card-text">Sign
                                         Up</strong></button></a>
                         </li>
+                        @else <!-- If the user is authenticated -->
+                        <!-- Show a button to go to the Products List page -->
+                        <li class="nav-item">
+                            <a class="nav-link" href='/ProductsList'>
+                                <button type="button" class="mybtn btn dark-green ">
+                                    <strong class="wordhover card-text">Go to Products</strong>
+                                </button>
+                            </a>
+                        </li>
+                    @endif
                     </ul>
                 </div>
             </div>
@@ -111,7 +121,7 @@
                         Reach more potential buyers,</br>
                         track your listings, and enjoy a seamless experience tailored to your needs.</br>
                         Start selling your properties today with ease!</p></i></b>
-            <a class="nav-link" href="#"><button type="button" class=" btn bg-parchment mybtn2"><b
+            <a class="nav-link" href="/SignUp"><button type="button" class=" btn bg-parchment mybtn2"><b
                         class="wordhover green-text">Sign
                         Up</b></button></a>
         </div>
