@@ -35,8 +35,9 @@ class CityController extends Controller
      
          return redirect()->back()->with('success', 'City updated successfully.');
      }
-
-
-
-
+     public function destroy($id){
+        $city = City::findOrfail($id);
+        $city->delete();
+        return redirect()->back()->with('success', 'City deleted successfully.');
+     }
 }

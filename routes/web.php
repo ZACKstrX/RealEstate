@@ -90,6 +90,7 @@ route::post('login',[AuthManager::class,'login']);
 
 
 // ----------------------------------------------------
+//city crud routes :
 route::post('/addcity',[CityController::class,'add']);
-
 Route::post('/updatecity/{id}', [CityController::class, 'update'])->name('city.update');
+Route::delete('/deletecity/{id}', [CityController::class, 'destroy'])->name('city.destroy');

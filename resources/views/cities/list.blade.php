@@ -16,7 +16,13 @@
           <tr>
             <td>{{$city->name}}</td>
             <td><a class="btn btn-secondary me-3" data-bs-toggle="modal" data-bs-target="#updateCityModal" data-city-id="{{ $city->id }}" data-city-name="{{ $city->name }}">Update</a>
-              <a class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this city?')">Delete</a></td>
+              <form action="{{ route('city.destroy', $city->id) }}" method="POST" style="display:inline;">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this city?')">
+                  Delete
+                </button>
+              </form></td>
           </tr>
         @endforeach
     </tbody>
