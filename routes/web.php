@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\AuthManager;
 use App\Http\Controllers\CityController;
+use App\Http\Controllers\StatusController;
+use App\Http\Controllers\TypeBienController;
 use App\Models\City;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -56,17 +58,12 @@ route::post('login',[AuthManager::class,'login']);
     
     
     // dash routes : 
-    route::get('TypeList',function(){
-        return view('type.list');
-    });
-    
+    Route::get('/TypeList', [TypeBienController::class, 'showlist'])->name('type.list');
     
     route::get('CitiesList',[CityController::class, 'showlist'])->name('cities.list');
     
     //Statut routes
-    route::get('StatutList',function(){
-        return view('statut.list');
-    });
+    Route::get('/StatutList', [StatusController::class, 'showlist'])->name('status.list');
     
     //Products routes
     route::get('ProductsList',function(){
@@ -94,3 +91,16 @@ route::post('login',[AuthManager::class,'login']);
 route::post('/addcity',[CityController::class,'add']);
 Route::post('/updatecity/{id}', [CityController::class, 'update'])->name('city.update');
 Route::delete('/deletecity/{id}', [CityController::class, 'destroy'])->name('city.destroy');
+
+// Status CRUD Routes
+Route::post('/addstatus', [StatusController::class, 'add'])->name('status.add');
+Route::post('/updatestatus/{id}', [StatusController::class, 'update'])->name('status.update');
+Route::delete('/deletestatus/{id}', [StatusController::class, 'destroy'])->name('status.destroy');
+
+
+// Type CRUD Routes
+Route::get('/typelist', [TypeBienController::class, 'showlist'])->name('type.list');
+Route::post('/addtype', [TypeBienController::class, 'add'])->name('type.add');
+Route::post('/updatetype/{id}', [TypeBienController::class, 'update'])->name('type.update');
+Route::delete('/deletetype/{id}', [TypeBienController::class, 'destroy'])->name('type.destroy');
+

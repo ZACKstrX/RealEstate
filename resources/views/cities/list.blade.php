@@ -96,12 +96,3 @@
     });
   });
 </script>
-
-
-
-
-
- {{-- <td>
-          <a class="btn btn-secondary me-3" data-bs-toggle="modal" data-bs-target="#updateCityModal" data-city-name="Oujda">Update</a>
-          <a class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this city?')">Delete</a>
-        </td> --}}
