@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AuthManager;
+use App\Http\Controllers\CityController;
+use App\Models\City;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -59,9 +61,7 @@ route::post('login',[AuthManager::class,'login']);
     });
     
     
-    route::get('CitiesList',function(){
-        return view('cities.list');
-    });
+    route::get('CitiesList',[CityController::class, 'showlist']);
     
     //Statut routes
     route::get('StatutList',function(){
@@ -87,3 +87,7 @@ route::post('login',[AuthManager::class,'login']);
         return redirect()->route('login');  // Redirect to login if not authenticated
     }
 })->name('product.form');
+
+
+// ----------------------------------------
+route::post('/addcity',[CityController::class,'add']);

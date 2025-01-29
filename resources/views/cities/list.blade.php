@@ -8,47 +8,17 @@
   
   <table class="table table-striped">
     <thead>
-      <tr>
         <th scope="col">Name</th>
         <th scope="col">Operations</th>
-      </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Fes</td>
-        <td>
-          <a class="btn btn-secondary me-3" data-bs-toggle="modal" data-bs-target="#updateCityModal" data-city-name="Fes">Update</a>
-          <a class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this city?')">Delete</a>
-        </td>
-      </tr>
-      <tr>
-        <td>Rabat</td>
-        <td>
-          <a class="btn btn-secondary me-3" data-bs-toggle="modal" data-bs-target="#updateCityModal" data-city-name="Rabat">Update</a>
-          <a class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this city?')">Delete</a>
-        </td>
-      </tr>
-      <tr>
-        <td>Tanger</td>
-        <td>
-          <a class="btn btn-secondary me-3" data-bs-toggle="modal" data-bs-target="#updateCityModal" data-city-name="Tanger">Update</a>
-          <a class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this city?')">Delete</a>
-        </td>
-      </tr>
-      <tr>
-        <td>Marakech</td>
-        <td>
-          <a class="btn btn-secondary me-3" data-bs-toggle="modal" data-bs-target="#updateCityModal" data-city-name="Marakech">Update</a>
-          <a class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this city?')">Delete</a>
-        </td>
-      </tr>
-      <tr>
-        <td>Oujda</td>
-        <td>
-          <a class="btn btn-secondary me-3" data-bs-toggle="modal" data-bs-target="#updateCityModal" data-city-name="Oujda">Update</a>
-          <a class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this city?')">Delete</a>
-        </td>
-      </tr>
+        @foreach ($cts as $city )
+          <tr>
+            <td>{{$city->name}}</td>
+            <td><a class="btn btn-secondary me-3" data-bs-toggle="modal" data-bs-target="#updateCityModal" data-city-name="">Update</a>
+              <a class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this city?')">Delete</a></td>
+          </tr>
+        @endforeach
     </tbody>
   </table>
 </div>
@@ -64,10 +34,11 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form>
+        <form method="POST" action="/addcity">
+          @csrf
           <div class="mb-3">
             <label for="cityName" class="form-label">City Name</label>
-            <input type="text" class="form-control" id="cityName" placeholder="Enter city name">
+            <input type="text" class="form-control" name="name" placeholder="Enter city name">
           </div>
           <button type="submit" class="btn btn-primary">Save City</button>
         </form>
@@ -85,7 +56,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form>
+        <form >
           <div class="mb-3">
             <label for="updateCityName" class="form-label">City Name</label>
             <input type="text" class="form-control" id="updateCityName" placeholder="Enter new city name">
@@ -107,3 +78,12 @@
     modalInput.value = cityName;
   });
 </script>
+
+
+
+
+
+ {{-- <td>
+          <a class="btn btn-secondary me-3" data-bs-toggle="modal" data-bs-target="#updateCityModal" data-city-name="Oujda">Update</a>
+          <a class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this city?')">Delete</a>
+        </td> --}}
