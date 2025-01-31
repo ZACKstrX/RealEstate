@@ -141,7 +141,7 @@
                 @if (Auth::check())
                 <a href='productform' class="mybtn2 btn bg-parchment"><b class="green-text">Post it Now!</b></a>
             @else
-                <a href='login' class="r is not logged in, link to the login pmybtn2 btn bg-parchment"><b class="green-text">Login to Post it Now!</b></a>
+                <a href='login' class="mybtn2 btn bg-parchment"><b class="green-text">Login to Post it Now!</b></a>
             @endif
             </div>
         </div>
