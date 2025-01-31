@@ -18,8 +18,7 @@ return new class extends Migration
             $table->integer('baths');
             $table->integer('garages');
             $table->integer('balconies');
-            $table->foreignId('bien_id')->constrained('biens');
-            $table->timestamps();
+             $table->timestamps();
         });
     }
 

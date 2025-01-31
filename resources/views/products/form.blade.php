@@ -1,7 +1,8 @@
 @include('template.nav')
 <div class="container_form">
     <div class="container">
-        <form class="form2">
+        <form class="form2" method="post" action="productForm">
+            @csrf
             <div class="form-row w-50">
                 <div class="d-flex flex-column align-items-center">
                     <img class="w-25" src="./images/logo.png" alt="">
@@ -30,13 +31,13 @@
 
                     <div class="form-group col-md-6">
                         <label for="inputEmail4">Email</label>
-                        <input type="email" class="form-control" placeholder="Email">
+                        <input type="email" class="form-control" name="email" placeholder="Email">
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-md-6 col">
                         <label for="inpuPrice">Price</label>
-                        <input type="text" class="form-control" id="inputPrice" name="prix" placeholder="in MAD">
+                        <input type="text" class="form-control"   name="prix" placeholder="in MAD">
                     </div>
 
                     <div class="form-group col">
@@ -85,7 +86,7 @@
                         <select class="form-control" name="etat_id">
                             <option selected>Choose...</option>
                             <option value="1">New</option>
-                            <option>Old</option>
+                            <option value="2">Old</option>
                         </select>
                     </div>
                 </div>
@@ -100,10 +101,6 @@
                             <option>3</option>
                             <option>4</option>
                             <option>5</option>
-                            <option>6</option>
-                            <option>7</option>
-                            <option>8</option>
-                            <option>9</option>
                             <option>More...</option>
                         </select>
                     </div>
@@ -117,10 +114,6 @@
                             <option>3</option>
                             <option>4</option>
                             <option>5</option>
-                            <option>6</option>
-                            <option>7</option>
-                            <option>8</option>
-                            <option>9</option>
                             <option>More...</option>
                         </select>
                     </div>
@@ -129,17 +122,13 @@
                 <div class="row mt-3">
                     <div class="col">
                         <label for="inputGarages">Number of garages</label>
-                        <select class="form-control" name="parages">
+                        <select class="form-control" name="garages">
                             <option selected>Choose...</option>
                             <option value="1">1</option>
                             <option>2</option>
                             <option>3</option>
                             <option>4</option>
                             <option>5</option>
-                            <option>6</option>
-                            <option>7</option>
-                            <option>8</option>
-                            <option>9</option>
                             <option>More...</option>
                         </select>
                     </div>
@@ -153,10 +142,6 @@
                             <option>3</option>
                             <option>4</option>
                             <option>5</option>
-                            <option>6</option>
-                            <option>7</option>
-                            <option>8</option>
-                            <option>9</option>
                             <option>More...</option>
                         </select>
                     </div>

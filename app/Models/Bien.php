@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Bien extends Model
 {
@@ -49,8 +50,8 @@ class Bien extends Model
         return $this->belongsTo(Status::class);
     }
 
-    public function bienDetail() : HasMany {
-        return $this->hasMany(BienDetails::class);
+    public function bienDetail() : HasOne {
+        return $this->HasOne(BienDetails::class,"detail_id","id");
     }
 
 }

@@ -25,6 +25,8 @@ return new class extends Migration
             $table->foreignId('status_id')->nullable()->constrained('statuses');
             $table->foreignId('user_id')->nullable()->constrained('users');
             $table->foreignId('etat_id')->nullable()->constrained('etats');
+            $table->foreignId('detail_id')->nullable()->constrained('bien_details');
+
              $table->timestamps();
         });
     }

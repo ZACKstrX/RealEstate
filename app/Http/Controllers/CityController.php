@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\City;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class CityController extends Controller
 {
@@ -17,7 +18,7 @@ class CityController extends Controller
         return redirect()->route('cities.list');
      }   
      public function showlist(){
-        $cities =City::all();
+        $cities = City::all();
         return view('cities.list',['cts'=> $cities ]);
      }
     

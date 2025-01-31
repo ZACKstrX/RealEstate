@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\TypeBien;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class TypeBienController extends Controller
 {

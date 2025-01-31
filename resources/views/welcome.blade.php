@@ -87,12 +87,10 @@
                               </select>
                             
                               <select class="select dark-green card-text fw-bold nooutlin">
-                                <option value="" selected>City</option>
-                                <option value="">Fes</option>
-                                <option value="">Rabat</option>
-                                <option value="">Tanger</option>
-                                <option value="">Marakech</option>
-                                <option value="">Oujda</option>
+                                <option selected>City</option>
+                                @foreach ($cts as $city)
+                                     <option value="{{ $city->id }}">{{ $city->name }}</option>
+                                @endforeach
                               </select>
                             <div class="searshdiv">
                             <input class=" form-control-sm  bg-parchment noborder  fw-bold nooutlin"

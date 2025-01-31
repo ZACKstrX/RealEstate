@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthManager;
 use App\Http\Controllers\BienController;
 use App\Http\Controllers\CityController;
+use App\Http\Controllers\LandingController;
 use App\Http\Controllers\StatusController;
 use App\Http\Controllers\TypeBienController;
 use App\Models\City;
@@ -20,9 +21,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [LandingController::class, 'showlist'])->name('landingpage'); 
+Route::get('/TypeList', [TypeBienController::class, 'showlist'])->name('type.list');
 
 
 Route::get('SignUp',function(){
@@ -51,7 +51,9 @@ route::post('signup',[AuthManager::class,'signup']);
 
 route::post('login',[AuthManager::class,'login']);
 
- Route::middleware('auth')->group(function(){
+ 
+
+Route::middleware('auth')->group(function(){        //middleware
 
     route::get('Dash', function(){
         return view('type.list');
@@ -72,8 +74,8 @@ route::post('login',[AuthManager::class,'login']);
         
     });
     
-    Route::get('productform', [BienController::class, 'create']);
-    
+    Route::get('productform', [BienController::class, 'come']);
+    Route::post('productForm',[BienController::class,'add']);
  });
 
 //  Route::get('/productform', function () {

@@ -12,7 +12,7 @@ class BienDetails extends Model
     protected $fillable = [
         'rooms',
         'baths',
-        'parages',
+        'garages',
         'balconies',
          'bien_id'
     ];

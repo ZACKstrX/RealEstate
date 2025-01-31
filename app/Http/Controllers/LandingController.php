@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\City;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 
-class Controller extends BaseController
+class LandingController extends BaseController
 {
-    use AuthorizesRequests, ValidatesRequests;
+
+    public function showlist(){
+        $cities = City::all();
+        return view('welcome',['cts'=> $cities ]);
+     }  
 }
