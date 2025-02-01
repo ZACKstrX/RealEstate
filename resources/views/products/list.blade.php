@@ -10,7 +10,7 @@
             <th scope="col">City </th>
             <th scope="col">Product Type </th>
             <th scope="col">Owner </th>
-            <th scope="col d-flex row gap">oaperations </th>
+            <th scope="col d-flex row gap">operations </th>
             
           </tr>
         </thead>
