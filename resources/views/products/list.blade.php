@@ -21,8 +21,16 @@
             <td>{{$product->prix}}</td>
             <td>{{$product->city_id}}</td>
             <td>{{$product->type_bien_id}}</td>
-            <td>{{$product->user_id}}</td>
-            <td></tr>
+            <td>@if($product->user_id ===null)
+              null
+              @else
+              {{$product->user_id }}
+              @endif  
+            </td>
+            <td>
+              <button type="button" class="btn btn-secondary me-3">Update</button>
+              <button type="button" class="btn btn-danger">Delete</button>
+            </tr>
           @endforeach
           </tbody>
       </table>
