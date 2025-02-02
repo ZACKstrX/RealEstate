@@ -44,7 +44,7 @@
                         @if (!Auth::check())
                         <li class="nav-item">
                             <a class="nav-link " href="/login"><button type="button "
-                                    class="mybtn btn dark-green "><strong class="wordhover card-text">Sign
+                                    class="mybtn btn dark-green "><strong class="wordhover card-text">Log
                                         in</strong></button></a>
                         </li>
                         <li class="nav-item">

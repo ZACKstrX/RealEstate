@@ -64,15 +64,15 @@ input::placeholder{
 }
 
 
-input:focus::placeholder {
+/* input:focus::placeholder {
     color: #6a994e !important;
     
-  }
-input:focus {
+  } */
+/* input:focus {
     border-color: #6a994e !important;  
     box-shadow: 0 0 0 0.2rem rgba(39, 242, 117, 0.25) !important;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; 
-  }
+  } */
   .SignINc{
     color: #5a9151;
 }   

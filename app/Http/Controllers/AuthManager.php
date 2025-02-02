@@ -4,10 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Routing\Controller;
 
 class AuthManager extends Controller
 {
+    public function showLogin(){
+        return view('SignIn');
+    }
+
     public function login(Request $request){
 
         $request->validate([
@@ -15,12 +20,12 @@ class AuthManager extends Controller
             'password' =>['required']
         ]);
 
-         if(!auth()->attempt($request->only('email','password'))){
+         if(Auth::attempt($request->only('email','password'))){    
 
-            return redirect('/login');
+             return redirect('/ProductsList');
         }
-
-        return redirect('/ProductsList');
+        
+        return back()->with('error', 'Invalid email or password.');
 
     }
 
@@ -34,18 +39,10 @@ class AuthManager extends Controller
             'email'=>'required',
             'password'=>'required'
         ]);
+        $request['password'] = bcrypt($request->password);
         $User = User::create($request->all());
 
-        // [
-        //     'first_name' => $request->first_name,
-        //     'last_name' => $request->last_name,
-        //     'phone_number' => $request->phone_number,
-        //     'email' => $request->email,
-        //     'password' => $request->password,
-        //     'adresse'=> $request->adresse,
-        //     'birthday'=>$request->birthday
-        //     ]
-        return redirect('/login');
+        return redirect('/login')->with('success', 'Account created successfully! Please log in.');
         
     }
 }

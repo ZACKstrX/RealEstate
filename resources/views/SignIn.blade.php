@@ -15,7 +15,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker.min.css"
         rel="stylesheet">
     <link rel="icon" href="./images/logo.png" type="image/png">
-    <link href="./app.css" rel="stylesheet"><link href="./SignUp.css" rel="stylesheet"><link href="./SignIn.css" rel="stylesheet">
+    <link href="./app.css" rel="stylesheet">
+    <link href="./SignUp.css" rel="stylesheet">
+    <link href="./SignIn.css" rel="stylesheet">
 </head>
 
 <body class="dark-green">
@@ -34,25 +36,35 @@
             <div class="SignInform">
                 <div class="CentredItems">
                     <img class="logo-nav-bigger" src="./images/logo.png" alt="">
-                    <h1 class="bgcText "><b><i><u>Sign In</u></i> </b></h1>
+                    <h1 class="bgcText "><b><i><u>Log In</u></i> </b></h1>
 
                     <form class="CentredItems" method="POST" action="/login">
-                        @csrf   
+                        @csrf
+                        @if(session('error'))
+                            <div class="alert alert-danger">{{ session('error') }}</div>
+                        @endif
+                    
                         <div>
                             <div class="form-group">
-                            <label for="exampleInputEmail1"><b class="green-input"> <i>Email address</i> </b> </label>
-                            <input type="email" class="form-control " name="email" placeholder="Enter email">
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                <label for="exampleInputEmail1"><b class="green-input"> <i>Email address</i> </b></label>
+                                <input type="email" class="form-control" name="email" placeholder="Enter email" value="{{ old('email') }}">
+                                @error('email')
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                             </div>
                             <div class="form-group">
-                            <label for="exampleInputPassword1"><b class="green-input"><i>Password</i> </b></label>
-                            <input type="password" class="form-control tt" name="password" placeholder="Password">
+                                <label for="exampleInputPassword1"><b class="green-input"><i>Password</i> </b></label>
+                                <input type="password" class="form-control tt" name="password" placeholder="Password" value="{{ old('password') }}">
+                                @error('password')
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
                             </div>
-                         </div>
-                         
-                        <button type="submit" class="mt-4 btn bgc "><b class="card-text"><i>Sign In</i> </b></button>
-                        <small>You dont' have an account ?<a href="/SignUp">Sign up</a></small>
-                      </form>
+                        </div>
+                    
+                        <button type="submit" class="mt-4 btn bgc "><b class="card-text"><i>Log In</i> </b></button>
+                        <small>You don't have an account? <a href="/SignUp">Sign up</a></small>
+                    </form>
                 </div>
 
 

@@ -7,6 +7,7 @@ use App\Http\Controllers\LandingController;
 use App\Http\Controllers\StatusController;
 use App\Http\Controllers\TypeBienController;
 use App\Models\City;
+use Illuminate\Auth\AuthManager as AuthAuthManager;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -30,9 +31,7 @@ Route::get('SignUp',function(){
 });
 
 
-Route::get('login',function(){
-    return view('SignIn');
-});
+Route::get('login',[AuthManager::class,'showLogin']);
 
 Route::get('logout',function(){
     Auth::logout();
