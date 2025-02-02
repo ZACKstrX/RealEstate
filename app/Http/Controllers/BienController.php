@@ -58,7 +58,9 @@ class BienController extends Controller
             'type_bien_id'=>$request->type_bien_id,
             'status_id'=>$request->status_id,
             'etat_id'=>$request->etat_id,
-            'detail_id' =>  $bienDetail->id
+            'detail_id' =>  $bienDetail->id,
+            'user_id' => auth()->id(),
+
         ]);
 
  

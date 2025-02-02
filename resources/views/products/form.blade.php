@@ -3,6 +3,7 @@
     <div class="container">
         <form class="form2" method="post" action="productForm">
             @csrf
+            <input type="hidden" name="user_id" value="{{ auth()->id() }}">
             <div class="form-row w-50">
                 <div class="d-flex flex-column align-items-center">
                     <img class="w-25" src="./images/logo.png" alt="">
@@ -16,7 +17,7 @@
 
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Description</label>
-                    <textarea class="form-control" id="inputTittle" name="description"></textarea>
+                    <textarea class="form-control" id="inputTittle" name="description" ></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Picture</label>
@@ -33,7 +34,7 @@
 
                     <div class="form-group col-md-6">
                         <label for="inputEmail4">Email</label>
-                        <input type="email" class="form-control" name="email" placeholder="Email">
+                        <input type="email" class="form-control" name="email" placeholder="exemple@exemple.com">
                     </div>
                 </div>
                 <div class="row">
