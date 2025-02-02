@@ -19,15 +19,16 @@ class BienController extends Controller
         $statuses = Status::all();
         $types = TypeBien::all();
 
-        // Passing the data to the view
+        // Passing the data to the form
         return view('products.form', compact('cities', 'statuses', 'types'));
     }
+    public function showlist(){
+        $biens = Bien::all();
+        // Passing the data to the list
+        return view('products.list',['products'=>$biens]);
+    }
 
-    public function add(Request $request){
-
-
-
- 
+    public function add(Request $request){ 
         // $request->validate([
         //     'title'=>'required',
         //     'description'=>'required',

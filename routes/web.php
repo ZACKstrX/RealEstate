@@ -69,10 +69,7 @@ Route::middleware('auth')->group(function(){        //middleware
     Route::get('/StatutList', [StatusController::class, 'showlist'])->name('status.list');
     
     //Products routes
-    route::get('ProductsList',function(){
-        return view('products.list');
-        
-    });
+    route::get('ProductsList',[BienController::class, 'showlist'])      ;
     
     Route::get('productform', [BienController::class, 'come']);
     Route::post('productForm',[BienController::class,'add']);
