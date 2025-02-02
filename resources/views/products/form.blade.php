@@ -26,8 +26,10 @@
                 <div class="row">
                     <div class="form-group col-md-6">
                         <label for="inputEmail4">Phone Number</label>
-                        <input type="text" class="form-control" placeholder="Phone Number" name="phone_number">
+                        <input type="tel" class="form-control" placeholder="Phone Number" name="phone_number"
+                            pattern="[0-9]{10}" maxlength="10" title="Enter a valid 10-digit phone number">
                     </div>
+                    
 
                     <div class="form-group col-md-6">
                         <label for="inputEmail4">Email</label>
@@ -35,15 +37,23 @@
                     </div>
                 </div>
                 <div class="row">
+
                     <div class="form-group col-md-6 col">
                         <label for="inpuPrice">Price</label>
-                        <input type="text" class="form-control"   name="prix" placeholder="in MAD">
+                        <div class="input-group">
+                            <input type="number" class="form-control" name="prix" placeholder="">
+                            <span class="input-group-text">MAD</span>
+                        </div>
                     </div>
 
                     <div class="form-group col">
                         <label for="inputAddress">Surface</label>
-                        <input type="text" class="form-control" placeholder="Ex: 500 m" name="surface">
+                        <div class="input-group">
+                            <input type="number" class="form-control" name="surface" placeholder="">
+                            <span class="input-group-text">m²</span>
+                        </div>
                     </div>
+
                 </div>
             </div>
 
@@ -53,7 +63,7 @@
                         <label for="inputCity">City</label>
                         <select class="form-control" name="city_id">
                             <option selected>Choose...</option>
-                            @foreach($cities as $city)
+                            @foreach ($cities as $city)
                                 <option value="{{ $city->id }}">{{ $city->name }}</option>
                             @endforeach
                         </select>
@@ -63,7 +73,7 @@
                         <label for="inputType">Type de bien</label>
                         <select class="form-control" name="type_bien_id">
                             <option selected>Choose...</option>
-                            @foreach($types as $type)
+                            @foreach ($types as $type)
                                 <option value="{{ $type->id }}">{{ $type->name }}</option>
                             @endforeach
                         </select>
@@ -75,7 +85,7 @@
                         <label for="inputStatut">Statut</label>
                         <select class="form-control" name="status_id">
                             <option selected>Choose...</option>
-                            @foreach($statuses as $status)
+                            @foreach ($statuses as $status)
                                 <option value="{{ $status->id }}">{{ $status->name }}</option>
                             @endforeach
                         </select>
