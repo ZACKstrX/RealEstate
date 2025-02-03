@@ -35,9 +35,7 @@
     left: 50px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
-/* .SignInform:hover{
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-} */
+
 .CentredItems{
     position: relative;
     display: flex;
@@ -61,10 +59,3 @@
     background: #006351 !important ; 
 }
 
-.green-input{
-    color: #006351;
-}
-
-input::placeholder{
-    color: #044536 !important;
-}
