@@ -29,7 +29,14 @@
             </td>
             <td>
               <button type="button" class="btn btn-secondary me-3">Update</button>
-              <button type="button" class="btn btn-danger">Delete</button>
+              <form action="{{ route('product.destroy',$product->id) }}" method="POST" style="display:inline;">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-danger"
+                    onclick="return confirm('Are you sure you want to delete this product?')">
+                    Delete
+                </button>
+            </form>
             </tr>
           @endforeach
           </tbody>

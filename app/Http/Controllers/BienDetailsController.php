@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\BienDetails;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class BienDetailsController extends Controller
 {

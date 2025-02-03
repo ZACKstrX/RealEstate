@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Bien;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -48,5 +49,6 @@ class AuthManager extends Controller
         return redirect('/login')->with('success', 'Account created successfully! Please log in.');
         
     }
+ 
 }
 

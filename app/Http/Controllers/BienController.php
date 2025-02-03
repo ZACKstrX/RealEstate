@@ -77,4 +77,9 @@ class BienController extends Controller
         return redirect()->route('landingpage');
 
     }
+    public function destroy($id){
+        $product = Bien::findOrfail($id);
+        $product->delete();
+        return redirect()->back()->with('success','Product deleted successfully');
+    }
 }

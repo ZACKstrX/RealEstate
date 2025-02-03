@@ -292,21 +292,6 @@ ul{
    gap: 20px;
 }
 
-/* Ensure error messages are visible */
-.text-danger {
-    color: red !important; /* Force red color */
-    font-size: 14px; /* Adjust font size if needed */
-    margin-top: 5px; /* Add some spacing */
-    display: block; /* Ensure it's displayed */
-}
-
-.alert-danger {
-    background-color: #f8d7da !important; /* Bootstrap's default alert danger background */
-    color: #721c24 !important; /* Bootstrap's default alert danger text color */
-    padding: 10px; /* Add padding for better visibility */
-    border-radius: 5px; /* Add rounded corners */
-    margin-bottom: 15px; /* Add spacing below the alert */
-}
 
 
 @media only screen and (max-width:770px) {
