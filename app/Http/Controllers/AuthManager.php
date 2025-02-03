@@ -25,7 +25,10 @@ class AuthManager extends Controller
              return redirect('/ProductsList');
         }
         
-        return back()->with('error', 'Invalid email or password.');
+        return back()->withErrors([
+            'email' => 'Invalid email or password.',
+            'password' => 'Invalid email or password.',
+        ])->withInput();
 
     }
 

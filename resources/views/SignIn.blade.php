@@ -40,24 +40,20 @@
 
                     <form class="CentredItems" method="POST" action="/login">
                         @csrf
-                        @if(session('error'))
-                            <div class="alert alert-danger">{{ session('error') }}</div>
-                        @endif
-                    
                         <div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1"><b class="green-input"> <i>Email address</i> </b></label>
-                                <input type="email" class="form-control" name="email" placeholder="Enter email" value="{{ old('email') }}">
+                                <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Enter email" value="{{ old('email') }}">
                                 @error('email')
-                                    <div class="text-danger">{{ $message }}</div>
+                                    <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1"><b class="green-input"><i>Password</i> </b></label>
-                                <input type="password" class="form-control tt" name="password" placeholder="Password" value="{{ old('password') }}">
+                                <input type="password" class="form-control tt @error('password') is-invalid @enderror" name="password" placeholder="Password" value="{{ old('password') }}">
                                 @error('password')
-                                    <div class="text-danger">{{ $message }}</div>
+                                    <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                             </div>
                         </div>
@@ -65,7 +61,6 @@
                         <button type="submit" class="mt-4 btn bgc "><b class="card-text"><i>Log In</i> </b></button>
                         <small>You don't have an account? <a href="/SignUp">Sign up</a></small>
                     </form>
-                </div>
 
 
             </div>
