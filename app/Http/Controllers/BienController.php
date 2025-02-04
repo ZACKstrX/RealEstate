@@ -109,7 +109,7 @@ class BienController extends Controller
                 'prix'=>'required',
             ]);
             $product->update($request->all());
-            return $this->showlist();
+            return redirect()->route('product.list');
         }
     }
 }

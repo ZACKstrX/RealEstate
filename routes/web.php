@@ -62,7 +62,7 @@ Route::middleware('auth')->group(function () {        //middleware
     Route::delete('/deletestatus/{id}', [StatusController::class, 'destroy'])->name('status.destroy');
     //----------------------------------------------------
     //Products routes
-    route::get('ProductsList', [BienController::class, 'showlist']);
+    route::get('ProductsList', [BienController::class, 'showlist'])->name('product.list');
     Route::get('productform', [BienController::class, 'come']);
     Route::post('productForm', [BienController::class, 'add']);
     Route::delete('deleteProduct/{id}',[BienController::class,'destroy'])->name('product.destroy');
