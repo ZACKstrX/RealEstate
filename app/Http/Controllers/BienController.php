@@ -99,5 +99,17 @@ class BienController extends Controller
                 ]  );
         }
     }
-    
+    public function updateProduct(Request $request,$id){
+        $product = Bien::findOrfail($id);
+        if($product){
+            $request->validate([
+                'title'=>'required',
+                'phone_number'=>'required',
+                'email'=>'required',
+                'prix'=>'required',
+            ]);
+            $product->update($request->all());
+            return $this->showlist();
+        }
+    }
 }

@@ -12,20 +12,20 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-    <link rel="icon" href="./images/logo.png" type="image/png">
-    <link href="./app.css" rel="stylesheet">
-    <link href="./SignUp.css" rel="stylesheet">
-    <link href="./SignIn.css" rel="stylesheet">
-    <link href="./sidebar.css" rel="stylesheet">
+    <link rel="icon" href="{{ asset('images/logo.png') }}" type="image/png">
+    <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="./css/bootstrap.css" rel="stylesheet" />
+    <link href="{{asset('SignUp.css')}}" rel="stylesheet">
+    <link href="{{asset('Sidebar.css')}}" rel="stylesheet">
+    <link href="{{asset('SignIn.css')}}" rel="stylesheet">
+    <link href="{{ asset('app.css') }}" rel="stylesheet">
 </head>
 
 <body style="background-color:#f0eee9;">
     <nav class="nav  navbar-expand-lg bg-parchment center" data-bs-theme="dark">
         <div class="container-fluid signav d-flex justify-content-center">
             <a class="navbar-brand" href="#">
-                <img class="logo-nav" src="./images/logo.png" alt="Logo">
+                <img class="logo-nav" src="{{ asset('images/logo.png') }}" alt="Logo">
             </a>
         </div>
     </nav>
@@ -41,7 +41,7 @@
             </div>
     
             <div class="user">
-                <img src="./images/profile.svg" alt="me" class="user-img">
+                <img src="{{ asset('images/profile.svg') }}" alt="me" class="user-img">
                 <div><p class="bold">Client B.</p>
                 <p>Admin</p>
             </div>

@@ -1,7 +1,7 @@
 @include('template.nav')
 <div class="container_form">
     <div class="container">
-        <form class="form2" method="post" action="productForm">
+        <form class="form2" method="POST" action="{{route('updateProduct',$previous->id)}}">
             @csrf
             <input type="hidden" name="user_id" value="{{ auth()->id() }}">
             <div class="form-row w-50">
