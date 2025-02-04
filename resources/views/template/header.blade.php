@@ -73,17 +73,17 @@
                     <span class="tooltip">Type</span>
                 </li><li>
                     <a href="StatutList">
-                        <i class='bx bx-cart-add'></i>
+                        <i class='bx bx-question-mark'></i>
                         <span class="nav-item">Statut</span>
                     </a>
                     <span class="tooltip">statut</span>
-                </li> <li>
+                 </li>{{-- <li>
                     <a href="#">
                         <i class="bx bx-cog"></i>
                         <span class="nav-item">Settings</span>
                     </a>
                     <span class="tooltip">Settings </span>
-                </li><li>
+                </li>--}}<li> 
                     <a href="/logout">
                         <i class="bx bx-log-out"></i>
                         <span class="nav-item">Logout</span>
