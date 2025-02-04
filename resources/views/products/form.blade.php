@@ -1,23 +1,28 @@
 @include('template.nav')
+
+
 <div class="container_form">
     <div class="container">
         <form class="form2" method="post" action="productForm">
             @csrf
             <input type="hidden" name="user_id" value="{{ auth()->id() }}">
-            <div class="form-row w-50">
-                <div class="d-flex flex-column align-items-center">
-                    <img class="w-25" src="./images/logo.png" alt="">
-                    <h2 class="SignINc"><b><i>Real Estate Information:</i> </b></h2>
-                </div>
+            <div class="form-col">
+            <div class="d-flex flex-column align-items-center">
+                <img class="w" src="./images/logo.png" alt="">
+                <h2 class="SignINc"><b><i>Real Estate Information:</i> </b></h2>
+            </div>
 
-                <div class="form-group col-md-6">
+        <div class="row">
+            <div class="form-row w-50 ">
+
+                <div class="form-group col-md-6 w-100">
                     <label for="inputPassword4">Title</label>
                     <input type="text" class="form-control" placeholder="title" name="title">
                 </div>
 
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Description</label>
-                    <textarea class="form-control" id="inputTittle" name="description" ></textarea>
+                    <textarea class="form-control" id="inputTittle" name="description"></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Picture</label>
@@ -30,7 +35,7 @@
                         <input type="tel" class="form-control" placeholder="Phone Number" name="phone_number"
                             pattern="[0-9]{10}" maxlength="10" title="Enter a valid 10-digit phone number">
                     </div>
-                    
+
 
                     <div class="form-group col-md-6">
                         <label for="inputEmail4">Email</label>
@@ -57,7 +62,7 @@
 
                 </div>
             </div>
-
+            {{-- ------------------------------------------------------------------------------------------------------------------------------------------------------- --}}
             <div class="form-row w-50">
                 <div class="row"> {{-- Here --}}
                     <div class="col">
@@ -168,6 +173,7 @@
                 </div>
                 <button type="submit" class="btn btn-success w-100">Post</button>
             </div>
+        </div></div>
         </form>
     </div>
 </div>

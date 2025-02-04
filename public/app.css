@@ -291,7 +291,10 @@ ul{
 .GAP{
    gap: 20px;
 }
-
+.w{
+   
+    width: 15%;
+}
 
 
 @media only screen and (max-width:770px) {
