@@ -25,7 +25,8 @@
 
         <nav class="nav navbar navbar-expand-lg bg-parchment" data-bs-theme="dark">
             <div class="container-fluid">
-                <div><img class="logo-nav" src="./images/logo.png" alt=""><a class="navbar-brand"
+                <div>
+                    <img class="logo-nav" src="./images/logo.png" alt=""><a class="navbar-brand"
                         href="#"></a></div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

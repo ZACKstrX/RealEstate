@@ -28,8 +28,8 @@
 <body style="background-color:#f0eee9;">
     <nav class="nav  navbar-expand-lg bg-parchment center" data-bs-theme="dark">
         <div class="container-fluid signav d-flex justify-content-center">
-            <a class="navbar-brand" href="#">
-                <img class="logo-nav" src="{{asset('images/logo.png')}}" alt="Logo">
+            <a class="navbar-brand" href="{{ url('/') }}">
+                <img class="logo-nav" src="{{asset('images/logo.png')}}" alt="Logo" >
             </a>
         </div>
     </nav>
