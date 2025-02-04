@@ -9,7 +9,8 @@
             <th scope="col">Price </th>
             <th scope="col">City </th>
             <th scope="col">Product Type </th>
-            <th scope="col">Owner </th>
+            <th scope="col">Owner ID</th>
+            <th scope="col">Owner Name</th>
             <th scope="col d-flex row gap">operations </th>
           </tr>
         </thead>
@@ -19,13 +20,11 @@
           <td>{{$product->title}}</td>
             <td>{{$product->surface}} m²</td>
             <td>{{$product->prix}} MAD</td>
-            <td>ID :{{$product->city_id}}</td>
-            <td>ID :{{$product->type_bien_id}}</td>
-            <td>@if($product->user_id ===null)
-              null
-              @else
-              ID :{{$product->user_id }}
-              @endif  
+            <td>{{$product->city->name}}</td>
+            <td>{{$product->typeBien->name}}</td>
+            <td>{{$product->user_id}}</td>
+            <td>{{$product->user->first_name }} {{$product->user->last_name}}</td>
+           
             </td>
             <td>
               <a class="btn btn-secondary me-3" href="{{url('/getupdate/'.$product->id)}}">Update</a>
