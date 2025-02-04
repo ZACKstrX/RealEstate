@@ -113,25 +113,21 @@
                     <div class="col">
                         <label for="inputBaths">Number of rooms</label>
                         <select class="form-control" name="rooms">
-                            <option selected>Choose...</option>
-                            <option value="1">1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                            <option>More...</option>
+                            <option >Choose...</option>
+                            @for($i = 1; $i <=5; $i++)
+                            <option value="{{$i}}"{{$bienDetails->rooms == $i ? 'selected' : ''}}>{{$i}}</option>
+                        @endfor
+                            <option value="6"{{$bienDetails->rooms > 5 ? 'selected' : ''}}>More...</option>
                         </select>
                     </div>
 
                     <div class="col">
                         <label for="inputBaths">Number of baths</label>
                         <select class="form-control" name="baths">
-                            <option selected>Choose...</option>
-                            <option value="1">1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                            <option >Choose...</option>
+                            @for($i = 1 ; $i<=5; $i++)
+                            <option value="{{$i}}"{{$bienDetails->baths == $i ? 'selected' : ''}}>{{$i}}</option>
+                            @endfor
                             <option>More...</option>
                         </select>
                     </div>
@@ -141,12 +137,10 @@
                     <div class="col">
                         <label for="inputGarages">Number of garages</label>
                         <select class="form-control" name="garages">
-                            <option selected>Choose...</option>
-                            <option value="1">1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                            <option >Choose...</option>
+                            @for($i = 1 ; $i<=5; $i++)
+                            <option value="{{$i}}" {{$bienDetails->garages == $i ? 'selected' : ''}}>{{$i}}</option>
+                            @endfor
                             <option>More...</option>
                         </select>
                     </div>
@@ -154,12 +148,10 @@
                     <div class="col">
                         <label for="inputBalconies">Number of balconies</label>
                         <select class="form-control" name="balconies">
-                            <option selected>Choose...</option>
-                            <option value="1">1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                            <option >Choose...</option>
+                            @for ($i = 1; $i <= 5; $i++)
+                            <option value="{{$i}}"{{$bienDetails->balconies == $i ? 'selected' : ''}}>{{$i}}</option>
+                            @endfor
                             <option>More...</option>
                         </select>
                     </div>

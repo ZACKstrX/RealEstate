@@ -50,8 +50,8 @@ class Bien extends Model
         return $this->belongsTo(Status::class);
     }
 
-    public function bienDetail() : HasOne {
-        return $this->HasOne(BienDetails::class,"detail_id","id");
+    public function bienDetail() : BelongsTo {
+        return $this->belongsTo(BienDetails::class,"detail_id","id");
     }
 
 }

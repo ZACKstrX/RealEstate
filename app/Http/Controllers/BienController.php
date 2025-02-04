@@ -85,12 +85,14 @@ class BienController extends Controller
 
     public function update($id){
         $product = Bien::find($id);
+        $bienDetails = $product->bienDetails;
         $cities = City::all();
         $statuses = Status::all();
         $types = TypeBien::all();
         if($product !=null){
             return view('products.update',[
                 'previous'=>$product,
+                'bienDetails'=>$product->bienDetail,
                 'cities' => $cities,
                 'statuses' => $statuses,
                 'types' => $types
