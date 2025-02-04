@@ -82,4 +82,20 @@ class BienController extends Controller
         $product->delete();
         return redirect()->back()->with('success','Product deleted successfully');
     }
+
+    public function update($id){
+        $product = Bien::find($id);
+        $cities = City::all();
+        $statuses = Status::all();
+        $types = TypeBien::all();
+        if($product !=null){
+            return view('products.update',[
+                'previous'=>$product,
+                'cities' => $cities,
+                'statuses' => $statuses,
+                'types' => $types
+                ]  );
+        }
+    }
+    
 }

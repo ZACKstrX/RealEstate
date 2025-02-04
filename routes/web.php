@@ -66,5 +66,7 @@ Route::middleware('auth')->group(function () {        //middleware
     Route::get('productform', [BienController::class, 'come']);
     Route::post('productForm', [BienController::class, 'add']);
     Route::delete('deleteProduct/{id}',[BienController::class,'destroy'])->name('product.destroy');
+    route::get('getupdate/{id}',[BienController::class, 'update']);
+
 });
 // ----------------------------------------------------

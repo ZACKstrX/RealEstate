@@ -17,18 +17,18 @@
           @foreach ($products as $product)
           <tr>  
           <td>{{$product->title}}</td>
-            <td>{{$product->surface}}</td>
-            <td>{{$product->prix}}</td>
-            <td>{{$product->city_id}}</td>
-            <td>{{$product->type_bien_id}}</td>
+            <td>{{$product->surface}} m²</td>
+            <td>{{$product->prix}} MAD</td>
+            <td>ID :{{$product->city_id}}</td>
+            <td>ID :{{$product->type_bien_id}}</td>
             <td>@if($product->user_id ===null)
               null
               @else
-              {{$product->user_id }}
+              ID :{{$product->user_id }}
               @endif  
             </td>
             <td>
-              <button type="button" class="btn btn-secondary me-3">Update</button>
+              <a class="btn btn-secondary me-3" href="{{url('/getupdate/'.$product->id)}}">Update</a>
               <form action="{{ route('product.destroy',$product->id) }}" method="POST" style="display:inline;">
                 @csrf
                 @method('DELETE')
