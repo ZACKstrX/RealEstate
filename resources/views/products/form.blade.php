@@ -9,10 +9,10 @@
             <div class="form-col">
             <div class="d-flex flex-column align-items-center">
                 <img class="w" src="./images/logo.png" alt="">
-                <h2 class="SignINc"><b><i>Real Estate Information:</i> </b></h2>
+                <h3 class="SignINc"><b><i>Real Estate Information:</i> </b></h3>
             </div>
 
-        <div class="row">
+        <div class="row"> 
             <div class="form-row w-50 ">
 
                 <div class="form-group col-md-6 w-100">
@@ -22,7 +22,8 @@
 
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Description</label>
-                    <textarea class="form-control" id="inputTittle" name="description"></textarea>
+                    <textarea class="form-control" id="inputTittle" name="description"
+                     style="height: 30px; max-height: 80px; overflow-y: auto;"></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Picture</label>
