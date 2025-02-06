@@ -69,16 +69,16 @@
                     <label for="inputFirstName"><b class="green-text">First Name</b> </label>
                     <input type="text" class="form-control searchopacity @error('first_name') is-invalid @enderror"id="inputFirstName" name="first_name"
                         placeholder="First name">
-                        @error('first_Name')
-                        <div class="invalid-feedback">{{ $message }}</div>
+                        @error('first_name')
+                        <div class="invalid-feedback d-block">{{ $message }}</div>
                         @enderror
                 </div>
                 <div class="col">
                     <label for="inputLastName"><b class="green-text">Last Name</b></label>
                     <input type="text" class="form-control searchopacity @error('last_name') is-invalid @enderror"id="inputLastName" name="last_name"
                         placeholder="Last name">
-                        @error('last_Name')
-                        <div class="invalid-feedback">{{ $message }}</div>
+                        @error('last_name')
+                        <div class="invalid-feedback" style="top: 100%;">{{ $message }}</div>
                         @enderror
                 </div>
 

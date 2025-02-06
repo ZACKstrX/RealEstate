@@ -36,10 +36,10 @@
     align-items: center;
     background-color:#F2E8CF;
     border-radius: 10%;
-    height:auto;
-    width: 600px;
+    height:660px;
+    width: 700px;
     position: relative;
-    padding: 4rem;
+    padding: 2rem 4rem 4rem 4rem;
      z-index: 5;
     right: 20px;
 }
