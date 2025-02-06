@@ -24,7 +24,9 @@
     <nav class="nav navbar navbar-expand-lg bg-parchment" data-bs-theme="dark">
         <div class="container-fluid">
             <div>
-                <a class="navbar-brand" href="{{ url('/') }}"><img class="logo-nav" src="./images/logo.png" alt=""></a></div>
+                <a class="navbar-brand" href="{{ url('/') }}"><img class="logo-nav" src="./images/logo.png"
+                        alt=""></a>
+            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -61,30 +63,43 @@
                 <img class="w-25" src="./images/logo.png" alt="">
                 <h2 class="SignINc"><b><i><u>Sign Up</u></i> </b></h2>
             </div>
+            
             <div class="row mb-4">
                 <div class="col">
                     <label for="inputFirstName"><b class="green-text">First Name</b> </label>
-                    <input type="text" class="form-control searchopacity"id="inputFirstName" name="first_name"
+                    <input type="text" class="form-control searchopacity @error('first_name') is-invalid @enderror"id="inputFirstName" name="first_name"
                         placeholder="First name">
+                        @error('first_Name')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
                 </div>
                 <div class="col">
                     <label for="inputLastName"><b class="green-text">Last Name</b></label>
-                    <input type="text" class="form-control searchopacity"id="inputLastName" name="last_name"
+                    <input type="text" class="form-control searchopacity @error('last_name') is-invalid @enderror"id="inputLastName" name="last_name"
                         placeholder="Last name">
+                        @error('last_Name')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
                 </div>
 
             </div>
             <div class="row  mb-4">
                 <div class="form-group col-md-6">
                     <label for="inputEmail4"><b class="green-text">Email</b></label>
-                    <input type="email" class="form-control searchopacity" id="inputEmail4" name="email"
+                    <input type="email" class="form-control searchopacity @error('email') is-invalid @enderror" id="inputEmail4" name="email"
                         placeholder="Email">
-                </div>
+                        @error('email')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                </div>  
 
                 <div class="form-group col-md-6">
                     <label for="inputPhoneNumber"><b class="green-text">Phone Number</b></label>
-                    <input type="text" class="form-control searchopacity" id="inputPhoneNumber" name="phone_number"
+                    <input type="text" class="form-control searchopacity @error('phone_number') is-invalid @enderror" id="inputPhoneNumber" name="phone_number"
                         placeholder="Phone Number">
+                        @error('phone_number')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
                 </div>
 
             </div>
@@ -98,8 +113,11 @@
             <div class="row mb-4">
                 <div class="form-group  col-md-6 ">
                     <label for="inputPassword4"><b class="green-text">Password</b></label>
-                    <input type="password" class="form-control searchopacity" id="inputPassword4" name="password"
+                    <input type="password" class="form-control searchopacity @error('password') is-invalid @enderror" id="inputPassword4" name="password"
                         placeholder="Password...">
+                        @error('password')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
                 </div>
 
                 <div class="form-group col-md-6">
@@ -119,7 +137,8 @@
                     </label>
                 </div>
             </div>
-            <button type="submit" class="mybtn btn dark-green "><strong class="wordhover card-text">SignUp</strong></button>
+            <button type="submit" class="mybtn btn dark-green "><strong
+                    class="wordhover card-text">SignUp</strong></button>
     </div>
 
 

@@ -41,7 +41,7 @@ class AuthManager extends Controller
             'last_name'=>['required'],
             'phone_number'=>'required',
             'email'=>'required',
-            'password'=>'required'
+            'password'=>'required|min:8|email'
         ]);
         $request['password'] = bcrypt($request->password);
         $User = User::create($request->all());
