@@ -17,7 +17,7 @@
 
                 <div class="form-group col-md-6 w-100">
                     <label for="inputPassword4">Title</label>
-                    <input type="text" class="form-control" placeholder="title" name="title">
+                    <input type="text" class="form-control @error('title') is-invalid @enderror" placeholder="title" name="title">
                 </div>
 
                 <div class="form-group">
@@ -27,20 +27,20 @@
                 </div>
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Picture</label>
-                    <input class="form-control" type="file" id="formFile" name="image">
+                    <input class="form-control @error('image') is-invalid @enderror" type="file" id="formFile" name="image">
                 </div>
 
                 <div class="row">
                     <div class="form-group col-md-6">
                         <label for="inputEmail4">Phone Number</label>
-                        <input type="tel" class="form-control" placeholder="Phone Number" name="phone_number"
+                        <input type="tel" class="form-control @error('phone_number') is-invalid @enderror" placeholder="Phone Number" name="phone_number"
                             pattern="[0-9]{10}" maxlength="10" title="Enter a valid 10-digit phone number">
                     </div>
 
 
                     <div class="form-group col-md-6">
                         <label for="inputEmail4">Email</label>
-                        <input type="email" class="form-control" name="email" placeholder="exemple@exemple.com">
+                        <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="exemple@exemple.com">
                     </div>
                 </div>
                 <div class="row">
@@ -48,7 +48,7 @@
                     <div class="form-group col-md-6 col">
                         <label for="inpuPrice">Price</label>
                         <div class="input-group">
-                            <input type="number" class="form-control" name="prix" placeholder="">
+                            <input type="number" class="form-control @error('prix') is-invalid @enderror" name="prix" placeholder="">
                             <span class="input-group-text">MAD</span>
                         </div>
                     </div>
@@ -56,7 +56,7 @@
                     <div class="form-group col">
                         <label for="inputAddress">Surface</label>
                         <div class="input-group">
-                            <input type="number" class="form-control" name="surface" placeholder="">
+                            <input type="number" class="form-control  @error('surface') is-invalid @enderror" name="surface" placeholder="">
                             <span class="input-group-text">m²</span>
                         </div>
                     </div>
@@ -68,7 +68,7 @@
                 <div class="row"> {{-- Here --}}
                     <div class="col">
                         <label for="inputCity">City</label>
-                        <select class="form-control" name="city_id">
+                        <select class="form-control @error('city_id') is-invalid @enderror" name="city_id">
                             <option selected>Choose...</option>
                             @foreach ($cities as $city)
                                 <option value="{{ $city->id }}">{{ $city->name }}</option>
@@ -78,7 +78,7 @@
 
                     <div class="col">
                         <label for="inputType">Type de bien</label>
-                        <select class="form-control" name="type_bien_id">
+                        <select class="form-control @error('type_bien_id') is-invalid @enderror" name="type_bien_id">
                             <option selected>Choose...</option>
                             @foreach ($types as $type)
                                 <option value="{{ $type->id }}">{{ $type->name }}</option>
@@ -90,7 +90,7 @@
                 <div class="row mt-3">
                     <div class="col">
                         <label for="inputStatut">Statut</label>
-                        <select class="form-control" name="status_id">
+                        <select class="form-control @error('status_id') is-invalid @enderror" name="status_id">
                             <option selected>Choose...</option>
                             @foreach ($statuses as $status)
                                 <option value="{{ $status->id }}">{{ $status->name }}</option>
@@ -100,7 +100,7 @@
 
                     <div class="col">
                         <label for="inputEtat">Etat</label>
-                        <select class="form-control" name="etat_id">
+                        <select class="form-control @error('etat_id') is-invalid @enderror" name="etat_id">
                             <option selected>Choose...</option>
                             <option value="1">New</option>
                             <option value="2">Old</option>
@@ -112,26 +112,24 @@
                     <div class="col">
                         <label for="inputBaths">Number of rooms</label>
                         <select class="form-control" name="rooms">
-                            <option selected>Choose...</option>
+                            <option selected value="0">Choose...</option>
                             <option value="1">1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                            <option>More...</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                         </select>
                     </div>
 
                     <div class="col">
                         <label for="inputBaths">Number of baths</label>
                         <select class="form-control" name="baths">
-                            <option selected>Choose...</option>
+                            <option selected value="0">Choose...</option>
                             <option value="1">1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                            <option>More...</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                         </select>
                     </div>
                 </div>
@@ -140,26 +138,24 @@
                     <div class="col">
                         <label for="inputGarages">Number of garages</label>
                         <select class="form-control" name="garages">
-                            <option selected>Choose...</option>
+                            <option selected value="0">Choose...</option>
                             <option value="1">1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                            <option>More...</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                         </select>
                     </div>
 
                     <div class="col">
                         <label for="inputBalconies">Number of balconies</label>
                         <select class="form-control" name="balconies">
-                            <option selected>Choose...</option>
+                            <option selected value="0">Choose...</option>
                             <option value="1">1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                            <option>More...</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                         </select>
                     </div>
                 </div>

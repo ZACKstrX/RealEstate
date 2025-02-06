@@ -14,10 +14,10 @@ return new class extends Migration
     {
         Schema::create('bien_details', function (Blueprint $table) {
             $table->id();
-            $table->integer('rooms');
-            $table->integer('baths');
-            $table->integer('garages');
-            $table->integer('balconies');
+            $table->integer('rooms')->nullable();
+            $table->integer('baths')->nullable();
+            $table->integer('garages')->nullable();
+            $table->integer('balconies')->nullable();
              $table->timestamps();
         });
     }

@@ -21,7 +21,7 @@ route::get('Menu', function () {
 Route::get('SignUp', function () {
     return view('SignUp');
 });
-Route::get('login', [AuthManager::class, 'showLogin']);
+Route::get('login', [AuthManager::class, 'showLogin'])->name('login');
 Route::get('logout', function () {
     Auth::logout();
     return redirect("/login");

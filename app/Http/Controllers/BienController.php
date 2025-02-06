@@ -29,24 +29,25 @@ class BienController extends Controller
     }
 
     public function add(Request $request){ 
-        // $request->validate([
-        //     'title'=>'required',
-        //     'description'=>'required',
-        //     'phone_number'=>'required',
-        //     'email'=>'required',
-        //     'surface'=>'required',
-        //     'prix'=>'required',
-        //     'city_id'=>'required',
-        //     'status_id'=>'required',
-        // ]);
-
+        $validatedData = $request->validate([
+            'title' => 'required|string|max:255',
+            'phone_number' => 'required|string|max:10',
+            'email' => 'required|email|max:255',
+            'prix' => 'required|numeric|min:0',
+            'surface' => 'required|numeric|min:0',
+            'image' => 'nullable|image',  // Assuming image is optional, adjust accordingly
+            'city_id' => 'required|exists:cities,id',
+            'type_bien_id' => 'required|exists:type_biens,id',
+            'status_id' => 'required|exists:statuses,id',
+            'etat_id' => 'required|exists:etats,id',
+        ]);
         $bienDetail = BienDetails::create([
             'rooms'=>$request->rooms,
             'baths'=>$request->baths,
             'garages'=>$request->garages,
             'balconies'=>$request->balconies,
         ]);
-
+        
         $Bien = Bien::create([
             'title'=>$request->title,
             'description'=>$request->description,
@@ -56,27 +57,18 @@ class BienController extends Controller
             'image'=>$request->image,
             'prix'=>$request->prix,
             'city_id'=>$request->city_id,
-            'type_bien_id'=>$request->type_bien_id,
+            'type_bien_id'=>$request->type_bien_id, 
             'status_id'=>$request->status_id,
             'etat_id'=>$request->etat_id,
             'detail_id' =>  $bienDetail->id,
             'user_id' => auth()->id(),
 
         ]);
-
- 
-
-      
-
-               // $DetailBien  = bienDetail::create([
-        //     'email'=>$request->email,
-        //     'surface'=>$request->surface,
-        //     'image'=>$request->image,
-        //     'prix'=>$request->prix,
-        // ])
         return redirect()->route('landingpage');
 
     }
+
+
     public function destroy($id){
         $product = Bien::findOrfail($id);
         $product->delete();

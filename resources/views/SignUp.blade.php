@@ -78,7 +78,7 @@
                     <input type="text" class="form-control searchopacity @error('last_name') is-invalid @enderror"id="inputLastName" name="last_name"
                         placeholder="Last name">
                         @error('last_name')
-                        <div class="invalid-feedback" style="top: 100%;">{{ $message }}</div>
+                         <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                 </div>
 
@@ -95,8 +95,8 @@
 
                 <div class="form-group col-md-6">
                     <label for="inputPhoneNumber"><b class="green-text">Phone Number</b></label>
-                    <input type="text" class="form-control searchopacity @error('phone_number') is-invalid @enderror" id="inputPhoneNumber" name="phone_number"
-                        placeholder="Phone Number">
+                    <input type="tel" class="form-control searchopacity @error('phone_number') is-invalid @enderror" id="inputPhoneNumber" name="phone_number"
+                        placeholder="Phone Number" pattern="[0-9]{10}" maxlength="10" title="Enter a valid 10-digit phone number">
                         @error('phone_number')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
