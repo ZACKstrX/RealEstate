@@ -172,31 +172,32 @@
                 </div>
             </form>
             @if(session('showModal'))
-        <!-- Modal for error message -->
-        <div class="modal" id="errorModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Missing Information</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        I think you forgot to type some required info. Please fill in all the required fields!
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <!-- Modal for error message -->
+            <div class="modal" id="errorModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Missing Information</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            I think you forgot to type some required info. Please fill in all the required fields!
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <script>
-            // Show the modal after page load
-            window.onload = function() {
-                var modal = new bootstrap.Modal(document.getElementById('errorModal'));
-                modal.show();
-            };
-        </script>
-    @endif
+            <script>
+                // Show the modal after page load
+                window.onload = function() {
+                    var modal = new bootstrap.Modal(document.getElementById('errorModal'));
+                    modal.show();
+                };
+            </script>
+        @endif
+        
 
         </div>
     </div>
