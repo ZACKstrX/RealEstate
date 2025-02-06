@@ -41,6 +41,10 @@ class BienController extends Controller
             'status_id' => 'required|exists:statuses,id',
             'etat_id' => 'required|exists:etats,id',
         ]);
+        if ($request->fails()) {
+            return redirect()->back()->withErrors($validatedData)->withInput()->with('showModal', true);
+        }
+        
         $bienDetail = BienDetails::create([
             'rooms'=>$request->rooms,
             'baths'=>$request->baths,
