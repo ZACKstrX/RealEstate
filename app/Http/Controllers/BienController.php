@@ -96,15 +96,28 @@ class BienController extends Controller
     }
     public function updateProduct(Request $request,$id){
         $product = Bien::findOrfail($id);
-        if($product){
-            $request->validate([
-                'title'=>'required',
-                'phone_number'=>'required',
-                'email'=>'required',
-                'prix'=>'required',
-            ]);
+        $validator = Validator::make($request->all(), [
+            'title' => 'required|string|max:255',
+            'phone_number' => 'required|string|max:10',
+            'email' => 'required|email|max:255',
+            'prix' => 'required|numeric|min:0',
+            'surface' => 'required|numeric|min:0',
+            'image' => 'nullable|image',  
+            'city_id' => 'required|exists:cities,id',
+            'type_bien_id' => 'required|exists:type_biens,id',
+            'status_id' => 'required|exists:statuses,id',
+            'etat_id' => 'required|exists:etats,id',
+        ]);
+        if ($validator->fails()) {
+            session()->flash('showModal', true); 
+            return redirect()->back()->withErrors($validator)->withInput();  
+        }
+
+
+
+  
             $product->update($request->all());
             return redirect()->route('product.list');
-        }
+    
     }
 }

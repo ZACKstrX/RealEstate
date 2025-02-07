@@ -7,7 +7,7 @@
                 <input type="hidden" name="user_id" value="{{ auth()->id() }}">
                 <div class="form-col">
                     <div class="d-flex flex-column align-items-center">
-                        <img class="w" src="./images/logo.png" alt="">
+                        <img class="w" src="{{ asset('images/logo.png') }}" alt="">
                         <h3 class="SignINc"><b><i>Real Estate Information:</i> </b></h3>
                     </div>
 
