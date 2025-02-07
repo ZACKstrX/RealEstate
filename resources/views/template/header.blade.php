@@ -42,7 +42,7 @@
     
             <div class="user" >
                 <img src="{{ asset('images/profile.svg') }}" alt="me" class="user-img">
-                <div><p class="bold">Client B.</p>
+                <div><p class="bold">{{ auth()->user()->first_name }}</p>
                 <p>Admin</p>
             </div>
             </div>
