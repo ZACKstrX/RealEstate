@@ -52,6 +52,7 @@ class BienController extends Controller
         'balconies'=>$request->balconies,
     ]);
     
+    
     $Bien = Bien::create([
         'title'=>$request->title,
         'description'=>$request->description,
@@ -67,6 +68,7 @@ class BienController extends Controller
         'detail_id' =>  $bienDetail->id,
         'user_id' => auth()->id(),
     ]);
+
 
     return redirect()->route('landingpage');
 }
@@ -112,10 +114,18 @@ class BienController extends Controller
             session()->flash('showModal', true); 
             return redirect()->back()->withErrors($validator)->withInput();  
         }
-
-
-
-  
+        if ($product->detail_id) {
+            $bienDetail = BienDetails::find($product->detail_id);
+            if ($bienDetail) {
+                $bienDetail->update([
+                    'rooms' => $request->rooms,
+                    'baths' => $request->baths,
+                    'garages' => $request->garages,
+                    'balconies' => $request->balconies,
+                ]);
+            }
+        }
+      
             $product->update($request->all());
             return redirect()->route('product.list');
     
