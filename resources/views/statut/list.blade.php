@@ -6,7 +6,7 @@
     <a class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addStatusModal">Add Status</a>
   </div>
 
-  <table class="table table-striped">
+  <table class="table table-striped text-center align-middle">
     <thead>
         <th scope="col">Name</th>
         <th scope="col">Operations</th>
@@ -14,7 +14,7 @@
     <tbody>
         @foreach ($statuses as $status )
           <tr>
-            <td>{{$status->name}}</td>
+            <td class="">{{$status->name}}</td>
             <td>
               <a class="btn btn-secondary me-3" data-bs-toggle="modal" data-bs-target="#updateStatusModal" data-status-id="{{ $status->id }}" data-status-name="{{ $status->name }}">Update</a>
               

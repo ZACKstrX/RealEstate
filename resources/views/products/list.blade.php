@@ -1,7 +1,7 @@
 @include('template.header')
 <div class="container">  
     <div class="d-flex justify-content-between mb-5"><h1>Products :</h1> <a href="/productform" class="btn btn-success ">Add Product</a> </div>
-    <table class="table table-striped ">
+    <table class="table table-striped text-center align-middle">
         <thead>
           <tr>
             <th scope="col">Title </th>

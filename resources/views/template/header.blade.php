@@ -34,7 +34,7 @@
 
             <div class="top">
                 <div class="logo">
-                    <i class="bx bxl-codepen"></i>
+                    <i class='bx bx-leaf'></i>
                     <span>GreenLeaf </span>
                 </div>
                 <i class="bx bx-menu" id="btn"></i>

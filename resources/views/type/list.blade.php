@@ -6,7 +6,7 @@
         <a class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addTypeModal">Add Type</a>
     </div>
 
-    <table class="table table-striped">
+    <table class="table table-striped text-center align-middle">
         <thead>
             <th scope="col">Name</th>
             <th scope="col">Operations</th>
