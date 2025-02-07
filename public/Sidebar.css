@@ -143,13 +143,11 @@ html, body {
     display: none;
 }
 .main-content{
-     position: relative;
     background-color: #f0eee9;
-    top:0;
-    left: 80px;
-    transition: all 0.5s ease;
-    width: 85%;
     padding: 1rem;
+    width: 100%; /* Remains full width */
+    min-height: 100vh;
+    transition: filter 0.3s ease;
 }
 
 /* nav bar  */

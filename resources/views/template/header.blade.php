@@ -40,7 +40,7 @@
                 <i class="bx bx-menu" id="btn"></i>
             </div>
     
-            <div class="user">
+            <div class="user" >
                 <img src="{{ asset('images/profile.svg') }}" alt="me" class="user-img">
                 <div><p class="bold">Client B.</p>
                 <p>Admin</p>
