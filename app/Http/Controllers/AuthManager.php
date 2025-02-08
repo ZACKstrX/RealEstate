@@ -49,6 +49,9 @@ class AuthManager extends Controller
         return redirect('/login')->with('success', 'Account created successfully! Please log in.');
         
     }
+    public function info(){
+        return view('User.info');
+    }
  
 }
 
