@@ -12,7 +12,6 @@ html, body {
 .user-img{
     width: 50px;
     border-radius: 100%;
-    border: 2px solid #000000;
     background-color: #F2E8CF;
 }
 .sidebar{

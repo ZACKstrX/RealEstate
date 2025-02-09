@@ -77,3 +77,41 @@
     background-color: #146124;
     width: 200px;
 }
+
+  
+.upload{
+    width: 80px;
+    position: relative;
+    margin: auto;
+}
+.upload img{
+    border:#F2E8CF solid 3px;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+.upload .round{
+position: absolute;
+bottom: 0;
+right: -4px;
+background-color: #5a9151;
+border-radius: 50%;
+width: 32px;
+height: 32px;
+line-height: 32px;
+text-align: center;
+overflow: hidden;
+}
+.upload .round input[type='file']{
+position:absolute;
+transform: scale(2);
+opacity: 0; 
+}
+input[type=file]::-webkit-file-upload-button{
+    cursor: pointer;
+}
+.left{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
