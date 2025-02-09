@@ -1,10 +1,10 @@
 .img1{
     z-index: 2;
     background-image: url('./images/User.jpg');
-    background-size: cover; /* Or 'contain' if you want the full image visible */
-    background-position: center; /* Centers the image in the div */
-    width: 100%;  /* Use viewport width to cover the entire screen */
-    height: 90vh; /* Use viewport height to cover the entire screen */
+    background-size: cover; 
+    background-position: center; 
+    width: 100%;  
+    height: 90vh; 
     display: flex;
     position: relative;
     justify-content: center;
@@ -15,14 +15,14 @@
     box-shadow: rgba(0, 0, 0, 0.4) -80px 0px 60px -10px;
     border: #F2E8CF solid 5px;
     align-items: center;
-    background-color: rgba(49, 48, 48, 0.6); /* Semi-transparent background */
+    background-color: rgba(49, 48, 48, 0.6); 
     border-radius: 5%;
     height: 660px;
-    width: 700px;
+    width: 800px;
     position: relative;
-    padding: 2rem 4rem 4rem 4rem;
+    padding: 2rem 4rem 1rem 4rem;
     z-index: 5;
-    backdrop-filter: blur(8px); /* Apply blur effect */
+    backdrop-filter: blur(8px); 
     -webkit-backdrop-filter: blur(10px);
  }
 
@@ -62,18 +62,18 @@
 .searchopacity:hover{
     box-shadow: rgb(20, 30, 40) -30px 20px 40px -15px, rgb(20, 30, 40) -40px 20px 40px -15px;
 }
-
-
-
-/* input:focus::placeholder {
-    color: #6a994e !important;
-    
-  } */
-
   .SignINc{
     color: #5a9151;
 }   
 .white-text{
    color : #f2e9d0 ;
 }
-  
+.centrer{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.b{
+    background-color: #146124;
+    width: 200px;
+}

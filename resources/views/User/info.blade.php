@@ -14,17 +14,13 @@
                 <label for="inputFirstName"><b class="white-text">First Name</b> </label>
                 <input type="text" class="form-control searchopacity1 @error('first_name') is-invalid @enderror"id="inputFirstName" name="first_name"
                     placeholder="First name">
-                    @error('first_name')
-                    <div class="invalid-feedback d-block">{{ $message }}</div>
-                    @enderror
+                 
             </div>
             <div class="col">
                 <label for="inputLastName"><b class="white-text">Last Name</b></label>
                 <input type="text" class="form-control searchopacity1 @error('last_name') is-invalid @enderror"id="inputLastName" name="last_name"
                     placeholder="Last name">
-                    @error('last_name')
-                     <div class="invalid-feedback">{{ $message }}</div>
-                    @enderror
+                 
             </div>
 
         </div>
@@ -33,18 +29,14 @@
                 <label for="inputEmail4"><b class="white-text">Email</b></label>
                 <input type="email" class="form-control searchopacity1 @error('email') is-invalid @enderror" id="inputEmail4" name="email"
                     placeholder="Email">
-                    @error('email')
-                    <div class="invalid-feedback">{{ $message }}</div>
-                    @enderror
+                 
             </div>  
 
             <div class="form-group col-md-6">
                 <label for="inputPhoneNumber"><b class="white-text">Phone Number</b></label>
                 <input type="tel" class="form-control searchopacity1 @error('phone_number') is-invalid @enderror" id="inputPhoneNumber" name="phone_number"
                     placeholder="Phone Number" pattern="[0-9]{10}" maxlength="10" title="Enter a valid 10-digit phone number">
-                    @error('phone_number')
-                    <div class="invalid-feedback">{{ $message }}</div>
-                @enderror
+                  
             </div>
 
         </div>
@@ -60,9 +52,7 @@
                 <label for="inputPassword4"><b class="white-text">Password</b></label>
                 <input type="password" class="form-control searchopacity1 @error('password') is-invalid @enderror" id="inputPassword4" name="password"
                     placeholder="Password...">
-                    @error('password')
-                    <div class="invalid-feedback">{{ $message }}</div>
-                @enderror
+                   
             </div>
 
             <div class="form-group col-md-6">
@@ -74,15 +64,8 @@
 
         </div>
 
-        <div class="form-group ">
-            <div class="form-check">
-                <input class="form-check-input " type="checkbox" id="gridCheck">
-                <label class="form-check-label" for="gridCheck">
-                    <b class="white-text">Check me out</b>
-                </label>
-            </div>
-        </div>
-        <button type="submit" class="mybtn btn dark-green "><strong
+        <div class="form-group centrer">
+        <button type="submit" class="btn btn-success b"><strong
                 class="wordhover card-text">Update</strong></button>
 </div>
 
