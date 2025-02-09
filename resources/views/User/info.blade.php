@@ -3,16 +3,18 @@
 
     <form class="form1" method="POST" action="/signup">
         @csrf
-        <div class="left">
-        <div class="upload">
-            <img class="size" src="images/profile.svg" alt="">
-            <div class="round">
-                <input type="file">
-                    <i class="fa fa-camera" style="color:#F2E8CF;"></i>
-                </input>
+       
+        <div class="d-flex flex-column align-items-center position-relative">
+            <div class="left"><!--here is -->
+                <div class="upload">
+                    <img class="size" src="images/profile.svg" alt="">
+                    <div class="round">
+                        <input type="file">
+                        <i class="fa fa-camera" style="color:#F2E8CF;"></i>
+                        </input>
+                    </div>
+                </div>
             </div>
-        </div></div>
-        <div class="d-flex flex-column align-items-center ">
             <img class="w-25" src="{{ asset('images/logo.png') }}" alt="">
             <h2 class="white-text"><b><i>Hi {{ auth()->user()->first_name }} </i> </b></h2>
             <h5 class="white-text"><b><i>You can change your profil infos here</i> </b></h5>

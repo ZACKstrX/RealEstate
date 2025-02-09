@@ -82,10 +82,10 @@
 .upload{
     width: 80px;
     position: relative;
-    margin: auto;
+    
 }
 .upload img{
-    border:#F2E8CF solid 3px;
+    border:#F2E8CF solid 4px;
     border-radius: 50%;
     width: 80px;
     height: 80px;
@@ -110,8 +110,10 @@ opacity: 0;
 input[type=file]::-webkit-file-upload-button{
     cursor: pointer;
 }
+
 .left{
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+    position : absolute;
+    top: 80px;
+    left: 0rem;
+    transform: translateY(-50%);
 }
