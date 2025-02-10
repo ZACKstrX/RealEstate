@@ -28,7 +28,7 @@
                             <label for="formFile" class="form-label">Picture</label>
                             <div class="d-flex">
                                 <input type="file" class="form-control me-2" name="image" id="imageInput" style="max-width: 60%; height: 38px;" />
-                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#imageModal" style="height: 38px; width: 150px;">See my image</button>
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#imageModal" style="height: 38px; width: 150px;">previous image</button>
                             </div>
                         </div>
                         

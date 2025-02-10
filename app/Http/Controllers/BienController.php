@@ -9,7 +9,7 @@ use App\Models\Status;
 use App\Models\TypeBien;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 class BienController extends Controller
 {
@@ -103,24 +103,49 @@ class BienController extends Controller
                 ]  );
         }
     }
-    public function updateProduct(Request $request,$id){
-        $product = Bien::findOrfail($id);
+    public function updateProduct(Request $request, $id)
+    {
+        $product = Bien::findOrFail($id);
         $validator = Validator::make($request->all(), [
             'title' => 'required|string|max:255',
             'phone_number' => 'required|string|max:10',
             'email' => 'required|email|max:255',
             'prix' => 'required|numeric|min:0',
             'surface' => 'required|numeric|min:0',
-            'image' => 'nullable|image',  
+            'image' => 'nullable|image',
             'city_id' => 'required|exists:cities,id',
             'type_bien_id' => 'required|exists:type_biens,id',
             'status_id' => 'required|exists:statuses,id',
             'etat_id' => 'required|exists:etats,id',
         ]);
+    
         if ($validator->fails()) {
-            session()->flash('showModal', true); 
-            return redirect()->back()->withErrors($validator)->withInput();  
+            session()->flash('showModal', true);
+            return redirect()->back()->withErrors($validator)->withInput();
         }
+    
+        $imagePath = $product->image;
+        if ($request->hasFile('image')) {
+            if ($product->image) {
+                Storage::disk('public')->delete($product->image);
+            }
+            $imagePath = $request->file('image')->store('images/useless', 'public');
+        }
+    
+        $product->update([
+            'title' => $request->title,
+            'description' => $request->description,
+            'phone_number' => $request->phone_number,
+            'email' => $request->email,
+            'surface' => $request->surface,
+            'prix' => $request->prix,
+            'image' => $imagePath,
+            'city_id' => $request->city_id,
+            'type_bien_id' => $request->type_bien_id,
+            'status_id' => $request->status_id,
+            'etat_id' => $request->etat_id,
+        ]);
+    
         if ($product->detail_id) {
             $bienDetail = BienDetails::find($product->detail_id);
             if ($bienDetail) {
@@ -132,9 +157,8 @@ class BienController extends Controller
                 ]);
             }
         }
-      
-            $product->update($request->all());
-            return redirect()->route('product.list');
     
+        return redirect()->route('product.list');
     }
+    
 }
