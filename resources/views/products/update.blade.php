@@ -2,7 +2,7 @@
 
 <div class="container_form">
     <div class="container">
-        <form class="form2" method="POST" action="{{ route('updateProduct', $previous->id) }}">
+        <form class="form2" method="POST" action="{{ route('updateProduct', $previous->id) }}" enctype="multipart/form-data">
             @csrf
             <input type="hidden" name="user_id" value="{{ auth()->id() }}">
             <div class="form-col">
@@ -26,9 +26,12 @@
                         
                         <div class="mb-3">
                             <label for="formFile" class="form-label">Picture</label>
-                            <button type="button" class="btn btn-secondary exeption" data-bs-toggle="modal" data-bs-target="#imageModal">Change Image</button>
+                            <div class="d-flex">
+                                <input type="file" class="form-control me-2" name="image" id="imageInput" style="max-width: 60%; height: 38px;" />
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#imageModal" style="height: 38px; width: 150px;">See my image</button>
+                            </div>
                         </div>
-
+                        
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label for="inputEmail4">Phone Number</label>
@@ -167,6 +170,7 @@
             </div>
         </form>
         
+        <!-- Error Modal -->
         @if ($errors->any())
         <div class="modal" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -176,61 +180,37 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        I think you forgot to type some required info. Please fill in all the required fields!
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
         @endif
 
-     
+        <!-- Image Modal -->
         <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="imageModalLabel">Update Image</h5>
+                        <h5 class="modal-title" id="imageModalLabel">Current Image</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        @if($previous->image)
-                            <div class="mb-3">
-                                <p>Current Image : </p>
-                                <img src="{{ asset('storage/' . $previous->image) }}" alt="Current Image" class="img-thumbnail mb-2" width="150">
-                            </div>
+                        @if ($previous->image)
+                            <img src="{{ asset('storage/'.$previous->image) }}" class="img-fluid" alt="Current Image">
                         @else
-                            <p>No current image available.</p>
+                            <p>No image available</p>
                         @endif
-        
-                        <div class="mb-3">
-                            <label for="formFile" class="form-label">Select a New Image</label>
-                            <input class="form-control" type="file" id="formFile" name="image">
-                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Save Changes</button>
                     </div>
                 </div>
             </div>
         </div>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                var imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
-        
-                var changeImageButton = document.querySelector('[data-bs-toggle="modal"]');
-                changeImageButton.addEventListener('click', function() {
-                    imageModal.show();
-                });
-            });
-
-            @if ($errors->any())
-                var errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
-                errorModal.show();
-            @endif
-        </script>
     </div>
 </div>
