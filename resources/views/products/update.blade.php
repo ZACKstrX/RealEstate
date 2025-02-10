@@ -70,9 +70,7 @@
                                 <select class="form-control  @error('city_id') is-invalid @enderror" name="city_id">
                                     <option>Choose...</option>
                                     @foreach ($cities as $city)
-                                        <option value="{{ $city->id }}" {{ $previous->city_id == $city->id ? 'selected' : '' }}>
-                                            {{ $city->name }}
-                                        </option>
+                                        <option value="{{ $city->id }}" {{ $previous->city_id == $city->id ? 'selected' : '' }}>{{ $city->name }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -82,9 +80,7 @@
                                 <select class="form-control  @error('type_bien_id') is-invalid @enderror" name="type_bien_id">
                                     <option>Choose...</option>
                                     @foreach ($types as $type)
-                                        <option value="{{ $type->id }}" {{ $previous->type_bien_id == $type->id ? 'selected' : '' }}>
-                                            {{ $type->name }}
-                                        </option>
+                                        <option value="{{ $type->id }}" {{ $previous->type_bien_id == $type->id ? 'selected' : '' }}>{{ $type->name }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -93,12 +89,10 @@
                         <div class="row mt-3">
                             <div class="col">
                                 <label for="inputStatut">Statut</label>
-                                <select class="form-control @error('status_id') is-invalid @enderror"" name="status_id">
+                                <select class="form-control @error('status_id') is-invalid @enderror" name="status_id">
                                     <option>Choose...</option>
                                     @foreach ($statuses as $status)
-                                        <option value="{{ $status->id }}" {{ $previous->status_id == $status->id ? 'selected' : '' }}>
-                                            {{ $status->name }}
-                                        </option>
+                                        <option value="{{ $status->id }}" {{ $previous->status_id == $status->id ? 'selected' : '' }}>{{ $status->name }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -132,7 +126,6 @@
                                     @for ($i = 1; $i <= 5; $i++)
                                         <option value="{{ $i }}" {{ $bienDetails->baths == $i ? 'selected' : '' }}>{{ $i }}</option>
                                     @endfor
-                                    
                                 </select>
                             </div>
                         </div>
@@ -145,7 +138,6 @@
                                     @for ($i = 1; $i <= 5; $i++)
                                         <option value="{{ $i }}" {{ $bienDetails->garages == $i ? 'selected' : '' }}>{{ $i }}</option>
                                     @endfor
-                                   
                                 </select>
                             </div>
 
@@ -156,7 +148,6 @@
                                     @for ($i = 1; $i <= 5; $i++)
                                         <option value="{{ $i }}" {{ $bienDetails->balconies == $i ? 'selected' : '' }}>{{ $i }}</option>
                                     @endfor
-                    
                                 </select>
                             </div>
                         </div>
@@ -175,13 +166,13 @@
                 </div>
             </div>
         </form>
-        @if(session('showModal'))
-        <!-- Modal for error message -->
-        <div class="modal" id="errorModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        
+        @if ($errors->any())
+        <div class="modal" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Missing Information</h5>
+                        <h5 class="modal-title" id="errorModalLabel">Missing Information</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -193,13 +184,53 @@
                 </div>
             </div>
         </div>
+        @endif
+
+     
+        <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="imageModalLabel">Update Image</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        @if($previous->image)
+                            <div class="mb-3">
+                                <p>Current Image : </p>
+                                <img src="{{ asset('storage/' . $previous->image) }}" alt="Current Image" class="img-thumbnail mb-2" width="150">
+                            </div>
+                        @else
+                            <p>No current image available.</p>
+                        @endif
+        
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Select a New Image</label>
+                            <input class="form-control" type="file" id="formFile" name="image">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Save Changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <script>
-            // Show the modal after page load
-            window.onload = function() {
-                var modal = new bootstrap.Modal(document.getElementById('errorModal'));
-                modal.show();
-            };
+            document.addEventListener('DOMContentLoaded', function() {
+                var imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+        
+                var changeImageButton = document.querySelector('[data-bs-toggle="modal"]');
+                changeImageButton.addEventListener('click', function() {
+                    imageModal.show();
+                });
+            });
+
+            @if ($errors->any())
+                var errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
+                errorModal.show();
+            @endif
         </script>
-    @endif
     </div>
 </div>
