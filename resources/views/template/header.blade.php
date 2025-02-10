@@ -40,14 +40,14 @@
                 <i class="bx bx-menu" id="btn"></i>
             </div>
 
-            <a class="user hah" href="{{ url('userinformation') }}" style="text-decoration: none; color: inherit;">
+            <a class="user hah mt-3" href="{{ url('userinformation') }}" style="text-decoration: none; color: inherit;">
                 <img src="{{ asset('images/profile.svg') }}" alt="me" class="user-img">
                 <div>
                     <p class="bold">{{ auth()->user()->first_name }}</p>
                     <p>Admin</p>
                 </div>
             </a>
-            <ul>
+            <ul class="mt-4">
                 <li>
                     <a href="/">
                         <i class='bx bxs-home-alt-2'></i>
@@ -82,20 +82,16 @@
                         <span class="nav-item">Statut</span>
                     </a>
                     <span class="tooltip">statut</span>
-                </li>{{-- <li>
-                    <a href="#">
-                        <i class="bx bx-cog"></i>
-                        <span class="nav-item">Settings</span>
-                    </a>
-                    <span class="tooltip">Settings </span>
-                </li> --}}<li>
-                    <a href="/logout">
-                        <i class="bx bx-log-out"></i>
-                        <span class="nav-item">Logout</span>
-                    </a>
-                    <span class="tooltip">Logout</span>
                 </li>
+                    <li class="mt-9">
+                        <a href="/logout">
+                            <i class="bx bx-log-out"></i>
+                            <span class="nav-item">Logout</span>
+                        </a>
+                        <span class="tooltip">Logout</span>
+                    </li>
             </ul>
+        
         </div>
 
         <div class="main-content ">
