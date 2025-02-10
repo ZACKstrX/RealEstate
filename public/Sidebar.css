@@ -12,6 +12,7 @@ html, body {
   
 .user-img{
     width: 50px;
+    border: #fff solid 1px;
     border-radius: 100%;
     background-color: #F2E8CF;
 }

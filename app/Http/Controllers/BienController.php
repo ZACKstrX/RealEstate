@@ -51,15 +51,22 @@ class BienController extends Controller
         'garages'=>$request->garages,
         'balconies'=>$request->balconies,
     ]);
+
+
+    $imagePath = null;
+    if ($request->hasFile('image')) {
+        $imagePath = $request->file('image')->store('images/useless', 'public');
+    } 
     
-    
+    $imageUrl = asset('storage/' . $imagePath);
+
     $Bien = Bien::create([
         'title'=>$request->title,
         'description'=>$request->description,
         'phone_number'=>$request->phone_number,
         'email'=>$request->email,
         'surface'=>$request->surface,
-        'image'=>$request->image,
+        'image'=>$imagePath,
         'prix'=>$request->prix,
         'city_id'=>$request->city_id,
         'type_bien_id'=>$request->type_bien_id, 

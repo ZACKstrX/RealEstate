@@ -11,6 +11,7 @@
             <th scope="col">Product Type </th>
             <th scope="col">Owner ID</th>
             <th scope="col">Owner Name</th>
+            <th scope="col">Product picture</th>
             <th scope="col d-flex row gap">operations </th>
           </tr>
         </thead>
@@ -26,6 +27,12 @@
             <td>{{$product->user->first_name }} {{$product->user->last_name}}</td>
            
             </td>
+            <td>  @if($product->image)
+              <img src="{{ asset('storage/' . $product->image) }}" alt="Product Image" style="max-width: 150px; max-height: 150px;">
+          @else
+              No Image
+          @endif
+         </td>
             <td>
               <a class="btn btn-secondary me-3" href="{{url('/getupdate/'.$product->id)}}">Update</a>
               <form action="{{ route('product.destroy',$product->id) }}" method="POST" style="display:inline;">

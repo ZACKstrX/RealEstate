@@ -2,7 +2,7 @@
 
     <div class="container_form">
         <div class="container">
-            <form class="form2" method="post" action="productForm">
+            <form class="form2" method="post" action="productForm"  enctype="multipart/form-data">
                 @csrf
                 <input type="hidden" name="user_id" value="{{ auth()->id() }}">
                 <div class="form-col">
