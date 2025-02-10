@@ -24,11 +24,9 @@
                                       style="height: 30px; max-height: 80px; overflow-y: auto;">{{ $previous->description }}</textarea>
                         </div>
                         
-
                         <div class="mb-3">
                             <label for="formFile" class="form-label">Picture</label>
-                            <input class="form-control @error('image') is-invalid @enderror" type="file"
-                             id="formFile" name="image">
+                            <button type="button" class="btn btn-secondary exeption" data-bs-toggle="modal" data-bs-target="#imageModal">Change Image</button>
                         </div>
 
                         <div class="row">
