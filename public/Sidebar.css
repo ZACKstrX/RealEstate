@@ -9,6 +9,7 @@
 html, body {
     margin: 0; 
   }
+  
 .user-img{
     width: 50px;
     border-radius: 100%;
@@ -154,4 +155,18 @@ html, body {
     align-items: center;
     justify-content: center;
     border-bottom: #6a994e 2px solid;
+}
+
+
+
+
+.hah{
+    min-width: 50px;
+    border-radius: 12px;
+}
+.hah:hover{
+    background-color: #F2E8CF;
+}
+.hah:hover p    {
+   color: #6a994e !important;
 }

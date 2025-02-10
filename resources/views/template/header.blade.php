@@ -11,13 +11,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+
     <link rel="icon" href="{{ asset('images/logo.png') }}" type="image/png">
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="{{asset('SignUp.css')}}" rel="stylesheet">
-    <link href="{{asset('Sidebar.css')}}" rel="stylesheet">
-    <link href="{{asset('SignIn.css')}}" rel="stylesheet">
+    <link href="{{ asset('SignUp.css') }}" rel="stylesheet">
+    <link href="{{ asset('Sidebar.css') }}" rel="stylesheet">
+    <link href="{{ asset('SignIn.css') }}" rel="stylesheet">
     <link href="{{ asset('app.css') }}" rel="stylesheet">
 </head>
 
@@ -39,13 +39,14 @@
                 </div>
                 <i class="bx bx-menu" id="btn"></i>
             </div>
-    
-            <div class="user" >
+
+            <a class="user hah" href="{{ url('userinformation') }}" style="text-decoration: none; color: inherit;">
                 <img src="{{ asset('images/profile.svg') }}" alt="me" class="user-img">
-                <div><p class="bold">{{ auth()->user()->first_name }}</p>
-                <p>Admin</p>
-            </div>
-            </div>
+                <div>
+                    <p class="bold">{{ auth()->user()->first_name }}</p>
+                    <p>Admin</p>
+                </div>
+            </a>
             <ul>
                 <li>
                     <a href="/">
@@ -53,37 +54,41 @@
                         <span class="nav-item">Menu</span>
                     </a>
                     <span class="tooltip">Menu</span>
-                </li><li>
+                </li>
+                <li>
                     <a href="/ProductsList">
                         <i class="bx bxs-shopping-bag"></i>
                         <span class="nav-item">Products</span>
                     </a>
                     <span class="tooltip">Products</span>
-                </li> <li>
+                </li>
+                <li>
                     <a href="/CitiesList">
                         <i class='bx bxs-city'></i>
                         <span class="nav-item">Cities</span>
                     </a>
                     <span class="tooltip">Cities</span>
-                </li> <li>
+                </li>
+                <li>
                     <a href="TypeList">
                         <i class="bx bx-list-check"></i>
                         <span class="nav-item">Type</span>
                     </a>
                     <span class="tooltip">Type</span>
-                </li><li>
+                </li>
+                <li>
                     <a href="StatutList">
                         <i class='bx bx-question-mark'></i>
                         <span class="nav-item">Statut</span>
                     </a>
                     <span class="tooltip">statut</span>
-                 </li>{{-- <li>
+                </li>{{-- <li>
                     <a href="#">
                         <i class="bx bx-cog"></i>
                         <span class="nav-item">Settings</span>
                     </a>
                     <span class="tooltip">Settings </span>
-                </li>--}}<li> 
+                </li> --}}<li>
                     <a href="/logout">
                         <i class="bx bx-log-out"></i>
                         <span class="nav-item">Logout</span>
