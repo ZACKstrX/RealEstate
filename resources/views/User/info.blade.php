@@ -7,11 +7,14 @@
         <div class="d-flex flex-column align-items-center position-relative mb-4">
             <div class="left">
                 <div class="upload">
-                    <img class="size" src="images/profile.svg" alt="">
+                    @if(auth()->user()->profile_picture)
+                        <img class="size" src="{{ asset('storage/' . auth()->user()->profile_picture) }}" alt="Profile Picture">
+                    @else
+                        <img class="size" src="images/profile.svg" alt="Default Profile Picture">
+                    @endif
                     <div class="round">
                         <input type="file" name="profile_picture">
                         <i class="fa fa-camera" style="color:#F2E8CF;"></i>
-                        </input>
                     </div>
                 </div>
             </div>
