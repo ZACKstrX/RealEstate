@@ -8,6 +8,7 @@ use Dotenv\Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator as FacadesValidator;
 
 class AuthManager extends Controller
@@ -64,6 +65,14 @@ class AuthManager extends Controller
         'phone_number'=>'required',
         'email'=>'required|email',
         ]);
+
+        $imagePath = $user->image;
+        if ($request->hasFile('image')) {
+            if ($user->image) {
+                Storage::disk('public')->delete($user->image);
+            }
+            $imagePath = $request->file('image')->store('images/useless', 'public');
+        }
     
         $user->update([
             'first_name' => $request->first_name,
@@ -72,7 +81,8 @@ class AuthManager extends Controller
             'email' => $request->email,
             'addresse' => $request->addresse,
             'birthday' => $request->birthday,
-            'bio' => $request->bio
+            'bio' => $request->bio,
+            'profile_picture'=>$imagePath
         ]);
         return redirect('/userinformation')->with('success', 'User updated successfully!');
     }

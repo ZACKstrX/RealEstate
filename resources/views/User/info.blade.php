@@ -1,7 +1,7 @@
 @include('template.nav')
 
 <div class="img1">
-    <form class="form1" method="POST" action="{{ route('updateuser', auth()->user()->id) }}">
+    <form class="form1" method="POST" action="{{ route('updateuser', auth()->user()->id) }}" enctype="multipart/form-data">
         @csrf
 
         <div class="d-flex flex-column align-items-center position-relative mb-4">
@@ -9,7 +9,7 @@
                 <div class="upload">
                     <img class="size" src="images/profile.svg" alt="">
                     <div class="round">
-                        <input type="file">
+                        <input type="file" name="profile_picture">
                         <i class="fa fa-camera" style="color:#F2E8CF;"></i>
                         </input>
                     </div>
