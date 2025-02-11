@@ -17,10 +17,10 @@
             </div>
             {{-- <img class="w-25" src="{{ asset('images/logo.png') }}" alt=""> --}}
             <h2 class="white-text"><b><i>Hi {{ auth()->user()->first_name }} </i> </b></h2>
-            <h5 class="white-text"><b><i>You can change your profil infos here</i> </b></h5>
+            <h5 class="white-text"><b><i>You can change your profil information here</i> </b></h5>
         </div>
 
-        <div class="row mb-4">
+        <div class="row mb-4 m">
             <div class="col">
                 <label for="inputFirstName"><b class="white-text">First Name</b> </label>
                 <input type="text"

@@ -82,6 +82,8 @@
 .upload{
     width: 80px;
     position: relative;
+    bottom: 50px;
+    margin-right: 1px;
     
 }
 .upload img{
