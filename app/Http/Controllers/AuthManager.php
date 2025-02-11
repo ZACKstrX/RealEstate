@@ -72,12 +72,12 @@ class AuthManager extends Controller
                 ->withInput();
         }
 
-        $imagePath = $user->image;
+        $imagePath = $user->profile_picture;
         if ($request->hasFile('profile_picture')) {
-            if ($user->image) {
-                Storage::disk('public')->delete($user->image);
+            if ($user->profile_picture) {
+                Storage::disk('public')->delete($user->profile_picture);
             }
-            $imagePath = $request->file('image')->store('images/useless', 'public');
+            $imagePath = $request->file('profile_picture')->store('profile_picture', 'public');
         }
     
         $user->update([
@@ -85,7 +85,7 @@ class AuthManager extends Controller
             'last_name' => $request->last_name,
             'phone_number' => $request->phone_number,
             'email' => $request->email,
-            'addresse' => $request->addresse,
+            'adresse' => $request->adresse,
             'birthday' => $request->birthday,
             'bio' => $request->bio,
             'profile_picture'=>$imagePath
