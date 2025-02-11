@@ -3,7 +3,7 @@
 <div class="img1">
     <form class="form1" method="POST" action="/signup">
         @csrf
-       
+
         <div class="d-flex flex-column align-items-center position-relative">
             <div class="left"><!--here is -->
                 <div class="upload">
@@ -15,7 +15,7 @@
                     </div>
                 </div>
             </div>
-            <img class="w-25" src="{{ asset('images/logo.png') }}" alt="">
+            {{-- <img class="w-25" src="{{ asset('images/logo.png') }}" alt=""> --}}
             <h2 class="white-text"><b><i>Hi {{ auth()->user()->first_name }} </i> </b></h2>
             <h5 class="white-text"><b><i>You can change your profil infos here</i> </b></h5>
         </div>
@@ -49,15 +49,24 @@
                 <label for="inputPhoneNumber"><b class="white-text">Phone Number</b></label>
                 <input type="tel" class="form-control searchopacity1 @error('phone_number') is-invalid @enderror"
                     id="inputPhoneNumber" name="phone_number" placeholder="Phone Number" pattern="[0-9]{10}"
-                    maxlength="10" title="Enter a valid 10-digit phone number" value="{{ auth()->user()->phone_number }}">
+                    maxlength="10" title="Enter a valid 10-digit phone number"
+                    value="{{ auth()->user()->phone_number }}">
 
             </div>
 
         </div>
-        <div class="form-group  mb-4">
-            <label for="inputAddress "><b class="white-text">Address</b></label>
-            <input type="text" class="form-control searchopacity1" id="inputAddress" name="adresse"
-                placeholder="1234 Main St" value="{{ auth()->user()->adresse }}">
+        <div class="row ">
+            <div class="form-group  mb-4">
+                <label for="inputAddress "><b class="white-text">Address</b></label>
+                <input type="text" class="form-control searchopacity1" id="inputAddress" name="adresse"
+                    placeholder="1234 Main St" value="{{ auth()->user()->adresse }}">
+            </div>
+            <div class="form-group  mb-4">
+                <label for="inputAddress "><b class="white-text">Address</b></label>
+                <input type="text" class="form-control searchopacity1" name="adresse"
+                    placeholder="1234 Main St" value="{{ auth()->user()->adresse }}">
+            </div>
+            
         </div>
 
 
@@ -66,13 +75,12 @@
                 <label for="inputPassword4"><b class="white-text">Password</b></label>
                 <input type="password" class="form-control searchopacity1 @error('password') is-invalid @enderror"
                     id="inputPassword4" name="password" placeholder="Password...">
-
             </div>
 
             <div class="form-group col-md-6">
                 <label for="birthday"><b class="white-text ">Birthday</b></label>
                 <input name="birthday" id="birthday" class="form-control searchopacity1" placeholder="Pick a Date"
-                value="{{ auth()->user()->birthday }}">
+                    value="{{ auth()->user()->birthday }}">
 
             </div>
 

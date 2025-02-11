@@ -27,6 +27,8 @@ class User extends Authenticatable
         'phone_number',
         'email',
         'password',
+        'profile_picture',
+        'bio'
     ];
     public function biens() : HasMany
     {

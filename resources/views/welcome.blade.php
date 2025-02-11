@@ -58,7 +58,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href='/ProductsList'>
                                 <button type="button" class="mybtn btn dark-green ">
-                                    <strong class="wordhover card-text">Go to Products</strong>
+                                    <strong class="wordhover card-text">Dashboard</strong>
                                 </button>
                             </a>
                         </li>

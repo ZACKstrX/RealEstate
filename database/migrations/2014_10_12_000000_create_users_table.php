@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string('adresse')->nullable();
             $table->date('birthday')->nullable();
             $table->string('phone_number');
+            $table->string('profile_picture')->nullable();
+            $table->string('bio')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
