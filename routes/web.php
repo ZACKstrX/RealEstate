@@ -69,9 +69,9 @@ Route::middleware('auth')->group(function () {        //middleware
     route::get('getupdate/{id}',[BienController::class, 'update'])->name('getupdate');
     route::post('updateProduct/{id}',[BienController::class, 'updateProduct'])->name('updateProduct');
     
-    
     //User routes :
     route::get('userinformation',[AuthManager::class, 'info']);
+    route::post('updateuser/{id}',[AuthManager::class,'update'])->name('updateuser');
 
 });
 // ----------------------------------------------------

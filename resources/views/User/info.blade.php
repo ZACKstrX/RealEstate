@@ -1,10 +1,10 @@
 @include('template.nav')
 
 <div class="img1">
-    <form class="form1" method="POST" action="/signup">
+    <form class="form1" method="POST" action="{{ route('updateuser', auth()->user()->id) }}">
         @csrf
 
-        <div class="d-flex flex-column align-items-center position-relative">
+        <div class="d-flex flex-column align-items-center position-relative mb-4">
             <div class="left"><!--here is -->
                 <div class="upload">
                     <img class="size" src="images/profile.svg" alt="">
@@ -16,7 +16,8 @@
                 </div>
             </div>
             {{-- <img class="w-25" src="{{ asset('images/logo.png') }}" alt=""> --}}
-            <h2 class="white-text"><b><i>Hi {{ auth()->user()->first_name }} </i> </b></h2>
+            <h2 class="white-text"><b><i>Hello {{ auth()->user()->first_name }} {{ auth()->user()->last_name }} </i>
+                </b></h2>
             <h5 class="white-text"><b><i>You can change your profil information here</i> </b></h5>
         </div>
 
@@ -55,33 +56,30 @@
             </div>
 
         </div>
-        <div class="row ">
-            <div class="form-group  mb-4">
+        <div class="row mb-4">
+            <div class="form-group  col-md-6">
                 <label for="inputAddress "><b class="white-text">Address</b></label>
                 <input type="text" class="form-control searchopacity1" id="inputAddress" name="adresse"
                     placeholder="1234 Main St" value="{{ auth()->user()->adresse }}">
             </div>
-            <div class="form-group  mb-4">
-                <label for="inputAddress "><b class="white-text">Address</b></label>
-                <input type="text" class="form-control searchopacity1" name="adresse"
-                    placeholder="1234 Main St" value="{{ auth()->user()->adresse }}">
-            </div>
             
-        </div>
-
-
-        <div class="row mb-4">
-            <div class="form-group  col-md-6 ">
-                <label for="inputPassword4"><b class="white-text">Password</b></label>
-                <input type="password" class="form-control searchopacity1 @error('password') is-invalid @enderror"
-                    id="inputPassword4" name="password" placeholder="Password...">
-            </div>
-
             <div class="form-group col-md-6">
                 <label for="birthday"><b class="white-text ">Birthday</b></label>
                 <input name="birthday" id="birthday" class="form-control searchopacity1" placeholder="Pick a Date"
                     value="{{ auth()->user()->birthday }}">
+            </div>
 
+        </div>
+
+
+        <div class="row mb-4">
+            <button type="submit" class="btn btn-secondary col-md-6 mt-4" style="height:60px; ">Change password</button>
+
+            <div class="form-group col-md-6">
+                <label for="inputBio"><b class="white-text">Bio</b></label>
+                <textarea class="form-control searchopacity1" name="bio" rows="2" maxlength="255"
+                    style="height: 60px; max-height: 60px; overflow-y: auto;">
+                     {{ old('bio', '') }}</textarea>
             </div>
 
         </div>
