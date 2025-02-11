@@ -64,10 +64,16 @@ class AuthManager extends Controller
         'last_name' => 'required',
         'phone_number'=>'required',
         'email'=>'required|email',
+        'profile_picture' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
+        if ($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->withInput();
+        }
 
         $imagePath = $user->image;
-        if ($request->hasFile('image')) {
+        if ($request->hasFile('profile_picture')) {
             if ($user->image) {
                 Storage::disk('public')->delete($user->image);
             }

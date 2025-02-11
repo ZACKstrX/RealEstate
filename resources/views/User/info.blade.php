@@ -5,7 +5,7 @@
         @csrf
 
         <div class="d-flex flex-column align-items-center position-relative mb-4">
-            <div class="left"><!--here is -->
+            <div class="left">
                 <div class="upload">
                     <img class="size" src="images/profile.svg" alt="">
                     <div class="round">
@@ -15,7 +15,6 @@
                     </div>
                 </div>
             </div>
-            {{-- <img class="w-25" src="{{ asset('images/logo.png') }}" alt=""> --}}
             <h2 class="white-text"><b><i>Hello {{ auth()->user()->first_name }} {{ auth()->user()->last_name }} </i>
                 </b></h2>
             <h5 class="white-text"><b><i>You can change your profil information here</i> </b></h5>
