@@ -11,7 +11,7 @@
                         <img class="size" src="{{ asset('storage/' . 
                         auth()->user()->profile_picture) }}" alt="Profile Picture">
                     @else
-                        <img class="size" src="images/profile.svg"
+                        <img class="" src="images/profile.svg"
                          alt="Default Profile Picture">
                     @endif
                     <div class="round">
