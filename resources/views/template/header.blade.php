@@ -41,7 +41,14 @@
             </div>
 
             <a class="user hah mt-3" href="{{ url('userinformation') }}" style="text-decoration: none; color: inherit;">
+               <div class="imgcontainer">
+                @if (auth()->user()->profile_picture)
+               <img class="user-img" src="{{ asset('storage/' . 
+                        auth()->user()->profile_picture) }}" alt="me" >
+                @else
                 <img src="{{ asset('images/profile.svg') }}" alt="me" class="user-img">
+                @endif
+               </div>
                 <div>
                     <p class="bold">{{ auth()->user()->first_name }}</p>
                     <p>Admin</p>

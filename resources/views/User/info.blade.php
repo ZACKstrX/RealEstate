@@ -8,9 +8,11 @@
             <div class="left">
                 <div class="upload">
                     @if(auth()->user()->profile_picture)
-                        <img class="size" src="{{ asset('storage/' . auth()->user()->profile_picture) }}" alt="Profile Picture">
+                        <img class="size" src="{{ asset('storage/' . 
+                        auth()->user()->profile_picture) }}" alt="Profile Picture">
                     @else
-                        <img class="size" src="images/profile.svg" alt="Default Profile Picture">
+                        <img class="size" src="images/profile.svg"
+                         alt="Default Profile Picture">
                     @endif
                     <div class="round">
                         <input type="file" name="profile_picture">

@@ -129,7 +129,8 @@ class BienController extends Controller
             if ($product->image) {
                 Storage::disk('public')->delete($product->image);
             }
-            $imagePath = $request->file('image')->store('images/useless', 'public');
+            $imagePath = $request->file('image')
+            ->store('images/useless', 'public');
         }
     
         $product->update([
