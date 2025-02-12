@@ -52,7 +52,7 @@
                                 <label for="inpuPrice">Price</label>
                                 <div class="input-group">
                                     <input type="number" class="form-control  @error('prix') is-invalid @enderror" name="prix" placeholder="" value="{{ $previous->prix }}">
-                                    <span class="input-group-text">MAD</span>
+                                    <span class="input-group-text" min="0" maxlength="10" step="0.01" >MAD</span>
                                 </div>
                             </div>
 
