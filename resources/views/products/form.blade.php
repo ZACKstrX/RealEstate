@@ -52,7 +52,7 @@
                                     <label for="inpuPrice">Price</label>
                                     <div class="input-group">
                                         <input type="number" class="form-control @error('prix') is-invalid @enderror"
-                                            name="prix" value="{{ old('prix', '') }}">
+                                        name="prix" min="100" max="9999999999" value="{{ old('prix', '') }}">
                                         <span class="input-group-text">MAD</span>
                                     </div>
                                 </div>

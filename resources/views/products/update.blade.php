@@ -51,15 +51,15 @@
                             <div class="form-group col-md-6 col">
                                 <label for="inpuPrice">Price</label>
                                 <div class="input-group">
-                                    <input type="number" class="form-control  @error('prix') is-invalid @enderror" name="prix" placeholder="" value="{{ $previous->prix }}">
-                                    <span class="input-group-text" min="0" maxlength="10" step="0.01" >MAD</span>
+                                    <input type="number" class="form-control  @error('prix') is-invalid @enderror"min="100" max="9999999999" name="prix" placeholder="" value="{{ $previous->prix }}">
+                                    <span class="input-group-text" >MAD</span>
                                 </div>
                             </div>
 
                             <div class="form-group col">
                                 <label for="inputAddress">Surface</label>
                                 <div class="input-group">
-                                    <input type="number" class="form-control  @error('surface') is-invalid @enderror" name="surface" placeholder="" value="{{ $previous->surface }}">
+                                    <input type="number" min="10" max="9999999" class="form-control  @error('surface') is-invalid @enderror" name="surface" placeholder="" value="{{ $previous->surface }}">
                                     <span class="input-group-text">m²</span>
                                 </div>
                             </div>
