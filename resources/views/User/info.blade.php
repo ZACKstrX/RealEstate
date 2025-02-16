@@ -83,7 +83,7 @@
                 <label for="inputBio"><b class="white-text">Bio</b></label>
                 <textarea class="form-control searchopacity1" name="bio" rows="2" maxlength="255"
                     style="height: 60px; max-height: 60px; overflow-y: auto;">
-                     {{ old('bio', '') }}</textarea>
+                     {{ old('bio', '') }} {{ auth()->user()->bio }}</textarea>
             </div>
 
         </div>
