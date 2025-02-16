@@ -77,8 +77,9 @@
 
 
         <div class="row mb-4">
-            <button type="submit" class="btn btn-secondary col-md-6 mt-4" style="height:60px; ">Change password</button>
-
+            <button type="button" class="btn btn-secondary col-md-6 mt-4" style="height:60px;" data-bs-toggle="modal" data-bs-target="#changePasswordModal">
+                Change Password
+            </button>
             <div class="form-group col-md-6">
                 <label for="inputBio"><b class="white-text">Bio</b></label>
                 <textarea class="form-control searchopacity1" name="bio" rows="2" maxlength="255"
@@ -97,6 +98,124 @@
 </div>
 
 
+
+<!-- Change Password Modal -->
+<div class="modal fade" id="changePasswordModal" tabindex="-1" aria-labelledby="changePasswordModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="changePasswordModalLabel">Change Password</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Form for password change -->
+                <form id="changePasswordForm" method="POST" action="{{ route('updatePassword', auth()->user()->id) }}">
+                    @csrf
+                    <div class="mb-3">
+                        <label for="currentPassword" class="form-label">Current Password</label>
+                        <input type="password" class="form-control" id="currentPassword" name="current_password" placeholder="Enter current password">
+                        <small id="passwordError" class="text-danger"></small>
+                    </div>
+
+                    <!-- These two fields should appear only if the current password is correct -->
+                    <div id="newPasswordFields" style="display: none;">
+                        <div class="mb-3">
+                            <label for="newPassword" class="form-label">New Password</label>
+                            <input type="password" class="form-control" id="newPassword" name="new_password" placeholder="Enter new password">
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Confirm New Password</label>
+                            <input type="password" class="form-control" id="confirmPassword" name="confirm_password" placeholder="Confirm new password">
+                            <small id="confirmError" class="text-danger"></small>
+                        </div>
+                    </div>
+                    <div id="passwordUpdateError" class="text-danger"></div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success" id="verifyPassword">Verify</button>
+                <button type="submit" class="btn btn-primary" id="updatePasswordBtn" style="display: none;">Update Password</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+$(document).ready(function() {
+    // Click event for verifying current password
+    $("#verifyPassword").click(function() {
+        var currentPassword = $("#currentPassword").val();
+
+        $.ajax({
+            url: "{{ route('checkPassword') }}", // Route to check password
+            type: "POST",
+            data: {
+                _token: "{{ csrf_token() }}",
+                password: currentPassword
+            },
+            success: function(response) {
+                if (response.valid) {
+                    $("#passwordError").text(""); // Clear error
+                    $("#newPasswordFields").show(); // Show new password fields
+                    $("#updatePasswordBtn").show(); // Show update button
+                    $("#verifyPassword").hide(); // Hide verify button
+                } else {
+                    $("#passwordError").text("Incorrect password, try again.");
+                }
+            }
+        });
+    });
+
+    // Confirm password match
+    $("#confirmPassword").on("keyup", function() {
+        var newPassword = $("#newPassword").val();
+        var confirmPassword = $("#confirmPassword").val();
+
+        if (newPassword !== confirmPassword) {
+            $("#confirmError").text("Passwords do not match.");
+            $("#updatePasswordBtn").prop("disabled", true);
+        } else {
+            $("#confirmError").text("");
+            $("#updatePasswordBtn").prop("disabled", false);
+        }
+    });
+
+    // Submit password change
+    $("#updatePasswordBtn").click(function() {
+        var newPassword = $("#newPassword").val();
+        var confirmPassword = $("#confirmPassword").val();
+
+        // Check if the passwords match
+        if (newPassword !== confirmPassword) {
+            $("#confirmError").text("Passwords do not match.");
+            return;
+        }
+
+        // Perform an AJAX request to update the password
+        $.ajax({
+            url: "{{ route('updatePassword', auth()->user()->id) }}", // Route to update password
+            type: "POST",
+            data: {
+                _token: "{{ csrf_token() }}",
+                current_password: $("#currentPassword").val(),
+                new_password: newPassword,
+                confirm_password: confirmPassword,
+            },
+            success: function(response) {
+                // Handle response, show success message or error
+                if (response.success) {
+                    alert("Password updated successfully!");
+                    $("#changePasswordModal").modal('hide'); // Close modal
+                } else {
+                    alert("There was an error updating your password.");
+                }
+            }
+        });
+    });
+});
+
+</script>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
     integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous">

@@ -7,8 +7,10 @@ use App\Http\Controllers\LandingController;
 use App\Http\Controllers\StatusController;
 use App\Http\Controllers\TypeBienController;
 use App\Models\City;
+use GuzzleHttp\Psr7\Request;
 use Illuminate\Auth\AuthManager as AuthAuthManager;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
 
 //---------------------------------------------------------------------------------------------------------------------------//
@@ -72,6 +74,7 @@ Route::middleware('auth')->group(function () {        //middleware
     //User routes :
     route::get('userinformation',[AuthManager::class, 'info']);
     route::post('updateuser/{id}',[AuthManager::class,'update'])->name('updateuser');
-
+    Route::post('/check-password', [AuthManager::class, 'checkPassword'])->name('checkPassword');
+    Route::post('/update-password/{id}', [AuthManager::class, 'updatePassword'])->name('updatePassword');
 });
 // ----------------------------------------------------

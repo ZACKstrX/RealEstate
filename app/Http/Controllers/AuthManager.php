@@ -8,6 +8,7 @@ use Dotenv\Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator as FacadesValidator;
 
@@ -92,5 +93,41 @@ class AuthManager extends Controller
         ]);
         return redirect('/userinformation')->with('success', 'User updated successfully!');
     }
+
+    public function checkPassword(Request $request)
+    {
+        $user = Auth::user();
+
+        if (Hash::check($request->password, $user->password)) {
+            return response()->json(['valid' => true]);
+        }
+
+        return response()->json(['valid' => false]);
+    }
+
+    public function updatePassword(Request $request, $id)
+    {
+        $user = Auth::user();  // Retrieve the authenticated user
+    
+        // Validate new password and current password
+        $request->validate([
+            'current_password' => 'required',
+            'new_password' => 'required|min:6|confirmed', // The 'confirmed' rule expects a matching confirmation field
+        ]);
+    
+        // Check if the current password matches the stored password
+        if (!Hash::check($request->current_password, $user->password)) {
+            return response()->json(['error' => 'Incorrect password']);
+        }
+    
+        // Update the password
+        $user->password = Hash::make($request->new_password);
+        $user->save();  // Save changes to the database
+    
+        return response()->json(['success' => true]);
+    }
+    
+    
+
 }
 
