@@ -5,31 +5,33 @@
         <h1>Types:</h1>
         <a class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addTypeModal">Add Type</a>
     </div>
-
-    <table class="table table-striped text-center align-middle">
-        <thead>
-            <th scope="col">Name</th>
-            <th scope="col">Operations</th>
-        </thead>
-        <tbody>
-            @foreach ($types as $type)
-                <tr>
-                    <td>{{ $type->name }}</td>
-                    <td>
-                        <a class="btn btn-secondary me-3" data-bs-toggle="modal" data-bs-target="#updateTypeModal"
-                            data-type-id="{{ $type->id }}" data-type-name="{{ $type->name }}">Update</a>
-                        <form action="{{ route('type.destroy', $type->id) }}" method="POST" style="display:inline;">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?')">
-                                Delete
-                            </button>
-                        </form>
-                    </td>
-                </tr>
-            @endforeach
-        </tbody>
-    </table>
+    <div class="table-responsive">
+        <table class="table table-striped text-center align-middle">
+            <thead>
+                <th scope="col">Name</th>
+                <th scope="col">Operations</th>
+            </thead>
+            <tbody>
+                @foreach ($types as $type)
+                    <tr>
+                        <td>{{ $type->name }}</td>
+                        <td>
+                            <a class="btn btn-secondary me-3" data-bs-toggle="modal" data-bs-target="#updateTypeModal"
+                                data-type-id="{{ $type->id }}" data-type-name="{{ $type->name }}">Update</a>
+                            <form action="{{ route('type.destroy', $type->id) }}" method="POST"
+                                style="display:inline;">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger  me-3 mt-1"" onclick="return confirm('Are you sure?')">
+                                    Delete
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
 </div>
 
 @include('template.footer')
@@ -71,7 +73,8 @@
                     <input type="hidden" name="id" id="updateTypeId">
                     <div class="mb-3">
                         <label for="updateTypeName" class="form-label">Type Name</label>
-                        <input type="text" class="form-control" name="name" id="updateTypeName" placeholder="Enter new type name">
+                        <input type="text" class="form-control" name="name" id="updateTypeName"
+                            placeholder="Enter new type name">
                     </div>
                     <button type="submit" class="btn btn-primary">Update Type</button>
                 </form>
@@ -82,9 +85,9 @@
 
 <!-- JavaScript for Modal -->
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
         const updateTypeModal = document.getElementById('updateTypeModal');
-        updateTypeModal.addEventListener('show.bs.modal', function (event) {
+        updateTypeModal.addEventListener('show.bs.modal', function(event) {
             const button = event.relatedTarget;
             const typeId = button.getAttribute('data-type-id');
             const typeName = button.getAttribute('data-type-name');

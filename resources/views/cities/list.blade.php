@@ -5,7 +5,7 @@
         <h1>Cities :</h1>
         <a class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addCityModal">Add City</a>
     </div>
-
+    <div class="table-responsive">
     <table class="table table-striped text-center align-middle">
         <thead>
             <th scope="col">Name</th>
@@ -20,7 +20,7 @@
                         <form action="{{ route('city.destroy', $city->id) }}" method="POST" style="display:inline;">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger"
+                            <button type="submit" class="btn btn-danger  me-3 mt-1"
                                 onclick="return confirm('Are you sure you want to delete this city?')">
                                 Delete
                             </button>
@@ -30,6 +30,7 @@
             @endforeach
         </tbody>
     </table>
+</div>
 </div>
 
 @include('template.footer')
