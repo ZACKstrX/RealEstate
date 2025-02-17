@@ -106,26 +106,31 @@ class AuthManager extends Controller
     }
 
     public function updatePassword(Request $request, $id)
-    {
-        $user = Auth::user();  // Retrieve the authenticated user
-    
-        // Validate new password and current password
-        $request->validate([
-            'current_password' => 'required',
-            'new_password' => 'required|min:6|confirmed', // The 'confirmed' rule expects a matching confirmation field
-        ]);
-    
-        // Check if the current password matches the stored password
-        if (!Hash::check($request->current_password, $user->password)) {
-            return response()->json(['error' => 'Incorrect password']);
-        }
-    
-        // Update the password
-        $user->password = Hash::make($request->new_password);
-        $user->save();  // Save changes to the database
-    
-        return response()->json(['success' => true]);
+{
+    $user = Auth::user();
+
+    // Validate the request
+    $request->validate([
+        'current_password' => 'required',
+        'new_password' => 'required|min:8|confirmed',
+    ], [
+        'current_password.required' => 'The current password field is required.',
+        'new_password.required' => 'The new password field is required.',
+        'new_password.min' => 'The new password must be at least 8 characters.',
+        'new_password.confirmed' => 'The new password confirmation does not match.',
+    ]);
+
+    // Check if the current password matches
+    if (!Hash::check($request->current_password, $user->password)) {
+        return redirect()->back()->withErrors(['current_password' => 'The current password is incorrect.']);
     }
+
+    // Update the password
+    $user->password = Hash::make($request->new_password);
+    $user->save();
+
+    return redirect()->back()->with('success', 'Password updated successfully!');
+}
     
     
 
