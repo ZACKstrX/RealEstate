@@ -94,22 +94,25 @@ class AuthManager extends Controller
         return redirect('/userinformation')->with('success', 'User updated successfully!');
     }
 
-    public function checkPassword(Request $request)
-    {
-        $user = Auth::user();
 
-        if (Hash::check($request->password, $user->password)) {
-            return response()->json(['valid' => true]);
-        }
 
-        return response()->json(['valid' => false]);
-    }
-
-    public function updatePassword(Request $request, $id)
+   public function checkPassword(Request $request)
 {
     $user = Auth::user();
 
-    // Validate the request
+    if (Hash::check($request->password, $user->password)) {
+        return response()->json(['valid' => true]);
+    }
+
+    return response()->json(['valid' => false]);
+}
+
+
+
+    public function updatePassword(Request $request, $id)
+{  /** @var User $user */
+    $user = Auth::user();
+
     $request->validate([
         'current_password' => 'required',
         'new_password' => 'required|min:8|confirmed',
@@ -120,12 +123,11 @@ class AuthManager extends Controller
         'new_password.confirmed' => 'The new password confirmation does not match.',
     ]);
 
-    // Check if the current password matches
     if (!Hash::check($request->current_password, $user->password)) {
         return redirect()->back()->withErrors(['current_password' => 'The current password is incorrect.']);
     }
 
-    // Update the password
+
     $user->password = Hash::make($request->new_password);
     $user->save();
 

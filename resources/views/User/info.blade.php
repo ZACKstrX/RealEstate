@@ -114,28 +114,25 @@
                     <div class="mb-3">
                         <label for="currentPassword" class="form-label">Current Password</label>
                         <input type="password" class="form-control" id="currentPassword" name="current_password" placeholder="Enter current password" required>
-                        @error('current_password')
-                            <small class="text-danger">{{ $message }}</small>
-                        @enderror
+                        <small id="passwordError" class="text-danger"></small>
                     </div>
 
-                    <div class="mb-3">
-                        <label for="newPassword" class="form-label">New Password</label>
-                        <input type="password" class="form-control" id="newPassword" name="new_password" placeholder="Enter new password" required>
-                        @error('new_password')
-                            <small class="text-danger">{{ $message }}</small>
-                        @enderror
+                    <!-- New Password Fields (Hidden by Default) -->
+                    <div id="newPasswordFields" style="display: none;">
+                        <div class="mb-3">
+                            <label for="newPassword" class="form-label">New Password</label>
+                            <input type="password" class="form-control" id="newPassword" name="new_password" placeholder="Enter new password" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Confirm New Password</label>
+                            <input type="password" class="form-control" id="confirmPassword" name="new_password_confirmation" placeholder="Confirm new password" required>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="confirmPassword" class="form-label">Confirm New Password</label>
-                        <input type="password" class="form-control" id="confirmPassword" name="new_password_confirmation" placeholder="Confirm new password" required>
-                        @error('new_password_confirmation')
-                            <small class="text-danger">{{ $message }}</small>
-                        @enderror
-                    </div>
+
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Update Password</button>
+                        <button type="button" class="btn btn-success" id="verifyPassword">Verify</button>
+                        <button type="submit" class="btn btn-primary" id="updatePasswordBtn" style="display: none;">Update Password</button>
                     </div>
                 </form>
             </div>
@@ -143,6 +140,49 @@
     </div>
 </div>
 
+
+<script>
+    $(document).ready(function() {
+        $("#verifyPassword").click(function() {
+            var currentPassword = $("#currentPassword").val();
+    
+            $.ajax({
+                url: "{{ route('checkPassword') }}",
+                type: "POST",
+                data: {
+                    _token: "{{ csrf_token() }}",
+                    password: currentPassword
+                },
+                success: function(response) {
+                    if (response.valid) {
+                        $("#passwordError").text("");
+                        $("#newPasswordFields").show();
+                        $("#updatePasswordBtn").show();
+                        $("#verifyPassword").hide(); 
+                    } else {
+                        $("#passwordError").text("Incorrect password, try again.");
+                    }
+                },
+                error: function() {
+                    $("#passwordError").text("An error occurred. Please try again.");
+                }
+            });
+        });
+    
+        $("#confirmPassword").on("keyup", function() {
+            var newPassword = $("#newPassword").val();
+            var confirmPassword = $("#confirmPassword").val();
+    
+            if (newPassword !== confirmPassword) {
+                $("#confirmError").text("Passwords do not match.");
+                $("#updatePasswordBtn").prop("disabled", true);
+            } else {
+                $("#confirmError").text("");
+                $("#updatePasswordBtn").prop("disabled", false);
+            }
+        });
+    });
+    </script>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
     integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous">
