@@ -76,5 +76,8 @@ Route::middleware('auth')->group(function () {        //middleware
     route::post('updateuser/{id}',[AuthManager::class,'update'])->name('updateuser');
     Route::post('/check-password', [AuthManager::class, 'checkPassword'])->name('checkPassword');
     Route::post('/update-password/{id}', [AuthManager::class, 'updatePassword'])->name('updatePassword');
+
+
+    Route::get('/clear-password-session', [AuthManager::class, 'clearPasswordSession'])->name('clearPasswordSession');
 });
 // ----------------------------------------------------

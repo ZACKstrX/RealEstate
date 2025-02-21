@@ -109,30 +109,37 @@
             </div>
             <div class="modal-body">
                 <!-- Form for password change -->
-                <form id="changePasswordForm" method="POST" action="{{ route('updatePassword', auth()->user()->id) }}">
+                <form id="changePasswordForm" method="POST" action="{{ route('checkPassword') }}">
                     @csrf
                     <div class="mb-3">
                         <label for="currentPassword" class="form-label">Current Password</label>
                         <input type="password" class="form-control" id="currentPassword" name="current_password" placeholder="Enter current password" required>
-                        <small id="passwordError" class="text-danger"></small>
+                        @if ($errors->has('current_password'))
+                            <small class="text-danger">{{ $errors->first('current_password') }}</small>
+                        @endif
                     </div>
 
-                    <!-- New Password Fields (Hidden by Default) -->
-                    <div id="newPasswordFields" style="display: none;">
-                        <div class="mb-3">
-                            <label for="newPassword" class="form-label">New Password</label>
-                            <input type="password" class="form-control" id="newPassword" name="new_password" placeholder="Enter new password" required>
+                    <!-- New Password Fields (Shown only after verification) -->
+                    @if (session('password_verified'))
+                        <div id="newPasswordFields">
+                            <div class="mb-3">
+                                <label for="newPassword" class="form-label">New Password</label>
+                                <input type="password" class="form-control" id="newPassword" name="new_password" placeholder="Enter new password" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="confirmPassword" class="form-label">Confirm New Password</label>
+                                <input type="password" class="form-control" id="confirmPassword" name="new_password_confirmation" placeholder="Confirm new password" required>
+                            </div>
                         </div>
-                        <div class="mb-3">
-                            <label for="confirmPassword" class="form-label">Confirm New Password</label>
-                            <input type="password" class="form-control" id="confirmPassword" name="new_password_confirmation" placeholder="Confirm new password" required>
-                        </div>
-                    </div>
+                    @endif
 
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-success" id="verifyPassword">Verify</button>
-                        <button type="submit" class="btn btn-primary" id="updatePasswordBtn" style="display: none;">Update Password</button>
+                        @if (session('password_verified'))
+                            <button type="submit" formaction="{{ route('updatePassword', auth()->user()->id) }}" class="btn btn-primary">Update Password</button>
+                        @else
+                            <button type="submit" class="btn btn-success">Verify</button>
+                        @endif
                     </div>
                 </form>
             </div>
@@ -182,6 +189,17 @@
             }
         });
     });
+    </script>
+    <script>
+        document.getElementById('changePasswordModal').addEventListener('hidden.bs.modal', function () {
+            // Clear the session flag when the modal is closed
+            fetch("{{ route('clearPasswordSession') }}", {
+                method: 'GET',
+                headers: {
+                    'X-CSRF-TOKEN': "{{ csrf_token() }}"
+                }
+            });
+        });
     </script>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
