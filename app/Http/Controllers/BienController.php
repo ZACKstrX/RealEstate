@@ -161,5 +161,8 @@ class BienController extends Controller
     
         return redirect()->route('product.list');
     }
+    public function card(){
+        return view('Products.card');
+    }
     
 }
