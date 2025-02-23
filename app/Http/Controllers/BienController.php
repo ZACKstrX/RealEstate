@@ -161,8 +161,9 @@ class BienController extends Controller
     
         return redirect()->route('product.list');
     }
-    public function card(){
-        return view('Products.card');
+    public function card(Request $request ,$id){
+        $product=Bien::findOrFail($id);
+        return view('Products.card',['product'=>$product]);
     }
     
 }

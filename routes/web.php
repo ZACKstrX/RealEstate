@@ -70,7 +70,7 @@ Route::middleware('auth')->group(function () {        //middleware
     Route::delete('deleteProduct/{id}',[BienController::class,'destroy'])->name('product.destroy');
     route::get('getupdate/{id}',[BienController::class, 'update'])->name('getupdate');
     route::post('updateProduct/{id}',[BienController::class, 'updateProduct'])->name('updateProduct');
-    route::get('card',[BienController::class,'card']);
+    route::get('card/{id}',[BienController::class,'card'])->name('productcard');
     
     //User routes :
     route::get('userinformation',[AuthManager::class, 'info']);
