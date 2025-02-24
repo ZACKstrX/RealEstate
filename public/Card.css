@@ -2,17 +2,41 @@
     position: relative;
 }
 .hh{
+position: relative;
+display: flex;
 width: 50vw; 
 height:calc(100vh - 10.4vh); 
-background-color: rgb(255, 0, 0);
+background-color: rgb(255, 255, 255);
 border : 0.5px solid rgb(58, 58, 58) ;
 }
 .picture{
-    position: absolute ;
-    margin:15px;
-    width: 100%;
-    height: 70%;
+    position: relative ;
+    margin-top:15px;
+    margin-left: 15px;
+    margin-right: 2px;
+    width: 97% !important;
+    height: 370px !important;
     background-color: rgb(255, 255, 255);
-    border: 5px black solid;
+    border: 4px black solid;
     border-radius: 3%;
+}
+.txt{
+    margin-top: 15px;
+    margin-left: 15px;
+    font-family: 'poppins';
+    font-weight: 600;
+    font-style: oblique;
+}
+.txtCadr{
+    position: relative;
+    margin-top: 15px;
+    margin-left: 15px;
+    width: 90%;
+    height:250px;
+}
+.txt1{
+    font-family: 'poppins';
+    font-style: oblique;
+    font-size:17px ;
+    font-weight: 500;
 }
