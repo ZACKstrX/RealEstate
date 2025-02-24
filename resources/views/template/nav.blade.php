@@ -24,6 +24,7 @@
         <link href="{{ asset('form.css') }}" rel="stylesheet">
         <link href="{{ asset('app.css') }}" rel="stylesheet">
         <link href="{{ asset('User.css') }}" rel="stylesheet">
+        <link href="{{ asset('Card.css') }}" rel="stylesheet">
     
     
 
