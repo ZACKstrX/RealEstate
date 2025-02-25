@@ -20,6 +20,12 @@
     
     <div class="contain">
         <div class="hh">
-           
+           <div class="IconArea d-flex align-items-center justify-content-center">
+            <i class='bx bxs-bath'></i>
+          </div>
+
+           <div class="TextArea">
+            
+           </div>
     </div>
 </div>

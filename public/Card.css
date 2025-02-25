@@ -40,3 +40,11 @@ border : 0.5px solid rgb(58, 58, 58) ;
     font-size:17px ;
     font-weight: 500;
 }
+.IconArea{
+    position: relative;
+    border-radius:5px;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(242, 238, 238);
+    border :1px solid black;
+}
