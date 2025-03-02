@@ -33,7 +33,7 @@
 
                 <div class="d-flex">
                     <div class="IconArea d-flex align-items-center justify-content-center">
-                        <i class='bx bxs-bath'></i>
+                        <i class='bx bx-home-alt' ></i>
                     </div>
                     <div class="TextArea">
                         <p>hi</p>
@@ -86,7 +86,7 @@
 
                 <div class="d-flex">
                     <div class="IconArea d-flex align-items-center justify-content-center">
-                        <i class='bx bxs-bath'></i>
+                        <i class='bx bxs-car-garage'></i>
                     </div>
                     <div class="TextArea">
                         <p>hi</p>
