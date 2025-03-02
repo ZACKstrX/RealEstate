@@ -42,51 +42,50 @@
 
                 <div class="d-flex">
                     <div class="IconArea d-flex align-items-center justify-content-center">
-                        <i class='bx bxs-bath'></i>
-                    </div>
-                    <div class="TextArea">
-                        <p>hi</p>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="iconsrow d-flex justify-content-around">
-
-                <div class="d-flex">
-                    <div class="IconArea d-flex align-items-center justify-content-center">
-                        <i class='bx bxs-bath'></i>
-                    </div>
-                    <div class="TextArea">
-                        <p>hi</p>
-                    </div>
-                </div>
-
-                <div class="d-flex">
-                    <div class="IconArea d-flex align-items-center justify-content-center">
-                        <i class='bx bxs-bath'></i>
-                    </div>
-                    <div class="TextArea">
-                        <p>hi</p>
-                    </div>
-                </div>
-
-                <div class="d-flex">
-                    <div class="IconArea d-flex align-items-center justify-content-center">
-                        <i class='bx bxs-bath'></i>
-                    </div>
-                    <div class="TextArea">
-                        <p>hi</p>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="iconsrow d-flex justify-content-around">
-
-                <div class="d-flex">
-                    <div class="IconArea d-flex align-items-center justify-content-center">
                         <i class='bx bxs-car-garage'></i>
+                    </div>
+                    <div class="TextArea">
+                        <p>hi</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="iconsrow d-flex justify-content-around">
+
+                <div class="d-flex">
+                    <div class="IconArea d-flex align-items-center justify-content-center">
+                        <i class='bx bx-ruler' ></i>                    </div>
+                    <div class="TextArea">
+                        <p>hi</p>
+                    </div>
+                </div>
+
+                <div class="d-flex">
+                    <div class="IconArea d-flex align-items-center justify-content-center">
+                        <i class='bx bxs-bath'></i>
+                    </div>
+                    <div class="TextArea">
+                        <p>hi</p>
+                    </div>
+                </div>
+
+                <div class="d-flex">
+                    <div class="IconArea d-flex align-items-center justify-content-center">
+                        <i class='bx bxs-bath'></i>
+                    </div>
+                    <div class="TextArea">
+                        <p>hi</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="iconsrow d-flex justify-content-around">
+
+                <div class="d-flex">
+                    <div class="IconArea d-flex align-items-center justify-content-center">
+                        <i class='bx bxs-wallet' ></i>
                     </div>
                     <div class="TextArea">
                         <p>hi</p>
