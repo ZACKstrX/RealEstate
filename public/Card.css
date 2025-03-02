@@ -4,9 +4,10 @@
 .hh{
 position: relative;
 display: flex;
+flex-direction: column;
 width: 50vw; 
 height:calc(100vh - 10.4vh); 
-background-color: rgb(255, 255, 255);
+background-color: rgb(216, 255, 222);
 border : 0.5px solid rgb(58, 58, 58) ;
 }
 .picture{
@@ -42,9 +43,25 @@ border : 0.5px solid rgb(58, 58, 58) ;
 }
 .IconArea{
     position: relative;
-    border-radius:5px;
+    border-radius: 5px 0px 0px 5px;
     width: 40px;
     height: 40px;
-    background-color: rgb(242, 238, 238);
-    border :1px solid black;
+    background-color:#6a994e;
+    border-width: 1px 0px 1px 1px;
+    border-style: solid;
+    border-color: black;    
+}
+
+.TextArea{
+    position: relative;
+    width: 70px;
+    height: 40px;
+    background-color: #F2E8CF;
+    border-radius: 0px 5px 5px 0px;
+    border-width: 1px 1px 1px 0px;
+    border-style: solid;
+    border-color: black;    
+}
+.iconsrow{
+    margin-top: 30px;
 }
